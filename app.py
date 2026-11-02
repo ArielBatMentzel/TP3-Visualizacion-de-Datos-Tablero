@@ -14,7 +14,6 @@ def cargar():
 lineas, pedidos = cargar()
 
 
-
 # --- FILTROS ---
 st.sidebar.header("Filtros")
 
