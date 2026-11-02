@@ -82,7 +82,7 @@ with tab1:
             st.session_state["emp_sel"] = sorted(set(emp_sel) ^ set(clickeados))  # ^ = agrega si no estaba, saca si estaba
             st.session_state["v"] = v + 1
             st.rerun()
-        st.caption("Click en un empleado para filtrar el resto del tablero (click de nuevo para sacarlo, se pueden elegir varios).")
+        st.caption("*Click en el círculo de un empleado para filtrar el resto del tablero (click de nuevo para sacarlo, se pueden elegir varios).*")
         if emp_sel and st.button("Limpiar selección"):
             st.session_state["emp_sel"] = []
             st.rerun()
@@ -111,7 +111,8 @@ with tab1:
 
     # --- GRÁFICO4: Mapa de clientes: importancia y recurrencia --- 
     st.subheader("Clientes por ciudad")
-
+    st.caption("*Tamaño del círculo: cantidad de pedidos; Color: valor vendido.*")
+    
     geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
            .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique")))
 
@@ -126,4 +127,5 @@ with tab1:
 
 
 # Agregar al mapa anotaciones diciendo: Color igual al valor vendido (o que la leyenda actual diga valor vendido o ingresos generados) y una anotación diciendo que el tamaño de los círculos es en base a la cantidad de pedidos
-# Que en el gráfico de empleados se pueda deseleccionar haciendo click en el mismo empleado (que no se requeira doble click para deseleccionar), que se pueda seleccionar más de un empleado a la vez
+# Corregir el gráfico de la evolución mensual (que sea por semanas sino o ver como se puede cambiar)
+
