@@ -33,21 +33,54 @@ if transportistas:                       # lista vacía = sin filtro
 emp_sel = st.session_state.get("emp_sel", [])   # empleados seleccionados
 df_sel = df[df["Empleado"].isin(emp_sel)] if emp_sel else df
 
+# Mismos filtros pero sobre la tabla a nivel PEDIDO (una fila por pedido): para pendientes y envíos fuera de plazo
+ped_sel = pedidos[(pedidos["FechaPedido"].dt.date >= rango[0]) & (pedidos["FechaPedido"].dt.date <= rango[1])]
+if transportistas:
+    ped_sel = ped_sel[ped_sel["Transportista"].isin(transportistas)]
+if emp_sel:
+    ped_sel = ped_sel[ped_sel["Empleado"].isin(emp_sel)]
 
 
-# --- ENCABEZADO---
-st.title("Gestión comercial")
-k1, k2, k3 = st.columns(3)
-k1.metric("Valor vendido", f"${df_sel['Valor'].sum():,.0f}")
-k2.metric("Pedidos", f"{df_sel['IdPedido'].nunique():,}")   # nunique: la fila es una línea de pedido
-k3.metric("Valor promedio por pedido", f"${df_sel['Valor'].sum() / max(df_sel['IdPedido'].nunique(), 1):,.0f}")
-
-tab1, tab2 = st.tabs(["Panorama", "Detalle de pedidos"])
 
 BASE = "#31688E"     # azul de viridis: color por defecto de las marcas
 ACENTO = "#35B779"   # verde de viridis: lo seleccionado / lo que se quiere resaltar
 GRIS = "#BDBDBD"     # líneas auxiliares
+ROJO = "#D62728"     # alerta: empleados por debajo del 70% del promedio / envíos fuera de plazo
+AMARILLO = "#E5A000" # advertencia: pedidos pendientes (ámbar oscuro, el amarillo puro no se lee sobre blanco)
 
+
+# --- ENCABEZADO---
+st.title("Gestión comercial")
+k1, k2, k3, k4, k5 = st.columns(5)
+k1.metric("Valor vendido", f"${df_sel['Valor'].sum():,.0f}")
+k2.metric("Pedidos", f"{df_sel['IdPedido'].nunique():,}")   # nunique: la fila es una línea de pedido
+k3.metric("Valor promedio por pedido", f"${df_sel['Valor'].sum() / max(df_sel['IdPedido'].nunique(), 1):,.0f}")
+
+# Pedidos pendientes: sin fecha de envío. Fuera de plazo: enviados después de FechaEntrega (la fecha prometida).
+pendientes = int(ped_sel["FechaEnvio"].isna().sum())
+enviados = int(ped_sel["FechaEnvio"].notna().sum())
+fuera_plazo = int((ped_sel["FechaEnvio"] > ped_sel["FechaEntrega"]).sum())   # NaT (pendientes) da False
+# Cada tarjeta va en un contenedor con "key": Streamlit le agrega la clase CSS st-key-<key>,
+# y con eso se le cambia el color al número (st.metric no tiene un parámetro de color).
+with k4.container(key="kpi_pendientes"):
+    st.metric("Pedidos pendientes de envío", f"{pendientes:,}",
+              help="Pedidos del período que todavía no tienen fecha de envío.")
+with k5.container(key="kpi_fuera"):
+    st.metric("Enviados fuera de plazo", f"{fuera_plazo:,}",
+              delta=f"{fuera_plazo / enviados:.1%} de los enviados" if enviados else None,
+              delta_color="off", delta_arrow="off",
+              help="Pedidos enviados después de la fecha de entrega prometida.")
+
+# Color solo si el valor es mayor a 0 (con 0 queda el color normal)
+css = ""
+if pendientes > 0:
+    css += f'.st-key-kpi_pendientes [data-testid="stMetricValue"], .st-key-kpi_pendientes [data-testid="stMetricValue"] * {{ color: {AMARILLO}; }}'
+if fuera_plazo > 0:
+    css += f'.st-key-kpi_fuera [data-testid="stMetricValue"], .st-key-kpi_fuera [data-testid="stMetricValue"] * {{ color: {ROJO}; }}'
+if css:
+    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+
+tab1, tab2 = st.tabs(["Panorama", "Detalle de pedidos"])
 
 texto_medida = "Valor vendido" if medida == "Valor" else "Cantidad de pedidos"
 
@@ -57,6 +90,7 @@ with tab1:
     # --- GRÁFICO1: Podio empleados---
     with izq:
         st.subheader(f"{texto_medida} por empleado")
+        st.caption("*Click en el círculo de un empleado para filtrar el resto del tablero (click de nuevo para sacarlo, se pueden elegir varios).*")
         rank = (df.groupby("Empleado", as_index=False)
                   .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"))
                   .sort_values(medida))        
@@ -66,9 +100,15 @@ with tab1:
         fig.update_traces(marker=dict(size=14, color=colores),
                           error_x=dict(thickness=2, width=0, color=GRIS))
 
-        promedio_mitad = rank[medida].mean() * 0.7
-        fig.add_vline(x=promedio_mitad, line_dash="dash", line_color="red", opacity=0.4, 
+        umbral = rank[medida].mean() * 0.7
+        fig.add_vline(x=umbral, line_dash="dash", line_color=ROJO, opacity=0.6,
                       annotation_text="70% del Promedio", annotation_position="top right")
+
+        # Nombres en rojo (y en negrita) para los empleados por debajo del umbral.
+        # Plotly no colorea etiquetas por separado, pero acepta HTML simple en ticktext.
+        ticktext = [f'<span style="color:{ROJO}"><b>{e}</b></span>' if v < umbral else e
+                    for e, v in zip(rank["Empleado"], rank[medida])]
+        fig.update_yaxes(tickmode="array", tickvals=rank["Empleado"], ticktext=ticktext)
         
         fig.update_layout(template="plotly_white", height=380, margin=dict(l=0, r=0, t=10, b=0),
                           yaxis_title=None, xaxis_title=medida)
@@ -82,7 +122,6 @@ with tab1:
             st.session_state["emp_sel"] = sorted(set(emp_sel) ^ set(clickeados))  # ^ = agrega si no estaba, saca si estaba
             st.session_state["v"] = v + 1
             st.rerun()
-        st.caption("*Click en el círculo de un empleado para filtrar el resto del tablero (click de nuevo para sacarlo, se pueden elegir varios).*")
         if emp_sel and st.button("Limpiar selección"):
             st.session_state["emp_sel"] = []
             st.rerun()
@@ -99,14 +138,35 @@ with tab1:
                               yaxis_title=None)
             st.plotly_chart(fig, width="stretch")
 
-    # --- GRÁFICO3: Evolución mensual del valor vendido --- 
-    st.subheader("Evolución mensual del valor vendido")
-    mensual = df_sel.groupby("Mes", as_index=False)["Valor"].sum()
-    fig = px.line(mensual, x="Mes", y="Valor", markers=True)
-    fig.update_traces(line_color=BASE)
+    # --- GRÁFICO3: Evolución del valor vendido (la granularidad se adapta al período elegido) ---
+    dias = (rango[1] - rango[0]).days + 1
+    if dias <= 21:
+        pfreq, nombre, fmt_eje = "D", "día", "%d/%m"
+    elif dias <= 150:
+        pfreq, nombre, fmt_eje = "W-SUN", "semana", "%d/%m/%y"    # semanas de lunes a domingo
+    else:
+        pfreq, nombre, fmt_eje = "M", "mes", "%m/%Y"
+
+    st.subheader(f"Evolución del valor vendido por {nombre}")
+
+    # Todos los períodos del rango, incluso los sin ventas (valen 0, no "faltan")
+    periodos = pd.period_range(pd.Timestamp(rango[0]), pd.Timestamp(rango[1]), freq=pfreq)
+    serie = (df_sel.groupby(df_sel["FechaPedido"].dt.to_period(pfreq))["Valor"].sum()
+                   .reindex(periodos, fill_value=0))
+    evol = pd.DataFrame({"Inicio": periodos.start_time, "Valor": serie.values})
+    etiqueta = {"D": "", "W-SUN": "Semana del ", "M": ""}[pfreq]
+    evol["Etiqueta"] = etiqueta + evol["Inicio"].dt.strftime("%m/%Y" if pfreq == "M" else "%d/%m/%Y")
+
+    fig = px.line(evol, x="Inicio", y="Valor", markers=True, custom_data=["Etiqueta"])
+    fig.update_traces(line_color=BASE, hovertemplate="%{customdata[0]}<br>Valor vendido: $%{y:,.0f}<extra></extra>")
     fig.update_layout(template="plotly_white", height=300, margin=dict(l=0, r=0, t=10, b=0), xaxis_title=None)
+    fig.update_xaxes(tickformat=fmt_eje)
     fig.update_yaxes(rangemode="tozero")
     st.plotly_chart(fig, width="stretch")
+
+    # Si el período corta la primera/última semana o mes, esos puntos quedan incompletos
+    if pfreq != "D" and (periodos[0].start_time.date() < rango[0] or periodos[-1].end_time.date() > rango[1]):
+        st.caption(f"*Ojo: los puntos de los extremos pueden estar incompletos (agrupación por {nombre}: el período seleccionado los corta).*")
 
 
     # --- GRÁFICO4: Mapa de clientes: importancia y recurrencia --- 
@@ -126,5 +186,4 @@ with tab1:
 
 
 
-# Corregir el gráfico de la evolución mensual (que sea por semanas sino o ver como se puede cambiar)
 
