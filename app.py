@@ -1,3 +1,5 @@
+from datetime import timedelta
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -18,7 +20,30 @@ lineas, pedidos = cargar()
 st.sidebar.header("Filtros")
 
 fmin, fmax = lineas["FechaPedido"].min().date(), lineas["FechaPedido"].max().date()
-rango = st.sidebar.date_input("Período", value=(fmin, fmax), min_value=fmin, max_value=fmax)
+
+# Atajos de período: "hoy" es la última fecha del dataset (no la fecha real), y se cuenta hacia atrás desde ahí.
+ATAJOS = {"Última semana": 7, "Último mes": 30, "Último trimestre": 90, "Último año": 365}
+
+def periodo_atajo(dias):
+    inicio = fmin if dias is None else max(fmax - timedelta(days=dias - 1), fmin)
+    return (inicio, fmax)
+
+def fijar_periodo(dias):
+    # Se ejecuta ANTES de que corra el script: por eso puede cambiar el valor del date_input
+    st.session_state["rango"] = periodo_atajo(dias)
+
+if "rango" not in st.session_state:
+    st.session_state["rango"] = (fmin, fmax)   # valor inicial (por eso el date_input no lleva value=)
+
+rango = st.sidebar.date_input("Período", min_value=fmin, max_value=fmax, key="rango")
+
+# Botones debajo del filtro (el que coincide con el período actual se muestra resaltado)
+cols = st.sidebar.columns(2)
+for i, (texto, dias) in enumerate(list(ATAJOS.items()) + [("Todo el período", None)]):
+    activo = tuple(rango) == periodo_atajo(dias)
+    cols[i % 2].button(texto, key=f"atajo_{i}", on_click=fijar_periodo, args=(dias,),
+                       type="primary" if activo else "secondary", width="stretch")
+
 if len(rango) != 2:   # mientras el usuario todavía no eligió la segunda fecha
     st.stop()
 
