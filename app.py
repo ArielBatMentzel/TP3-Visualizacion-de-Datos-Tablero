@@ -126,6 +126,5 @@ with tab1:
 
 
 
-# Agregar al mapa anotaciones diciendo: Color igual al valor vendido (o que la leyenda actual diga valor vendido o ingresos generados) y una anotación diciendo que el tamaño de los círculos es en base a la cantidad de pedidos
 # Corregir el gráfico de la evolución mensual (que sea por semanas sino o ver como se puede cambiar)
 
