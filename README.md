@@ -8,8 +8,8 @@ Tablero interactivo hecho con Streamlit (TP3 - Visualización de Datos).
 
    ```bash
    python -m venv venv
-   source venv/bin/activate      # Mac / Linux
-   venv\Scripts\activate         # Windows
+   source .venv/bin/activate      # Mac / Linux
+   .venv\Scripts\activate         # Windows
    ```
 
 2. Instalar los requerimientos:
