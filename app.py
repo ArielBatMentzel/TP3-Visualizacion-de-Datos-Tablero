@@ -76,10 +76,12 @@ AMARILLO = "#E5A000" # advertencia: pedidos pendientes (ámbar oscuro, el amaril
 
 # --- ENCABEZADO---
 st.title("Gestión comercial")
-k1, k2, k3, k4, k5 = st.columns(5)
-k1.metric("Valor vendido", f"${df_sel['Valor'].sum():,.0f}")
-k2.metric("Pedidos", f"{df_sel['IdPedido'].nunique():,}")   # nunique: la fila es una línea de pedido
-k3.metric("Valor promedio por pedido", f"${df_sel['Valor'].sum() / max(df_sel['IdPedido'].nunique(), 1):,.0f}")
+k1, k2, k3, k4, k5, k6 = st.columns(6)
+k1.metric("Clientes", f"{df_sel['IdCliente'].nunique():,}",
+          help="Clientes distintos que hicieron al menos un pedido en el período.")
+k2.metric("Valor vendido", f"${df_sel['Valor'].sum():,.0f}")
+k3.metric("Pedidos", f"{df_sel['IdPedido'].nunique():,}")   # nunique: la fila es una línea de pedido
+k4.metric("Valor promedio por pedido", f"${df_sel['Valor'].sum() / max(df_sel['IdPedido'].nunique(), 1):,.0f}")
 
 # Pedidos pendientes: sin fecha de envío. Fuera de plazo: enviados después de FechaEntrega (la fecha prometida).
 pendientes = int(ped_sel["FechaEnvio"].isna().sum())
@@ -87,10 +89,10 @@ enviados = int(ped_sel["FechaEnvio"].notna().sum())
 fuera_plazo = int((ped_sel["FechaEnvio"] > ped_sel["FechaEntrega"]).sum())   # NaT (pendientes) da False
 # Cada tarjeta va en un contenedor con "key": Streamlit le agrega la clase CSS st-key-<key>,
 # y con eso se le cambia el color al número (st.metric no tiene un parámetro de color).
-with k4.container(key="kpi_pendientes"):
+with k5.container(key="kpi_pendientes"):
     st.metric("Pedidos pendientes de envío", f"{pendientes:,}",
               help="Pedidos del período que todavía no tienen fecha de envío.")
-with k5.container(key="kpi_fuera"):
+with k6.container(key="kpi_fuera"):
     st.metric("Enviados fuera de plazo", f"{fuera_plazo:,}",
               delta=f"{fuera_plazo / enviados:.1%} de los enviados" if enviados else None,
               delta_color="off", delta_arrow="off",
@@ -110,9 +112,46 @@ tab1, tab2 = st.tabs(["Panorama", "Detalle de pedidos"])
 texto_medida = "Valor vendido" if medida == "Valor" else "Cantidad de pedidos"
 
 with tab1:
+
+    # --- GRÁFICO1: Evolución del valor vendido o de pedidos, según la medida (la granularidad se adapta al período elegido) ---
+    dias = (rango[1] - rango[0]).days + 1
+    if dias <= 21:
+        pfreq, nombre, fmt_eje = "D", "día", "%d/%m"
+    elif dias <= 150:
+        pfreq, nombre, fmt_eje = "W-SUN", "semana", "%d/%m/%y"    # semanas de lunes a domingo
+    else:
+        pfreq, nombre, fmt_eje = "M", "mes", "%m/%Y"
+
+    titulo_evol = "valor vendido" if medida == "Valor" else "pedidos"
+    st.subheader(f"Evolución de {titulo_evol} por {nombre}")
+
+    # Todos los períodos del rango, incluso los sin ventas (valen 0, no "faltan")
+    periodos = pd.period_range(pd.Timestamp(rango[0]), pd.Timestamp(rango[1]), freq=pfreq)
+    por_periodo = df_sel.groupby(df_sel["FechaPedido"].dt.to_period(pfreq))
+    serie = (por_periodo["Valor"].sum() if medida == "Valor"
+             else por_periodo["IdPedido"].nunique())        # pedidos: se cuentan pedidos distintos, no líneas
+    serie = serie.reindex(periodos, fill_value=0)
+    evol = pd.DataFrame({"Inicio": periodos.start_time, medida: serie.values})
+    etiqueta = {"D": "", "W-SUN": "Semana del ", "M": ""}[pfreq]
+    evol["Etiqueta"] = etiqueta + evol["Inicio"].dt.strftime("%m/%Y" if pfreq == "M" else "%d/%m/%Y")
+
+    hover_medida = "Valor vendido: $%{y:,.0f}" if medida == "Valor" else "Pedidos: %{y:,.0f}"
+    fig = px.line(evol, x="Inicio", y=medida, markers=True, custom_data=["Etiqueta"])
+    fig.update_traces(line_color=BASE, hovertemplate="%{customdata[0]}<br>" + hover_medida + "<extra></extra>")
+    fig.update_layout(template="plotly_white", height=300, margin=dict(l=0, r=0, t=10, b=0), xaxis_title=None)
+    fig.update_xaxes(tickformat=fmt_eje)
+    fig.update_yaxes(rangemode="tozero")
+    st.plotly_chart(fig, width="stretch")
+
+    # Si el período corta la primera/última semana o mes, esos puntos quedan incompletos
+    if pfreq != "D" and (periodos[0].start_time.date() < rango[0] or periodos[-1].end_time.date() > rango[1]):
+        st.caption(f"*Ojo: los puntos de los extremos pueden estar incompletos (agrupación por {nombre}: el período seleccionado los corta).*")
+
+
+
     izq, der = st.columns([3, 2])
 
-    # --- GRÁFICO1: Podio empleados---
+    # --- GRÁFICO2: Podio empleados---
     with izq:
         st.subheader(f"{texto_medida} por empleado")
         st.caption("*Click en el círculo de un empleado para filtrar el resto del tablero (click de nuevo para sacarlo, se pueden elegir varios).*")
@@ -152,7 +191,7 @@ with tab1:
             st.rerun()
 
 
-    # --- GRÁFICO2: Productos con mayores ingresos --- (se podría hacer margen bruto para ver rentabilidad) pero el top es el mismo porque todos los productos tienen el mismo margen}
+    # --- GRÁFICO3: Productos con mayores ingresos --- (se podría hacer margen bruto para ver rentabilidad) pero el top es el mismo porque todos los productos tienen el mismo margen}
     with der:
             st.subheader("Top 10 productos por ingresos generados")
             top = (df_sel.groupby("Producto", as_index=False)["Valor"].sum()
@@ -163,52 +202,46 @@ with tab1:
                               yaxis_title=None)
             st.plotly_chart(fig, width="stretch")
 
-    # --- GRÁFICO3: Evolución del valor vendido (la granularidad se adapta al período elegido) ---
-    dias = (rango[1] - rango[0]).days + 1
-    if dias <= 21:
-        pfreq, nombre, fmt_eje = "D", "día", "%d/%m"
-    elif dias <= 150:
-        pfreq, nombre, fmt_eje = "W-SUN", "semana", "%d/%m/%y"    # semanas de lunes a domingo
-    else:
-        pfreq, nombre, fmt_eje = "M", "mes", "%m/%Y"
+    # --- GRÁFICO4: Mapa de clientes (izquierda) y GRÁFICO5: Top clientes por % de ingresos (derecha) ---
+    mapa, top_cli = st.columns([3, 2])
 
-    st.subheader(f"Evolución del valor vendido por {nombre}")
-
-    # Todos los períodos del rango, incluso los sin ventas (valen 0, no "faltan")
-    periodos = pd.period_range(pd.Timestamp(rango[0]), pd.Timestamp(rango[1]), freq=pfreq)
-    serie = (df_sel.groupby(df_sel["FechaPedido"].dt.to_period(pfreq))["Valor"].sum()
-                   .reindex(periodos, fill_value=0))
-    evol = pd.DataFrame({"Inicio": periodos.start_time, "Valor": serie.values})
-    etiqueta = {"D": "", "W-SUN": "Semana del ", "M": ""}[pfreq]
-    evol["Etiqueta"] = etiqueta + evol["Inicio"].dt.strftime("%m/%Y" if pfreq == "M" else "%d/%m/%Y")
-
-    fig = px.line(evol, x="Inicio", y="Valor", markers=True, custom_data=["Etiqueta"])
-    fig.update_traces(line_color=BASE, hovertemplate="%{customdata[0]}<br>Valor vendido: $%{y:,.0f}<extra></extra>")
-    fig.update_layout(template="plotly_white", height=300, margin=dict(l=0, r=0, t=10, b=0), xaxis_title=None)
-    fig.update_xaxes(tickformat=fmt_eje)
-    fig.update_yaxes(rangemode="tozero")
-    st.plotly_chart(fig, width="stretch")
-
-    # Si el período corta la primera/última semana o mes, esos puntos quedan incompletos
-    if pfreq != "D" and (periodos[0].start_time.date() < rango[0] or periodos[-1].end_time.date() > rango[1]):
-        st.caption(f"*Ojo: los puntos de los extremos pueden estar incompletos (agrupación por {nombre}: el período seleccionado los corta).*")
-
-
-    # --- GRÁFICO4: Mapa de clientes: importancia y recurrencia --- 
-    st.subheader("Clientes por ciudad")
-    st.caption("*Tamaño del círculo: cantidad de pedidos; Color: valor vendido.*")
+    with mapa:
+        st.subheader("Clientes por ciudad")
+        st.caption("*Tamaño del círculo: cantidad de pedidos; Color: valor vendido.*")
     
-    geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
-           .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique")))
+        geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
+               .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique")))
 
-    fig = px.scatter_geo(geo, lat="LatitudCiudadCliente", lon="LongitudCiudadCliente", size="Pedidos", color="Valor",
-                         color_continuous_scale="Viridis",      # continua. Probá "Cividis", "Plasma", "Viridis_r"
-                         hover_name="CiudadCliente", hover_data={"LatitudCiudadCliente": False, "LongitudCiudadCliente": False, "Valor": ":,.0f"},
-                         projection="natural earth", size_max=30)
-    fig.update_geos(showcountries=True, countrycolor="#DDDDDD", fitbounds="locations")
-    fig.update_layout(height=420, margin=dict(l=0, r=0, t=10, b=0))
-    st.plotly_chart(fig, width="stretch")
+        fig = px.scatter_geo(geo, lat="LatitudCiudadCliente", lon="LongitudCiudadCliente", size="Pedidos", color="Valor",
+                             color_continuous_scale="Viridis",      # continua. Probá "Cividis", "Plasma", "Viridis_r"
+                             hover_name="CiudadCliente", hover_data={"LatitudCiudadCliente": False, "LongitudCiudadCliente": False, "Valor": ":,.0f"},
+                             projection="natural earth", size_max=30)
+        fig.update_geos(showcountries=True, countrycolor="#DDDDDD", fitbounds="locations")
+        fig.update_layout(height=420, margin=dict(l=0, r=0, t=10, b=0))
+        st.plotly_chart(fig, width="stretch")
 
+    with top_cli:
+        TOP_CLIENTES = 10
+        st.subheader(f"Top {TOP_CLIENTES} clientes por % de ingresos")
+        st.caption("*Porcentaje del valor vendido total (según los filtros activos) que aporta cada cliente.*")
+        total_valor = df_sel["Valor"].sum()
+        if total_valor > 0:
+            clientes = (df_sel.groupby(["IdCliente", "Cliente"], as_index=False)
+                              .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique")))
+            clientes["Participacion"] = clientes["Valor"] / total_valor
+            top_c = clientes.nlargest(TOP_CLIENTES, "Participacion").sort_values("Participacion")   # ascendente: el mayor queda arriba
+            top_c["Texto"] = top_c["Participacion"].map(lambda x: f"{x:.1%}")
 
-
-
+            fig = px.bar(top_c, x="Participacion", y="Cliente", orientation="h", text="Texto",
+                         custom_data=["Valor", "Pedidos"])
+            fig.update_traces(marker_color=BASE, textposition="outside", cliponaxis=False,
+                              hovertemplate="%{y}<br>%{x:.1%} del total<br>Valor: $%{customdata[0]:,.0f}"
+                                            "<br>Pedidos: %{customdata[1]}<extra></extra>")
+            fig.update_layout(template="plotly_white", height=420, margin=dict(l=0, r=30, t=10, b=0),
+                              yaxis_title=None, xaxis_title=None)
+            fig.update_xaxes(tickformat=".0%", rangemode="tozero")
+            st.plotly_chart(fig, width="stretch")
+            sujeto = f"Estos {len(top_c)} clientes suman" if len(top_c) > 1 else "Este cliente suma"
+            st.caption(f"*{sujeto} el {top_c['Participacion'].sum():.0%} del valor vendido.*")
+        else:
+            st.info("No hay ventas con los filtros seleccionados.")
