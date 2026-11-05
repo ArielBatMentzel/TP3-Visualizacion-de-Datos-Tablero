@@ -150,10 +150,9 @@ if css:
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 if comparable:
-    st.caption(f"*Variaciones contra el período anterior de igual duración ({prev_ini:%d/%m/%Y} a {prev_fin:%d/%m/%Y}).*")
+    st.caption(f"*Período anterior de igual duración ({prev_ini:%d/%m/%Y} a {prev_fin:%d/%m/%Y}).*")
 else:
-    st.caption("*Sin variación: el período anterior de igual duración queda fuera del rango de datos "
-               f"(los datos empiezan el {fmin:%d/%m/%Y}).*")
+    st.caption("*El período anterior queda fuera del rango de datos*")
 
 if df_sel.empty:
     st.info("No hay ventas con la selección de empleados actual. Probá limpiar la selección.")
