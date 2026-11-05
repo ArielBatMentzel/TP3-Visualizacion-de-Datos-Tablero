@@ -3,6 +3,7 @@ from datetime import timedelta
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import plotly.graph_objects as go
 
 # paleta.py tiene que estar en la misma carpeta que este archivo
 from paleta import ACENTO, AMARILLO, AMARILLO_TEXTO, BASE, GRIS, ROJO, RUMBO_CONTINUA
@@ -230,12 +231,33 @@ with tab1:
 
     colores = [ACENTO if e in emp_sel else (AMARILLO if a_ else BASE) for e, a_ in zip(rank["Empleado"], abajo)]
 
-    fig = px.scatter(rank, x=medida, y="Empleado", error_x_minus=rank[medida],   # la "barra fina" del lollipop
-                     custom_data=["Valor", "Pedidos", "ValorPorPedido", "PctPromedio"])
-    fig.update_traces(marker=dict(size=14, color=colores),
-                      error_x=dict(thickness=2, width=0, color=GRIS),
-                      hovertemplate="<b>%{y}</b><br>Valor: $%{customdata[0]:,.0f}<br>Pedidos: %{customdata[1]}"
-                                    "<br>Valor por pedido: $%{customdata[2]:,.0f}")
+    fig = go.Figure()
+
+    # Tallos horizontales del lollipop.
+    for _, fila in rank.iterrows():
+        fig.add_shape(
+            type="line",
+            x0=0, x1=fila[medida],
+            y0=fila["Empleado"], y1=fila["Empleado"],
+            line=dict(color="rgba(128, 128, 128, 0.5)", width=0.5),
+            layer="below"
+        )
+
+    # Puntos.
+    fig.add_trace(go.Scatter(
+        x=rank[medida],
+        y=rank["Empleado"],
+        mode="markers",
+        marker=dict(size=13, color=colores),
+        customdata=rank[["Valor", "Pedidos", "ValorPorPedido", "PctPromedio"]],
+        hovertemplate="<b>%{y}</b><br>Valor: $%{customdata[0]:,.0f}"
+                    "<br>Pedidos: %{customdata[1]}"
+                    "<br>Valor por pedido: $%{customdata[2]:,.0f}<extra></extra>",
+        showlegend=False
+    ))
+
+    fig.update_xaxes(type="linear", rangemode="tozero")
+    fig.update_yaxes(showgrid=False)
     fig.add_vline(x=umbral, line_dash="dash", line_color=AMARILLO,
                   annotation_text="70% del promedio", annotation_position="top left",
                   annotation_font=dict(color=AMARILLO_TEXTO, size=11))
