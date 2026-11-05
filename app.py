@@ -169,53 +169,112 @@ tab1, tab2 = st.tabs(["Ventas y equipo", "Productos, clientes y ciudades"])
 with tab1:
 
     # ---------------------------------------------------------------------------
-    # PREGUNTA 1 — ¿Cómo evolucionan el valor vendido y los pedidos? ¿Viene por encima o por debajo del período anterior?
-    # La granularidad (día / semana / mes) se adapta a la duración del período elegido.
+    # PREGUNTA 1 — ¿Cómo evolucionan el valor vendido y los pedidos?
     # ---------------------------------------------------------------------------
     if dias <= 21:
-        pfreq, nombre, fmt_eje = "D", "día", "%d/%m"
+      pfreq, nombre, fmt_eje = "D", "día", "%d/%m"
     elif dias <= 150:
-        pfreq, nombre, fmt_eje = "W-SUN", "semana", "%d/%m/%y"    # semanas de lunes a domingo
+      pfreq, nombre, fmt_eje = "W-SUN", "semana", "%d/%m/%y"
     else:
-        pfreq, nombre, fmt_eje = "M", "mes", "%m/%Y"
+      pfreq, nombre, fmt_eje = "M", "mes", "%m/%Y"
 
     titulo_evol = "valor vendido" if medida == "Valor" else "pedidos"
     st.subheader(f"Evolución de {titulo_evol} por {nombre}")
 
     def evolucion(d, desde, hasta):
-        """Serie por día/semana/mes con TODOS los períodos del rango (los sin ventas valen 0, no 'faltan')."""
-        periodos = pd.period_range(pd.Timestamp(desde), pd.Timestamp(hasta), freq=pfreq)
-        por_periodo = d.groupby(d["FechaPedido"].dt.to_period(pfreq))
-        serie = (por_periodo["Valor"].sum() if medida == "Valor"
-                 else por_periodo["IdPedido"].nunique())      # pedidos: pedidos distintos, no líneas
-        serie = serie.reindex(periodos, fill_value=0)
-        evol = pd.DataFrame({"Inicio": periodos.start_time, medida: serie.values})
-        prefijo = "Semana del " if pfreq == "W-SUN" else ""
-        evol["Etiqueta"] = prefijo + evol["Inicio"].dt.strftime("%m/%Y" if pfreq == "M" else "%d/%m/%Y")
-        return periodos, evol
+      """Serie por día/semana/mes con todos los períodos del rango.
+
+      Las etiquetas detectan semanas/meses incompletos en los extremos y
+      muestran el rango de fechas exacto consumido.
+      """
+      periodos = pd.period_range(
+          pd.Timestamp(desde), pd.Timestamp(hasta), freq=pfreq
+      )
+      por_periodo = d.groupby(d["FechaPedido"].dt.to_period(pfreq))
+      serie = (
+          por_periodo["Valor"].sum()
+          if medida == "Valor"
+          else por_periodo["IdPedido"].nunique()
+      )
+      serie = serie.reindex(periodos, fill_value=0)
+
+      desde_d = pd.Timestamp(desde).date()
+      hasta_d = pd.Timestamp(hasta).date()
+      etiquetas = []
+
+      for p in periodos:
+        eff_start = max(p.start_time.date(), desde_d)
+        eff_end = min(p.end_time.date(), hasta_d)
+
+        if pfreq == "D":
+          lbl = eff_start.strftime("%d/%m/%Y")
+        elif pfreq == "M":
+          if eff_start == p.start_time.date() and eff_end == p.end_time.date():
+            lbl = p.start_time.strftime("%m/%Y")
+          else:
+            lbl = f"Del {eff_start:%d/%m} al {eff_end:%d/%m/%Y}"
+        else:  # W-SUN (Semanas)
+          if eff_start == p.start_time.date() and eff_end == p.end_time.date():
+            lbl = f"Semana del {eff_start:%d/%m/%Y}"
+          else:
+            lbl = f"Del {eff_start:%d/%m} al {eff_end:%d/%m/%Y}"
+        etiquetas.append(lbl)
+
+      evol = pd.DataFrame(
+          {"Inicio": periodos.start_time, medida: serie.values, "Etiqueta": etiquetas}
+      )
+      return periodos, evol
 
     periodos, evol = evolucion(df_sel, rango[0], rango[1])
-    hover_medida = "Valor vendido: $%{y:,.0f}" if medida == "Valor" else "Pedidos: %{y:,.0f}"
+    hover_medida = (
+        "Valor vendido: $%{y:,.0f}"
+        if medida == "Valor"
+        else "Pedidos: %{y:,.0f}"
+    )
 
-    fig = px.line(evol, x="Inicio", y=medida, markers=True, custom_data=["Etiqueta"])
-    fig.update_traces(name="Período seleccionado", showlegend=comparable, line_color=BASE, marker_color=BASE,
-                      hovertemplate="%{customdata[0]}<br>" + hover_medida + "<extra></extra>")
+    fig = px.line(
+        evol, x="Inicio", y=medida, markers=True, custom_data=["Etiqueta"]
+    )
+    fig.update_traces(
+        name="Período seleccionado",
+        showlegend=False,
+        line_color=BASE,
+        marker_color=BASE,
+        hovertemplate="%{customdata[0]}<br>" + hover_medida + "<extra></extra>",
+    )
+
     if comparable:
-        # Período anterior desplazado hacia adelante para superponerlo con el actual
-        _, evol_prev = evolucion(df_prev, prev_ini, prev_fin)
-        fig.add_scatter(x=evol_prev["Inicio"] + pd.Timedelta(days=dias), y=evol_prev[medida], mode="lines",
-                        name="Período anterior", line=dict(color=GRIS, dash="dash", width=2),
-                        customdata=evol_prev[["Etiqueta"]],
-                        hovertemplate="Anterior: %{customdata[0]}<br>" + hover_medida + "<extra></extra>")
-    fig.update_layout(template="plotly_white", height=320, margin=dict(l=0, r=0, t=10, b=0), xaxis_title=None,
-                      legend=dict(orientation="h", y=1.12, x=0, title_text=""))
+      _, evol_prev = evolucion(df_prev, prev_ini, prev_fin)
+      n_puntos = min(len(evol), len(evol_prev))
+
+      fig.add_scatter(
+          x=evol["Inicio"].iloc[:n_puntos],
+          y=evol_prev[medida].iloc[:n_puntos],
+          mode="lines",
+          name="Período anterior",
+          showlegend=True,
+          line=dict(color=GRIS, dash="dash", width=2),
+          customdata=evol_prev[["Etiqueta"]].iloc[:n_puntos],
+          hovertemplate=(
+              "Anterior: %{customdata[0]}<br>" + hover_medida + "<extra></extra>"
+          ),
+      )
+
+    fig.update_layout(
+        template="plotly_white",
+        height=320,
+        margin=dict(l=0, r=0, t=10, b=0),
+        xaxis_title=None,
+        legend=dict(
+            orientation="h",
+            y=1.12,
+            x=0,
+            title_text="",
+        ),
+    )
     fig.update_xaxes(tickformat=fmt_eje)
     fig.update_yaxes(rangemode="tozero")
     st.plotly_chart(fig, width="stretch")
-
-    # Si el período corta la primera/última semana o mes, esos puntos quedan incompletos
-    if pfreq != "D" and (periodos[0].start_time.date() < rango[0] or periodos[-1].end_time.date() > rango[1]):
-        st.caption(f"*Ojo: los puntos de los extremos pueden estar incompletos (agrupación por {nombre}: el período seleccionado los corta).*")
 
     # ---------------------------------------------------------------------------
     # PREGUNTA 2 — ¿Qué empleados rinden más y quiénes están por debajo del objetivo (70% del promedio)?
