@@ -100,8 +100,7 @@ if df.empty:
 def resumen(d):
     n_pedidos = d["IdPedido"].nunique()      # nunique: la fila es una línea de pedido
     valor = d["Valor"].sum()
-    return {"clientes": d["IdCliente"].nunique(), "valor": valor, "pedidos": n_pedidos,
-            "promedio": valor / n_pedidos if n_pedidos else 0}
+    return {"clientes": d["IdCliente"].nunique(), "valor": valor, "pedidos": n_pedidos}
 
 
 actual = resumen(df_sel)
