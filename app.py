@@ -280,7 +280,7 @@ with tab2:
         d = d.copy()
         fig = px.bar(d, x=col, y="Producto", orientation="h")
         fig.update_traces(marker_color=[ACENTO if p in en_ambos else BASE for p in d["Producto"]],
-                          texttemplate=plantilla, textposition="outside", cliponaxis=False)
+                          texttemplate=plantilla, textposition="outside", cliponaxis=False, hovertemplate=None, hoverinfo="none")
         fig.update_layout(template="plotly_white", height=380, margin=dict(l=0, r=40, t=10, b=0),
                           yaxis_title=None, xaxis_title=None)
         return fig
@@ -335,7 +335,7 @@ with tab2:
         fig = px.bar(top_c, x="Participacion", y="Cliente", orientation="h", text="Texto",
                      custom_data=["Valor", "Pedidos", "CiudadCliente"])
         fig.update_traces(marker_color=BASE, textposition="outside", cliponaxis=False,
-                          hovertemplate="%{y} (%{customdata[2]})<br>%{x:.1%} del total<br>Valor: $%{customdata[0]:,.0f}"
+                          hovertemplate="Valor: $%{customdata[0]:,.0f}"
                                         "<br>Pedidos: %{customdata[1]}<extra></extra>")
         fig.update_layout(template="plotly_white", height=430, margin=dict(l=0, r=30, t=10, b=0),
                           yaxis_title=None, xaxis_title=None)
