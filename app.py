@@ -54,8 +54,7 @@ for i, (texto, n_dias) in enumerate(list(ATAJOS.items()) + [("Todo el período",
 if len(rango) != 2:   # mientras el usuario todavía no eligió la segunda fecha
     st.stop()
 
-transportistas = st.sidebar.multiselect("Transportista", sorted(lineas["Transportista"].unique()))
-medida = st.sidebar.radio("Medida (evolución y ranking de empleados)", ["Valor", "Pedidos"], horizontal=True)
+medida = st.sidebar.radio("Medida (Ventas y equipo)", ["Valor", "Pedidos"], horizontal=True)
 texto_medida = "Valor vendido" if medida == "Valor" else "Cantidad de pedidos"
 
 # Empleados clickeados en el ranking (filtran todo el tablero menos el propio ranking)
@@ -65,8 +64,6 @@ emp_sel = st.session_state.get("emp_sel", [])
 def filtrar(tabla, desde, hasta, con_empleados=True):
     """Filtra una tabla (líneas o pedidos) por fechas, transportista y, opcionalmente, empleados seleccionados."""
     d = tabla[(tabla["FechaPedido"].dt.date >= desde) & (tabla["FechaPedido"].dt.date <= hasta)]
-    if transportistas:                       # lista vacía = sin filtro
-        d = d[d["Transportista"].isin(transportistas)]
     if con_empleados and emp_sel:
         d = d[d["Empleado"].isin(emp_sel)]
     return d
@@ -212,8 +209,6 @@ with tab1:
     fig.update_yaxes(rangemode="tozero")
     st.plotly_chart(fig, width="stretch")
 
-    if comparable:
-        st.caption("*Línea punteada: período anterior de igual duración, desplazado para superponerlo con el actual.*")
     # Si el período corta la primera/última semana o mes, esos puntos quedan incompletos
     if pfreq != "D" and (periodos[0].start_time.date() < rango[0] or periodos[-1].end_time.date() > rango[1]):
         st.caption(f"*Ojo: los puntos de los extremos pueden estar incompletos (agrupación por {nombre}: el período seleccionado los corta).*")
@@ -299,8 +294,7 @@ with tab2:
     with col_b:
         st.subheader("Top 10 productos por unidades vendidas")
         st.plotly_chart(barras_top(top_unid, "Unidades", "%{x:,.0f}"), width="stretch")
-    st.caption(f"*Verde: productos que están en los dos rankings ({len(en_ambos)} de 10). "
-               "Los que están en uno solo se destacan por precio (ingresos) o por volumen (unidades).*")
+    st.caption(f"*Verde: productos que están en los dos rankings ({len(en_ambos)} de 10).*")
 
     # ---------------------------------------------------------------------------
     # PREGUNTA 3 — ¿Cómo se concentran valor y pedidos por ciudad? ¿Qué clientes son los más importantes?
@@ -352,14 +346,13 @@ with tab2:
         # Cuánto depende la empresa de pocos clientes
         acumulado = clientes["Participacion"].sort_values(ascending=False).cumsum()
         n_mitad = int((acumulado < 0.5).sum()) + 1
-        sujeto = f"Estos {len(top_c)} clientes suman" if len(top_c) > 1 else "Este cliente suma"
-        st.caption(f"*{sujeto} el {top_c['Participacion'].sum():.0%} del valor vendido. "
+        sujeto = f"Estos clientes suman" if len(top_c) > 1 else "Este cliente suma"
+        st.caption(f"*{sujeto} el {top_c['Participacion'].sum():.0%}. "
                    f"La mitad del valor la generan {n_mitad} de {len(clientes)} clientes.*")
 
     # Clientes importantes (valor) vs recurrentes (pedidos)
     st.subheader("Clientes: importancia (valor) vs recurrencia (pedidos)")
     st.caption("*Cada punto es un cliente. Las líneas punteadas marcan el promedio. Arriba a la derecha: importantes y recurrentes; "
-               "arriba a la izquierda: importantes pero poco frecuentes; abajo a la derecha: recurrentes de menor valor. "
                "Se rotulan los 5 clientes con más valor.*")
     clientes["Etiqueta"] = clientes["Cliente"].where(clientes["Valor"].rank(ascending=False, method="first") <= 5, "")
     fig = px.scatter(clientes, x="Pedidos", y="Valor", text="Etiqueta", custom_data=["Cliente", "CiudadCliente"])
