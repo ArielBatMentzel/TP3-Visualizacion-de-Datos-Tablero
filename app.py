@@ -216,7 +216,7 @@ with tab1:
     # PREGUNTA 2 — ¿Qué empleados rinden más y quiénes están por debajo del objetivo (70% del promedio)?
     # ---------------------------------------------------------------------------
     st.subheader(f"{texto_medida} por empleado")
-    st.caption("*Amarillo: por debajo del 70% del promedio del equipo (posible necesidad de apoyo). "
+    st.caption("*Amarillo: posible necesidad de apoyo. "
                "Click en un empleado para filtrar el resto del tablero; click de nuevo para sacarlo; se pueden elegir varios.*")
 
     rank = (df.groupby("Empleado", as_index=False)
@@ -235,10 +235,7 @@ with tab1:
     fig.update_traces(marker=dict(size=14, color=colores),
                       error_x=dict(thickness=2, width=0, color=GRIS),
                       hovertemplate="<b>%{y}</b><br>Valor: $%{customdata[0]:,.0f}<br>Pedidos: %{customdata[1]}"
-                                    "<br>Valor por pedido: $%{customdata[2]:,.0f}"
-                                    f"<br>% del promedio ({medida.lower()}): " + "%{customdata[3]:.0%}<extra></extra>")
-    fig.add_vline(x=promedio, line_dash="dot", line_color=GRIS,
-                  annotation_text="Promedio", annotation_position="top right", annotation_font=dict(color="#6B7280", size=11))
+                                    "<br>Valor por pedido: $%{customdata[2]:,.0f}")
     fig.add_vline(x=umbral, line_dash="dash", line_color=AMARILLO,
                   annotation_text="70% del promedio", annotation_position="top left",
                   annotation_font=dict(color=AMARILLO_TEXTO, size=11))
