@@ -1,831 +1,831 @@
-IdPedido,IdCliente,Cliente,CiudadCliente,IdEmpleado,Empleado,IdTransportista,Transportista,FechaPedido,FechaEntrega,FechaEnvio,ValorPedido,CostoTotalPedido,Pendiente,DiasHastaEnvio,FueraDePlazo
-10248,WELLI,Wellington Importadora,Resende,5,Steven Buchanan,3,Federal Shipping,2016-06-29,2016-07-27,2016-07-11,440.0,176.0,False,12.0,False
-10249,TOMSP,Toms Spezialitäten,Münster,6,Michael Suyama,1,Speedy Express,2016-06-30,2016-08-11,2016-07-05,1863.4,745.36,False,5.0,False
-10250,HANAR,Hanari Carnes,Rio de Janeiro,4,Margaret Peacock,2,United Package,2016-07-03,2016-07-31,2016-07-07,1813.0,725.1999999999999,False,4.0,False
-10251,VICTE,Victuailles en stock,Lyon,3,Janet Leverling,1,Speedy Express,2016-07-03,2016-07-31,2016-07-10,670.8,268.32,False,7.0,False
-10252,SUPRD,Suprêmes délices,Charleroi,4,Margaret Peacock,2,United Package,2016-07-04,2016-08-01,2016-07-06,3730.0,1492.0,False,2.0,False
-10253,HANAR,Hanari Carnes,Rio de Janeiro,3,Janet Leverling,2,United Package,2016-07-05,2016-07-19,2016-07-11,1444.8,577.92,False,6.0,False
-10254,CHOPS,Centro comercial Moctezuma,México D.F.,5,Steven Buchanan,2,United Package,2016-07-06,2016-08-03,2016-07-18,625.2,250.07999999999998,False,12.0,False
-10255,RICSU,Richter Supermarkt,Génova,9,Anne Dodsworth,3,Federal Shipping,2016-07-07,2016-08-04,2016-07-10,2490.5,996.2,False,3.0,False
-10256,WELLI,Wellington Importadora,Resende,3,Janet Leverling,2,United Package,2016-07-10,2016-08-07,2016-07-12,517.8,207.12,False,2.0,False
-10257,HILAA,HILARIÓN-Abastos,San Cristóbal,4,Margaret Peacock,3,Federal Shipping,2016-07-11,2016-08-08,2016-07-17,1119.9,447.96000000000004,False,6.0,False
-10258,ERNSH,Ernst Handel,Graz,1,Nancy Davolio,1,Speedy Express,2016-07-12,2016-08-09,2016-07-18,2018.6,807.44,False,6.0,False
-10259,CENTC,Centro comercial Moctezuma,México D.F.,4,Margaret Peacock,3,Federal Shipping,2016-07-13,2016-08-10,2016-07-20,100.8,40.32,False,7.0,False
-10260,OTTIK,Ottilies Käseladen,Köln,4,Margaret Peacock,1,Speedy Express,2016-07-14,2016-08-11,2016-07-24,1746.2,698.48,False,10.0,False
-10261,QUEDE,Que Delícia,Rio de Janeiro,4,Margaret Peacock,2,United Package,2016-07-14,2016-08-11,2016-07-25,448.0,179.2,False,11.0,False
-10262,RATTC,Rattlesnake Canyon Grocery,Albuquerque,8,Laura Callahan,3,Federal Shipping,2016-07-17,2016-08-14,2016-07-20,624.8,249.92,False,3.0,False
-10263,ERNSH,Ernst Handel,Graz,9,Anne Dodsworth,3,Federal Shipping,2016-07-18,2016-08-15,2016-07-26,2464.8,985.9200000000001,False,8.0,False
-10264,FOLKO,Folk och fä HB,Bräcke,6,Michael Suyama,3,Federal Shipping,2016-07-19,2016-08-16,2016-08-18,724.5,289.8,False,30.0,True
-10265,BLONP,Blondel père et fils,Estrasburgo,2,Andrew Fuller,1,Speedy Express,2016-07-20,2016-08-17,2016-08-07,1176.0,470.4,False,18.0,False
-10266,WARTH,Wartian Herkku,Oulu,3,Janet Leverling,3,Federal Shipping,2016-07-21,2016-09-01,2016-07-26,364.8,145.92,False,5.0,False
-10267,FRANK,Frankenversand,München,4,Margaret Peacock,1,Speedy Express,2016-07-24,2016-08-21,2016-08-01,4031.0,1612.4,False,8.0,False
-10268,GROSR,GROSELLA-Restaurante,Caracas,8,Laura Callahan,3,Federal Shipping,2016-07-25,2016-08-22,2016-07-28,1101.2,440.48,False,3.0,False
-10269,WHITC,White Clover Markets,Seattle,5,Steven Buchanan,1,Speedy Express,2016-07-26,2016-08-09,2016-08-04,676.0,270.4,False,9.0,False
-10270,WARTH,Wartian Herkku,Oulu,1,Nancy Davolio,1,Speedy Express,2016-07-27,2016-08-24,2016-07-28,1376.0,550.4,False,1.0,False
-10271,SPLIR,Split Rail Beer & Ale,Lander,6,Michael Suyama,2,United Package,2016-07-27,2016-08-24,2016-08-25,48.0,19.2,False,29.0,True
-10272,RATTC,Rattlesnake Canyon Grocery,Albuquerque,6,Michael Suyama,2,United Package,2016-07-28,2016-08-25,2016-08-01,1456.0,582.4,False,4.0,False
-10273,QUICK,QUICK-Stop,Cunewalde,3,Janet Leverling,3,Federal Shipping,2016-07-31,2016-08-28,2016-08-07,2142.4,856.96,False,7.0,False
-10274,VINET,Vins et alcools Chevalier,Reims,6,Michael Suyama,1,Speedy Express,2016-08-01,2016-08-29,2016-08-11,538.6,215.44,False,10.0,False
-10275,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,1,Nancy Davolio,1,Speedy Express,2016-08-02,2016-08-30,2016-08-04,307.2,122.88,False,2.0,False
-10276,TORTU,Tortuga Restaurante,México D.F.,8,Laura Callahan,3,Federal Shipping,2016-08-03,2016-08-17,2016-08-09,420.0,168.0,False,6.0,False
-10277,MORGK,Morgenstern Gesundkost,Leipzig,2,Andrew Fuller,3,Federal Shipping,2016-08-04,2016-09-01,2016-08-08,1200.8,480.32,False,4.0,False
-10278,BERGS,Berglunds snabbköp,Luleå,8,Laura Callahan,2,United Package,2016-08-07,2016-09-04,2016-08-11,1488.8,595.52,False,4.0,False
-10279,LEHMS,Lehmanns Marktstand,Fráncfort,8,Laura Callahan,2,United Package,2016-08-08,2016-09-05,2016-08-11,468.0,187.2,False,3.0,False
-10280,BERGS,Berglunds snabbköp,Luleå,2,Andrew Fuller,1,Speedy Express,2016-08-09,2016-09-06,2016-09-07,613.2,245.28,False,29.0,True
-10281,ROMEY,Romero y tomillo,Madrid,4,Margaret Peacock,1,Speedy Express,2016-08-09,2016-08-23,2016-08-16,86.5,34.6,False,7.0,False
-10282,ROMEY,Romero y tomillo,Madrid,4,Margaret Peacock,1,Speedy Express,2016-08-10,2016-09-07,2016-08-16,155.4,62.16,False,6.0,False
-10283,LILAS,LILA-Supermercado,Barquisimeto,3,Janet Leverling,3,Federal Shipping,2016-08-11,2016-09-08,2016-08-18,1414.8,565.92,False,7.0,False
-10284,LEHMS,Lehmanns Marktstand,Fráncfort,4,Margaret Peacock,1,Speedy Express,2016-08-14,2016-09-11,2016-08-22,1452.0,580.8,False,8.0,False
-10285,QUICK,QUICK-Stop,Cunewalde,1,Nancy Davolio,2,United Package,2016-08-15,2016-09-12,2016-08-21,2179.2,871.68,False,6.0,False
-10286,QUICK,QUICK-Stop,Cunewalde,8,Laura Callahan,3,Federal Shipping,2016-08-16,2016-09-13,2016-08-25,3016.0,1206.4,False,9.0,False
-10287,RICAR,Ricardo Adocicados,Rio de Janeiro,8,Laura Callahan,3,Federal Shipping,2016-08-17,2016-09-14,2016-08-23,924.0,369.6,False,6.0,False
-10288,REGGC,Reggiani Caseifici,Reggio Emilia,4,Margaret Peacock,1,Speedy Express,2016-08-18,2016-09-15,2016-08-29,89.0,35.6,False,11.0,False
-10289,BSBEV,B's Beverages,Londres,7,Robert King,3,Federal Shipping,2016-08-21,2016-09-18,2016-08-23,479.4,191.76,False,2.0,False
-10290,COMMI,Comércio Mineiro,São Paulo,8,Laura Callahan,1,Speedy Express,2016-08-22,2016-09-19,2016-08-29,2169.0,867.6,False,7.0,False
-10291,QUEDE,Que Delícia,Rio de Janeiro,6,Michael Suyama,2,United Package,2016-08-22,2016-09-19,2016-08-30,552.8,221.12,False,8.0,False
-10292,TRADH,Tradição Hipermercados,São Paulo,1,Nancy Davolio,2,United Package,2016-08-23,2016-09-20,2016-08-28,1296.0,518.4,False,5.0,False
-10293,TORTU,Tortuga Restaurante,México D.F.,1,Nancy Davolio,3,Federal Shipping,2016-08-24,2016-09-21,2016-09-06,848.7,339.48,False,13.0,False
-10294,RATTC,Rattlesnake Canyon Grocery,Albuquerque,4,Margaret Peacock,2,United Package,2016-08-25,2016-09-22,2016-08-31,1887.6,755.04,False,6.0,False
-10295,VINET,Vins et alcools Chevalier,Reims,2,Andrew Fuller,2,United Package,2016-08-28,2016-09-25,2016-09-05,121.6,48.64,False,8.0,False
-10296,LILAS,LILA-Supermercado,Barquisimeto,6,Michael Suyama,1,Speedy Express,2016-08-29,2016-09-26,2016-09-06,1050.6,420.24,False,8.0,False
-10297,BLONP,Blondel père et fils,Estrasburgo,5,Steven Buchanan,2,United Package,2016-08-30,2016-10-11,2016-09-05,1420.0,568.0,False,6.0,False
-10298,HUNGO,Hungry Owl All-Night Grocers,Cork,6,Michael Suyama,2,United Package,2016-08-31,2016-09-28,2016-09-06,3127.0,1250.8,False,6.0,False
-10299,RICAR,Ricardo Adocicados,Rio de Janeiro,4,Margaret Peacock,2,United Package,2016-09-01,2016-09-29,2016-09-08,349.5,139.8,False,7.0,False
-10300,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,2,Andrew Fuller,2,United Package,2016-09-04,2016-10-02,2016-09-13,608.0,243.2,False,9.0,False
-10301,WANDK,Die Wandernde Kuh,Stuttgart,8,Laura Callahan,2,United Package,2016-09-04,2016-10-02,2016-09-12,755.0,302.0,False,8.0,False
-10302,SUPRD,Suprêmes délices,Charleroi,4,Margaret Peacock,2,United Package,2016-09-05,2016-10-03,2016-10-04,2708.8,1083.52,False,29.0,True
-10303,GODOS,Godos Cocina Típica,Sevilla,7,Robert King,2,United Package,2016-09-06,2016-10-04,2016-09-13,1242.0,496.79999999999995,False,7.0,False
-10304,TORTU,Tortuga Restaurante,México D.F.,1,Nancy Davolio,2,United Package,2016-09-07,2016-10-05,2016-09-12,954.4,381.76,False,5.0,False
-10305,OLDWO,Old World Delicatessen,Anchorage,8,Laura Callahan,3,Federal Shipping,2016-09-08,2016-10-06,2016-10-04,4157.0,1662.8,False,26.0,False
-10306,ROMEY,Romero y tomillo,Madrid,1,Nancy Davolio,3,Federal Shipping,2016-09-11,2016-10-09,2016-09-18,498.5,199.39999999999998,False,7.0,False
-10307,LONEP,Lonesome Pine Restaurant,Portland,2,Andrew Fuller,2,United Package,2016-09-12,2016-10-10,2016-09-20,424.0,169.6,False,8.0,False
-10308,ANATR,Ana Trujillo Emparedados y helados,México D.F.,7,Robert King,3,Federal Shipping,2016-09-13,2016-10-11,2016-09-19,88.8,35.519999999999996,False,6.0,False
-10309,HUNGO,Hungry Owl All-Night Grocers,Cork,3,Janet Leverling,1,Speedy Express,2016-09-14,2016-10-12,2016-10-18,1762.0,704.8,False,34.0,True
-10310,THEBI,The Big Cheese,Portland,8,Laura Callahan,2,United Package,2016-09-15,2016-10-13,2016-09-22,336.0,134.4,False,7.0,False
-10311,DUMON,Du monde entier,Nantes,1,Nancy Davolio,3,Federal Shipping,2016-09-15,2016-09-29,2016-09-21,268.8,107.52,False,6.0,False
-10312,WANDK,Die Wandernde Kuh,Stuttgart,2,Andrew Fuller,2,United Package,2016-09-18,2016-10-16,2016-09-28,1614.8,645.92,False,10.0,False
-10313,QUICK,QUICK-Stop,Cunewalde,2,Andrew Fuller,2,United Package,2016-09-19,2016-10-17,2016-09-29,182.4,72.96,False,10.0,False
-10314,RATTC,Rattlesnake Canyon Grocery,Albuquerque,1,Nancy Davolio,2,United Package,2016-09-20,2016-10-18,2016-09-29,2327.0,930.8,False,9.0,False
-10315,ISLAT,Island Trading,Cowes,4,Margaret Peacock,2,United Package,2016-09-21,2016-10-19,2016-09-28,516.8,206.72,False,7.0,False
-10316,RATTC,Rattlesnake Canyon Grocery,Albuquerque,1,Nancy Davolio,3,Federal Shipping,2016-09-22,2016-10-20,2016-10-03,2835.0,1134.0,False,11.0,False
-10317,LONEP,Lonesome Pine Restaurant,Portland,6,Michael Suyama,1,Speedy Express,2016-09-25,2016-10-23,2016-10-05,288.0,115.2,False,10.0,False
-10318,ISLAT,Island Trading,Cowes,8,Laura Callahan,2,United Package,2016-09-26,2016-10-24,2016-09-29,240.4,96.16,False,3.0,False
-10319,TORTU,Tortuga Restaurante,México D.F.,7,Robert King,3,Federal Shipping,2016-09-27,2016-10-25,2016-10-06,1191.2,476.48,False,9.0,False
-10320,WARTH,Wartian Herkku,Oulu,5,Steven Buchanan,3,Federal Shipping,2016-09-28,2016-10-12,2016-10-13,516.0,206.4,False,15.0,True
-10321,ISLAT,Island Trading,Cowes,3,Janet Leverling,2,United Package,2016-09-28,2016-10-26,2016-10-06,144.0,57.6,False,8.0,False
-10322,PERIC,Pericles Comidas clásicas,México D.F.,7,Robert King,3,Federal Shipping,2016-09-29,2016-10-27,2016-10-18,112.0,44.8,False,19.0,False
-10323,KOENE,Königlich Essen,Brandenburgo,4,Margaret Peacock,1,Speedy Express,2016-10-02,2016-10-30,2016-10-09,164.4,65.76,False,7.0,False
-10324,SAVEA,Save-a-lot Markets,Boise,9,Anne Dodsworth,1,Speedy Express,2016-10-03,2016-10-31,2016-10-05,6155.9,2462.36,False,2.0,False
-10325,KOENE,Königlich Essen,Brandenburgo,1,Nancy Davolio,3,Federal Shipping,2016-10-04,2016-10-18,2016-10-09,1497.0,598.8,False,5.0,False
-10326,BOLID,Bólido Comidas preparadas,Madrid,4,Margaret Peacock,2,United Package,2016-10-05,2016-11-02,2016-10-09,982.0,392.8,False,4.0,False
-10327,FOLKO,Folk och fä HB,Bräcke,2,Andrew Fuller,1,Speedy Express,2016-10-06,2016-11-03,2016-10-09,2262.5,905.0,False,3.0,False
-10328,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,4,Margaret Peacock,3,Federal Shipping,2016-10-09,2016-11-06,2016-10-12,1168.0,467.20000000000005,False,3.0,False
-10329,SPLIR,Split Rail Beer & Ale,Lander,4,Margaret Peacock,2,United Package,2016-10-10,2016-11-21,2016-10-18,4819.4,1927.76,False,8.0,False
-10330,LILAS,LILA-Supermercado,Barquisimeto,3,Janet Leverling,1,Speedy Express,2016-10-11,2016-11-08,2016-10-23,1940.0,776.0,False,12.0,False
-10331,BONAP,Bon app',Marsella,9,Anne Dodsworth,1,Speedy Express,2016-10-11,2016-11-22,2016-10-16,88.5,35.4,False,5.0,False
-10332,MEREP,Mère Paillarde,Montreal,3,Janet Leverling,2,United Package,2016-10-12,2016-11-23,2016-10-16,2233.6,893.4399999999999,False,4.0,False
-10333,WARTH,Wartian Herkku,Oulu,5,Steven Buchanan,3,Federal Shipping,2016-10-13,2016-11-10,2016-10-20,954.0,381.59999999999997,False,7.0,False
-10334,VICTE,Victuailles en stock,Lyon,8,Laura Callahan,2,United Package,2016-10-16,2016-11-13,2016-10-23,144.8,57.92,False,7.0,False
-10335,HUNGO,Hungry Owl All-Night Grocers,Cork,7,Robert King,2,United Package,2016-10-17,2016-11-14,2016-10-19,2545.2000000000003,1018.0799999999999,False,2.0,False
-10336,PRINI,Princesa Isabel Vinhos,Lisboa,7,Robert King,2,United Package,2016-10-18,2016-11-15,2016-10-20,316.8,126.72,False,2.0,False
-10337,FRANK,Frankenversand,München,4,Margaret Peacock,3,Federal Shipping,2016-10-19,2016-11-16,2016-10-24,2467.0,986.8,False,5.0,False
-10338,OLDWO,Old World Delicatessen,Anchorage,4,Margaret Peacock,3,Federal Shipping,2016-10-20,2016-11-17,2016-10-24,934.5,373.8,False,4.0,False
-10339,MEREP,Mère Paillarde,Montreal,2,Andrew Fuller,2,United Package,2016-10-23,2016-11-20,2016-10-30,3463.2,1385.28,False,7.0,False
-10340,BONAP,Bon app',Marsella,1,Nancy Davolio,3,Federal Shipping,2016-10-24,2016-11-21,2016-11-03,2564.4,1025.76,False,10.0,False
-10341,SIMOB,Simons bistro,København,7,Robert King,3,Federal Shipping,2016-10-24,2016-11-21,2016-10-31,412.0,164.8,False,7.0,False
-10342,FRANK,Frankenversand,München,4,Margaret Peacock,2,United Package,2016-10-25,2016-11-08,2016-10-30,2300.8,920.3199999999999,False,5.0,False
-10343,LEHMS,Lehmanns Marktstand,Fráncfort,4,Margaret Peacock,1,Speedy Express,2016-10-26,2016-11-23,2016-11-01,1586.0,634.4,False,6.0,False
-10344,WHITC,White Clover Markets,Seattle,4,Margaret Peacock,2,United Package,2016-10-27,2016-11-24,2016-10-31,2856.0,1142.4,False,4.0,False
-10345,QUICK,QUICK-Stop,Cunewalde,2,Andrew Fuller,2,United Package,2016-10-30,2016-11-27,2016-11-06,2924.8,1169.92,False,7.0,False
-10346,RATTC,Rattlesnake Canyon Grocery,Albuquerque,3,Janet Leverling,3,Federal Shipping,2016-10-31,2016-12-12,2016-11-03,1731.2,692.48,False,3.0,False
-10347,FAMIA,Familia Arquibaldo,São Paulo,4,Margaret Peacock,3,Federal Shipping,2016-11-01,2016-11-29,2016-11-03,928.0,371.2,False,2.0,False
-10348,WANDK,Die Wandernde Kuh,Stuttgart,4,Margaret Peacock,2,United Package,2016-11-02,2016-11-30,2016-11-10,396.0,158.4,False,8.0,False
-10349,SPLIR,Split Rail Beer & Ale,Lander,7,Robert King,1,Speedy Express,2016-11-03,2016-12-01,2016-11-10,141.6,56.64,False,7.0,False
-10350,LAMAI,La maison d'Asie,Toulouse,6,Michael Suyama,2,United Package,2016-11-06,2016-12-04,2016-11-28,713.4,285.36,False,22.0,False
-10351,ERNSH,Ernst Handel,Graz,1,Nancy Davolio,1,Speedy Express,2016-11-06,2016-12-04,2016-11-15,5677.6,2271.04,False,9.0,False
-10352,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,3,Janet Leverling,3,Federal Shipping,2016-11-07,2016-11-21,2016-11-13,154.0,61.6,False,6.0,False
-10353,PICCO,Piccolo und mehr,Salzburgo,7,Robert King,3,Federal Shipping,2016-11-08,2016-12-06,2016-11-20,10741.6,4296.64,False,12.0,False
-10354,PERIC,Pericles Comidas clásicas,México D.F.,8,Laura Callahan,3,Federal Shipping,2016-11-09,2016-12-07,2016-11-15,568.8,227.52,False,6.0,False
-10355,AROUT,Around the Horn,Londres,6,Michael Suyama,1,Speedy Express,2016-11-10,2016-12-08,2016-11-15,480.0,192.0,False,5.0,False
-10356,WANDK,Die Wandernde Kuh,Stuttgart,6,Michael Suyama,2,United Package,2016-11-13,2016-12-11,2016-11-22,1106.4,442.56,False,9.0,False
-10357,LILAS,LILA-Supermercado,Barquisimeto,1,Nancy Davolio,3,Federal Shipping,2016-11-14,2016-12-12,2016-11-27,1360.0,544.0,False,13.0,False
-10358,LAMAI,La maison d'Asie,Toulouse,5,Steven Buchanan,1,Speedy Express,2016-11-15,2016-12-13,2016-11-22,452.0,180.79999999999998,False,7.0,False
-10359,SEVES,Seven Seas Imports,Londres,5,Steven Buchanan,3,Federal Shipping,2016-11-16,2016-12-14,2016-11-21,3654.4,1461.76,False,5.0,False
-10360,BLONP,Blondel père et fils,Estrasburgo,4,Margaret Peacock,3,Federal Shipping,2016-11-17,2016-12-15,2016-11-27,7390.2,2956.0800000000004,False,10.0,False
-10361,QUICK,QUICK-Stop,Cunewalde,1,Nancy Davolio,2,United Package,2016-11-17,2016-12-15,2016-11-28,2273.6,909.44,False,11.0,False
-10362,BONAP,Bon app',Marsella,3,Janet Leverling,1,Speedy Express,2016-11-20,2016-12-18,2016-11-23,1549.6,619.8399999999999,False,3.0,False
-10363,DRACD,Drachenblut Delikatessen,Aachen,4,Margaret Peacock,3,Federal Shipping,2016-11-21,2016-12-19,2016-11-29,447.20000000000005,178.88,False,8.0,False
-10364,EASTC,Eastern Connection,Londres,1,Nancy Davolio,1,Speedy Express,2016-11-21,2017-01-02,2016-11-29,950.0,380.0,False,8.0,False
-10365,ANTON,Antonio Moreno Taquería,México D.F.,3,Janet Leverling,2,United Package,2016-11-22,2016-12-20,2016-11-27,403.2,161.28,False,5.0,False
-10366,GALED,Galería del gastrónomo,Barcelona,8,Laura Callahan,2,United Package,2016-11-23,2017-01-04,2016-12-25,136.0,54.400000000000006,False,32.0,False
-10367,VAFFE,Vaffeljernet,Århus,7,Robert King,3,Federal Shipping,2016-11-23,2016-12-21,2016-11-27,834.1999999999999,333.68,False,4.0,False
-10368,ERNSH,Ernst Handel,Graz,2,Andrew Fuller,2,United Package,2016-11-24,2016-12-22,2016-11-27,1834.2,733.68,False,3.0,False
-10369,SPLIR,Split Rail Beer & Ale,Lander,8,Laura Callahan,2,United Package,2016-11-27,2016-12-25,2016-12-04,2527.2,1010.88,False,7.0,False
-10370,CHOPS,Centro comercial Moctezuma,México D.F.,6,Michael Suyama,2,United Package,2016-11-28,2016-12-26,2016-12-22,1174.0,469.6,False,24.0,False
-10371,LAMAI,La maison d'Asie,Toulouse,1,Nancy Davolio,1,Speedy Express,2016-11-28,2016-12-26,2016-12-19,91.2,36.48,False,21.0,False
-10372,QUEEN,Queen Cozinha,São Paulo,5,Steven Buchanan,2,United Package,2016-11-29,2016-12-27,2016-12-04,12281.2,4912.4800000000005,False,5.0,False
-10373,HUNGO,Hungry Owl All-Night Grocers,Cork,4,Margaret Peacock,3,Federal Shipping,2016-11-30,2016-12-28,2016-12-06,1708.0,683.2,False,6.0,False
-10374,WOLZA,Wolski Zajazd,Warszawa,1,Nancy Davolio,3,Federal Shipping,2016-11-30,2016-12-28,2016-12-04,459.0,183.6,False,4.0,False
-10375,HUNGC,Hungry Coyote Import Store,Elgin,3,Janet Leverling,2,United Package,2016-12-01,2016-12-29,2016-12-04,338.0,135.2,False,3.0,False
-10376,MEREP,Mère Paillarde,Montreal,1,Nancy Davolio,2,United Package,2016-12-04,2017-01-01,2016-12-08,420.0,168.0,False,4.0,False
-10377,SEVES,Seven Seas Imports,Londres,1,Nancy Davolio,3,Federal Shipping,2016-12-04,2017-01-01,2016-12-08,1016.0,406.4,False,4.0,False
-10378,FOLKO,Folk och fä HB,Bräcke,5,Steven Buchanan,3,Federal Shipping,2016-12-05,2017-01-02,2016-12-14,103.2,41.28,False,9.0,False
-10379,QUEDE,Que Delícia,Rio de Janeiro,2,Andrew Fuller,1,Speedy Express,2016-12-06,2017-01-03,2016-12-08,959.2,383.68,False,2.0,False
-10380,HUNGO,Hungry Owl All-Night Grocers,Cork,8,Laura Callahan,3,Federal Shipping,2016-12-07,2017-01-04,2017-01-11,1419.8,567.92,False,35.0,True
-10381,LILAS,LILA-Supermercado,Barquisimeto,3,Janet Leverling,3,Federal Shipping,2016-12-07,2017-01-04,2016-12-08,112.0,44.8,False,1.0,False
-10382,ERNSH,Ernst Handel,Graz,4,Margaret Peacock,1,Speedy Express,2016-12-08,2017-01-05,2016-12-11,2900.0,1160.0,False,3.0,False
-10383,AROUT,Around the Horn,Londres,8,Laura Callahan,3,Federal Shipping,2016-12-11,2017-01-08,2016-12-13,899.0,359.6,False,2.0,False
-10384,BERGS,Berglunds snabbköp,Luleå,3,Janet Leverling,3,Federal Shipping,2016-12-11,2017-01-08,2016-12-15,2222.4,888.96,False,4.0,False
-10385,SPLIR,Split Rail Beer & Ale,Lander,1,Nancy Davolio,2,United Package,2016-12-12,2017-01-09,2016-12-18,864.0,345.6,False,6.0,False
-10386,FAMIA,Familia Arquibaldo,São Paulo,9,Anne Dodsworth,3,Federal Shipping,2016-12-13,2016-12-27,2016-12-20,166.0,66.4,False,7.0,False
-10387,SANTG,Santé Gourmet,Stavern,1,Nancy Davolio,2,United Package,2016-12-13,2017-01-10,2016-12-15,1058.4,423.36,False,2.0,False
-10388,SEVES,Seven Seas Imports,Londres,2,Andrew Fuller,1,Speedy Express,2016-12-14,2017-01-11,2016-12-15,1274.0,509.59999999999997,False,1.0,False
-10389,BOTTM,Bottom-Dollar Markets,Tsawassen,4,Margaret Peacock,2,United Package,2016-12-15,2017-01-12,2016-12-19,1832.8,733.12,False,4.0,False
-10390,ERNSH,Ernst Handel,Graz,6,Michael Suyama,1,Speedy Express,2016-12-18,2017-01-15,2016-12-21,2275.2,910.0799999999999,False,3.0,False
-10391,DRACD,Drachenblut Delikatessen,Aachen,3,Janet Leverling,3,Federal Shipping,2016-12-18,2017-01-15,2016-12-26,86.4,34.56,False,8.0,False
-10392,PICCO,Piccolo und mehr,Salzburgo,2,Andrew Fuller,3,Federal Shipping,2016-12-19,2017-01-16,2016-12-27,1440.0,576.0,False,8.0,False
-10393,SAVEA,Save-a-lot Markets,Boise,1,Nancy Davolio,3,Federal Shipping,2016-12-20,2017-01-17,2016-12-29,3302.6,1321.04,False,9.0,False
-10394,HUNGC,Hungry Coyote Import Store,Elgin,1,Nancy Davolio,3,Federal Shipping,2016-12-20,2017-01-17,2016-12-29,442.0,176.79999999999998,False,9.0,False
-10395,HILAA,HILARIÓN-Abastos,San Cristóbal,6,Michael Suyama,1,Speedy Express,2016-12-21,2017-01-18,2016-12-29,2333.2,933.28,False,8.0,False
-10396,FRANK,Frankenversand,München,1,Nancy Davolio,3,Federal Shipping,2016-12-22,2017-01-05,2017-01-01,1903.8,761.52,False,10.0,False
-10397,PRINI,Princesa Isabel Vinhos,Lisboa,5,Steven Buchanan,1,Speedy Express,2016-12-22,2017-01-19,2016-12-28,843.2,337.28,False,6.0,False
-10398,SAVEA,Save-a-lot Markets,Boise,2,Andrew Fuller,3,Federal Shipping,2016-12-25,2017-01-22,2017-01-04,2736.0,1094.4,False,10.0,False
-10399,VAFFE,Vaffeljernet,Århus,8,Laura Callahan,3,Federal Shipping,2016-12-26,2017-01-09,2017-01-03,1765.6,706.24,False,8.0,False
-10400,EASTC,Eastern Connection,Londres,1,Nancy Davolio,3,Federal Shipping,2016-12-27,2017-01-24,2017-01-11,3063.0,1225.2,False,15.0,False
-10401,RATTC,Rattlesnake Canyon Grocery,Albuquerque,1,Nancy Davolio,1,Speedy Express,2016-12-27,2017-01-24,2017-01-05,3868.6,1547.44,False,9.0,False
-10402,ERNSH,Ernst Handel,Graz,8,Laura Callahan,2,United Package,2016-12-28,2017-02-08,2017-01-05,2713.5,1085.4,False,8.0,False
-10403,ERNSH,Ernst Handel,Graz,4,Margaret Peacock,3,Federal Shipping,2016-12-29,2017-01-26,2017-01-04,1005.9,402.36,False,6.0,False
-10404,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,2,Andrew Fuller,1,Speedy Express,2016-12-29,2017-01-26,2017-01-03,1675.0,670.0,False,5.0,False
-10405,LINOD,LINO-Delicateses,I. de Margarita,1,Nancy Davolio,1,Speedy Express,2017-01-01,2017-01-29,2017-01-17,400.0,160.0,False,16.0,False
-10406,QUEEN,Queen Cozinha,São Paulo,7,Robert King,1,Speedy Express,2017-01-02,2017-02-13,2017-01-08,2018.2,807.28,False,6.0,False
-10407,OTTIK,Ottilies Käseladen,Köln,2,Andrew Fuller,2,United Package,2017-01-02,2017-01-30,2017-01-25,1194.0,477.6,False,23.0,False
-10408,FOLIG,Folies gourmandes,Lille,8,Laura Callahan,1,Speedy Express,2017-01-03,2017-01-31,2017-01-09,1622.4,648.96,False,6.0,False
-10409,OCEAN,Océano Atlántico Ltda.,Buenos Aires,3,Janet Leverling,1,Speedy Express,2017-01-04,2017-02-01,2017-01-09,319.2,127.68,False,5.0,False
-10410,BOTTM,Bottom-Dollar Markets,Tsawassen,3,Janet Leverling,3,Federal Shipping,2017-01-05,2017-02-02,2017-01-10,802.0,320.8,False,5.0,False
-10411,BOTTM,Bottom-Dollar Markets,Tsawassen,9,Anne Dodsworth,3,Federal Shipping,2017-01-05,2017-02-02,2017-01-16,1208.5,483.4,False,11.0,False
-10412,WARTH,Wartian Herkku,Oulu,8,Laura Callahan,2,United Package,2017-01-08,2017-02-05,2017-01-10,372.0,148.8,False,2.0,False
-10413,LAMAI,La maison d'Asie,Toulouse,3,Janet Leverling,2,United Package,2017-01-09,2017-02-06,2017-01-11,2123.2,849.28,False,2.0,False
-10414,FAMIA,Familia Arquibaldo,São Paulo,2,Andrew Fuller,3,Federal Shipping,2017-01-09,2017-02-06,2017-01-12,231.4,92.56,False,3.0,False
-10415,HUNGC,Hungry Coyote Import Store,Elgin,3,Janet Leverling,1,Speedy Express,2017-01-10,2017-02-07,2017-01-19,102.4,40.96,False,9.0,False
-10416,WARTH,Wartian Herkku,Oulu,8,Laura Callahan,3,Federal Shipping,2017-01-11,2017-02-08,2017-01-22,720.0,288.0,False,11.0,False
-10417,SIMOB,Simons bistro,København,4,Margaret Peacock,3,Federal Shipping,2017-01-11,2017-02-08,2017-01-23,11283.2,4513.28,False,12.0,False
-10418,QUICK,QUICK-Stop,Cunewalde,4,Margaret Peacock,1,Speedy Express,2017-01-12,2017-02-09,2017-01-19,1814.8,725.92,False,7.0,False
-10419,RICSU,Richter Supermarkt,Génova,4,Margaret Peacock,2,United Package,2017-01-15,2017-02-12,2017-01-25,2208.0,883.1999999999999,False,10.0,False
-10420,WELLI,Wellington Importadora,Resende,3,Janet Leverling,1,Speedy Express,2017-01-16,2017-02-13,2017-01-22,1897.6,759.04,False,6.0,False
-10421,QUEDE,Que Delícia,Rio de Janeiro,8,Laura Callahan,1,Speedy Express,2017-01-16,2017-02-27,2017-01-22,1273.2,509.28,False,6.0,False
-10422,FRANS,Franchi S.p.A.,Torino,2,Andrew Fuller,1,Speedy Express,2017-01-17,2017-02-14,2017-01-26,49.8,19.92,False,9.0,False
-10423,GOURL,Gourmet Lanchonetes,Campinas,6,Michael Suyama,3,Federal Shipping,2017-01-18,2017-02-01,2017-02-19,1020.0,408.0,False,32.0,True
-10424,MEREP,Mère Paillarde,Montreal,7,Robert King,2,United Package,2017-01-18,2017-02-15,2017-01-22,11493.2,4597.280000000001,False,4.0,False
-10425,LAMAI,La maison d'Asie,Toulouse,6,Michael Suyama,2,United Package,2017-01-19,2017-02-16,2017-02-09,480.0,192.0,False,21.0,False
-10426,GALED,Galería del gastrónomo,Barcelona,4,Margaret Peacock,1,Speedy Express,2017-01-22,2017-02-19,2017-02-01,338.2,135.28,False,10.0,False
-10427,PICCO,Piccolo und mehr,Salzburgo,4,Margaret Peacock,2,United Package,2017-01-22,2017-02-19,2017-02-26,651.0,260.4,False,35.0,True
-10428,REGGC,Reggiani Caseifici,Reggio Emilia,7,Robert King,1,Speedy Express,2017-01-23,2017-02-20,2017-01-30,192.0,76.8,False,7.0,False
-10429,HUNGO,Hungry Owl All-Night Grocers,Cork,3,Janet Leverling,2,United Package,2017-01-24,2017-03-07,2017-02-02,1748.5,699.4,False,9.0,False
-10430,ERNSH,Ernst Handel,Graz,4,Margaret Peacock,1,Speedy Express,2017-01-25,2017-02-08,2017-01-29,5796.0,2318.4,False,4.0,False
-10431,BOTTM,Bottom-Dollar Markets,Tsawassen,4,Margaret Peacock,2,United Package,2017-01-25,2017-02-08,2017-02-02,2523.0,1009.2,False,8.0,False
-10432,SPLIR,Split Rail Beer & Ale,Lander,3,Janet Leverling,2,United Package,2017-01-26,2017-02-09,2017-02-02,485.0,194.0,False,7.0,False
-10433,PRINI,Princesa Isabel Vinhos,Lisboa,3,Janet Leverling,3,Federal Shipping,2017-01-29,2017-02-26,2017-02-27,851.2,340.48,False,29.0,True
-10434,FOLKO,Folk och fä HB,Bräcke,3,Janet Leverling,2,United Package,2017-01-29,2017-02-26,2017-02-08,360.0,144.0,False,10.0,False
-10435,CONSH,Consolidated Holdings,Londres,8,Laura Callahan,2,United Package,2017-01-30,2017-03-13,2017-02-02,631.6,252.64,False,3.0,False
-10436,BLONP,Blondel père et fils,Estrasburgo,3,Janet Leverling,2,United Package,2017-01-31,2017-02-28,2017-02-06,2210.8,884.3199999999999,False,6.0,False
-10437,WARTH,Wartian Herkku,Oulu,8,Laura Callahan,1,Speedy Express,2017-01-31,2017-02-28,2017-02-07,393.0,157.2,False,7.0,False
-10438,TOMSP,Toms Spezialitäten,Münster,3,Janet Leverling,2,United Package,2017-02-01,2017-03-01,2017-02-09,567.5,227.0,False,8.0,False
-10439,MEREP,Mère Paillarde,Montreal,6,Michael Suyama,3,Federal Shipping,2017-02-02,2017-03-02,2017-02-05,1078.0,431.2,False,3.0,False
-10440,SAVEA,Save-a-lot Markets,Boise,4,Margaret Peacock,2,United Package,2017-02-05,2017-03-05,2017-02-23,5793.1,2317.24,False,18.0,False
-10441,OLDWO,Old World Delicatessen,Anchorage,3,Janet Leverling,2,United Package,2017-02-05,2017-03-19,2017-03-09,1755.0,702.0,False,32.0,False
-10442,ERNSH,Ernst Handel,Graz,3,Janet Leverling,2,United Package,2017-02-06,2017-03-06,2017-02-13,1792.0,716.8,False,7.0,False
-10443,REGGC,Reggiani Caseifici,Reggio Emilia,8,Laura Callahan,1,Speedy Express,2017-02-07,2017-03-07,2017-02-09,537.6,215.04,False,2.0,False
-10444,BERGS,Berglunds snabbköp,Luleå,3,Janet Leverling,3,Federal Shipping,2017-02-07,2017-03-07,2017-02-16,1031.7,412.68,False,9.0,False
-10445,BERGS,Berglunds snabbköp,Luleå,3,Janet Leverling,1,Speedy Express,2017-02-08,2017-03-08,2017-02-15,174.9,69.96000000000001,False,7.0,False
-10446,TOMSP,Toms Spezialitäten,Münster,6,Michael Suyama,1,Speedy Express,2017-02-09,2017-03-09,2017-02-14,273.6,109.44,False,5.0,False
-10447,RICAR,Ricardo Adocicados,Rio de Janeiro,4,Margaret Peacock,2,United Package,2017-02-09,2017-03-09,2017-03-02,914.4,365.76,False,21.0,False
-10448,RANCH,Rancho grande,Buenos Aires,4,Margaret Peacock,2,United Package,2017-02-12,2017-03-12,2017-02-19,443.4,177.35999999999999,False,7.0,False
-10449,BLONP,Blondel père et fils,Estrasburgo,3,Janet Leverling,2,United Package,2017-02-13,2017-03-13,2017-02-22,1838.2,735.28,False,9.0,False
-10450,VICTE,Victuailles en stock,Lyon,8,Laura Callahan,2,United Package,2017-02-14,2017-03-14,2017-03-06,531.4,212.56,False,20.0,False
-10451,QUICK,QUICK-Stop,Cunewalde,4,Margaret Peacock,3,Federal Shipping,2017-02-14,2017-02-28,2017-03-07,4277.4,1710.96,False,21.0,True
-10452,SAVEA,Save-a-lot Markets,Boise,8,Laura Callahan,1,Speedy Express,2017-02-15,2017-03-15,2017-02-21,2096.0,838.4,False,6.0,False
-10453,AROUT,Around the Horn,Londres,1,Nancy Davolio,2,United Package,2017-02-16,2017-03-16,2017-02-21,453.0,181.2,False,5.0,False
-10454,LAMAI,La maison d'Asie,Toulouse,4,Margaret Peacock,3,Federal Shipping,2017-02-16,2017-03-16,2017-02-20,414.0,165.6,False,4.0,False
-10455,WARTH,Wartian Herkku,Oulu,8,Laura Callahan,2,United Package,2017-02-19,2017-04-02,2017-02-26,2684.0,1073.6000000000001,False,7.0,False
-10456,KOENE,Königlich Essen,Brandenburgo,8,Laura Callahan,2,United Package,2017-02-20,2017-04-03,2017-02-23,656.0,262.4,False,3.0,False
-10457,KOENE,Königlich Essen,Brandenburgo,2,Andrew Fuller,1,Speedy Express,2017-02-20,2017-03-20,2017-02-26,1584.0,633.6,False,6.0,False
-10458,SUPRD,Suprêmes délices,Charleroi,7,Robert King,3,Federal Shipping,2017-02-21,2017-03-21,2017-02-27,3891.0,1556.4,False,6.0,False
-10459,VICTE,Victuailles en stock,Lyon,4,Margaret Peacock,2,United Package,2017-02-22,2017-03-22,2017-02-23,1688.0,675.2,False,1.0,False
-10460,FOLKO,Folk och fä HB,Bräcke,8,Laura Callahan,1,Speedy Express,2017-02-23,2017-03-23,2017-02-26,234.8,93.92,False,3.0,False
-10461,LILAS,LILA-Supermercado,Barquisimeto,1,Nancy Davolio,3,Federal Shipping,2017-02-23,2017-03-23,2017-02-28,2051.6,820.64,False,5.0,False
-10462,CONSH,Consolidated Holdings,Londres,2,Andrew Fuller,1,Speedy Express,2017-02-26,2017-03-26,2017-03-13,156.0,62.4,False,15.0,False
-10463,SUPRD,Suprêmes délices,Charleroi,5,Steven Buchanan,3,Federal Shipping,2017-02-27,2017-03-27,2017-03-01,713.3,285.32,False,2.0,False
-10464,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,4,Margaret Peacock,2,United Package,2017-02-27,2017-03-27,2017-03-09,1848.0,739.2,False,10.0,False
-10465,VAFFE,Vaffeljernet,Århus,1,Nancy Davolio,3,Federal Shipping,2017-02-28,2017-03-28,2017-03-09,2719.0,1087.6,False,9.0,False
-10466,COMMI,Comércio Mineiro,São Paulo,4,Margaret Peacock,1,Speedy Express,2017-03-01,2017-03-29,2017-03-08,216.0,86.4,False,7.0,False
-10467,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,8,Laura Callahan,2,United Package,2017-03-01,2017-03-29,2017-03-06,235.2,94.08,False,5.0,False
-10468,KOENE,Königlich Essen,Brandenburgo,3,Janet Leverling,3,Federal Shipping,2017-03-02,2017-03-30,2017-03-07,717.6,287.04,False,5.0,False
-10469,WHITC,White Clover Markets,Seattle,1,Nancy Davolio,1,Speedy Express,2017-03-05,2017-04-02,2017-03-09,1125.5,450.2,False,4.0,False
-10470,BONAP,Bon app',Marsella,4,Margaret Peacock,2,United Package,2017-03-06,2017-04-03,2017-03-09,1820.8,728.3199999999999,False,3.0,False
-10471,BSBEV,B's Beverages,Londres,2,Andrew Fuller,3,Federal Shipping,2017-03-06,2017-04-03,2017-03-13,1328.0,531.2,False,7.0,False
-10472,SEVES,Seven Seas Imports,Londres,8,Laura Callahan,1,Speedy Express,2017-03-07,2017-04-04,2017-03-14,1051.2,420.47999999999996,False,7.0,False
-10473,ISLAT,Island Trading,Cowes,1,Nancy Davolio,3,Federal Shipping,2017-03-08,2017-03-22,2017-03-16,230.4,92.16,False,8.0,False
-10474,PERIC,Pericles Comidas clásicas,México D.F.,5,Steven Buchanan,2,United Package,2017-03-08,2017-04-05,2017-03-16,1249.1000000000001,499.64,False,8.0,False
-10475,SUPRD,Suprêmes délices,Charleroi,9,Anne Dodsworth,1,Speedy Express,2017-03-09,2017-04-06,2017-03-30,1770.8,708.3199999999999,False,21.0,False
-10476,HILAA,HILARIÓN-Abastos,San Cristóbal,8,Laura Callahan,3,Federal Shipping,2017-03-12,2017-04-09,2017-03-19,182.4,72.96000000000001,False,7.0,False
-10477,PRINI,Princesa Isabel Vinhos,Lisboa,5,Steven Buchanan,2,United Package,2017-03-12,2017-04-09,2017-03-20,672.0,268.8,False,8.0,False
-10478,VICTE,Victuailles en stock,Lyon,2,Andrew Fuller,3,Federal Shipping,2017-03-13,2017-03-27,2017-03-21,496.0,198.4,False,8.0,False
-10479,RATTC,Rattlesnake Canyon Grocery,Albuquerque,3,Janet Leverling,3,Federal Shipping,2017-03-14,2017-04-11,2017-03-16,10495.6,4198.24,False,2.0,False
-10480,FOLIG,Folies gourmandes,Lille,6,Michael Suyama,2,United Package,2017-03-15,2017-04-12,2017-03-19,756.0,302.4,False,4.0,False
-10481,RICAR,Ricardo Adocicados,Rio de Janeiro,8,Laura Callahan,2,United Package,2017-03-15,2017-04-12,2017-03-20,1472.0,588.8,False,5.0,False
-10482,LAZYK,Lazy K Kountry Store,Walla Walla,1,Nancy Davolio,3,Federal Shipping,2017-03-16,2017-04-13,2017-04-05,147.0,58.8,False,20.0,False
-10483,WHITC,White Clover Markets,Seattle,7,Robert King,2,United Package,2017-03-19,2017-04-16,2017-04-20,704.0,281.6,False,32.0,True
-10484,BSBEV,B's Beverages,Londres,3,Janet Leverling,3,Federal Shipping,2017-03-19,2017-04-16,2017-03-27,386.2,154.48,False,8.0,False
-10485,LINOD,LINO-Delicateses,I. de Margarita,4,Margaret Peacock,2,United Package,2017-03-20,2017-04-03,2017-03-26,1760.0,704.0,False,6.0,False
-10486,HILAA,HILARIÓN-Abastos,San Cristóbal,1,Nancy Davolio,2,United Package,2017-03-21,2017-04-18,2017-03-28,1272.0,508.8,False,7.0,False
-10487,QUEEN,Queen Cozinha,São Paulo,2,Andrew Fuller,2,United Package,2017-03-21,2017-04-18,2017-03-23,925.1,370.04,False,2.0,False
-10488,FRANK,Frankenversand,München,8,Laura Callahan,2,United Package,2017-03-22,2017-04-19,2017-03-28,1560.0,624.0,False,6.0,False
-10489,PICCO,Piccolo und mehr,Salzburgo,6,Michael Suyama,2,United Package,2017-03-23,2017-04-20,2017-04-04,502.2,200.88,False,12.0,False
-10490,HILAA,HILARIÓN-Abastos,San Cristóbal,7,Robert King,2,United Package,2017-03-26,2017-04-23,2017-03-29,3163.2,1265.28,False,3.0,False
-10491,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,8,Laura Callahan,3,Federal Shipping,2017-03-26,2017-04-23,2017-04-03,305.3,122.12,False,8.0,False
-10492,BOTTM,Bottom-Dollar Markets,Tsawassen,3,Janet Leverling,1,Speedy Express,2017-03-27,2017-04-24,2017-04-06,896.0,358.4,False,10.0,False
-10493,LAMAI,La maison d'Asie,Toulouse,4,Margaret Peacock,3,Federal Shipping,2017-03-28,2017-04-25,2017-04-05,676.0,270.4,False,8.0,False
-10494,COMMI,Comércio Mineiro,São Paulo,4,Margaret Peacock,2,United Package,2017-03-28,2017-04-25,2017-04-04,912.0,364.8,False,7.0,False
-10495,LAUGB,Laughing Bacchus Wine Cellars,Vancouver,3,Janet Leverling,3,Federal Shipping,2017-03-29,2017-04-26,2017-04-06,278.0,111.2,False,8.0,False
-10496,TRADH,Tradição Hipermercados,São Paulo,7,Robert King,2,United Package,2017-03-30,2017-04-27,2017-04-02,200.0,80.0,False,3.0,False
-10497,LEHMS,Lehmanns Marktstand,Fráncfort,7,Robert King,1,Speedy Express,2017-03-30,2017-04-27,2017-04-02,1380.6,552.24,False,3.0,False
-10498,HILAA,HILARIÓN-Abastos,San Cristóbal,8,Laura Callahan,2,United Package,2017-04-02,2017-04-30,2017-04-06,575.0,230.0,False,4.0,False
-10499,LILAS,LILA-Supermercado,Barquisimeto,4,Margaret Peacock,2,United Package,2017-04-03,2017-05-01,2017-04-11,1412.0,564.8,False,8.0,False
-10500,LAMAI,La maison d'Asie,Toulouse,6,Michael Suyama,1,Speedy Express,2017-04-04,2017-05-02,2017-04-12,550.8,220.32,False,8.0,False
-10501,BLAUS,Blauer See Delikatessen,Mannheim,9,Anne Dodsworth,3,Federal Shipping,2017-04-04,2017-05-02,2017-04-11,149.0,59.6,False,7.0,False
-10502,PERIC,Pericles Comidas clásicas,México D.F.,2,Andrew Fuller,1,Speedy Express,2017-04-05,2017-05-03,2017-04-24,816.3,326.52,False,19.0,False
-10503,HUNGO,Hungry Owl All-Night Grocers,Cork,6,Michael Suyama,2,United Package,2017-04-06,2017-05-04,2017-04-11,2048.5,819.4,False,5.0,False
-10504,WHITC,White Clover Markets,Seattle,4,Margaret Peacock,3,Federal Shipping,2017-04-06,2017-05-04,2017-04-13,1388.5,555.4,False,7.0,False
-10505,MEREP,Mère Paillarde,Montreal,3,Janet Leverling,3,Federal Shipping,2017-04-09,2017-05-07,2017-04-16,147.9,59.16,False,7.0,False
-10506,KOENE,Königlich Essen,Brandenburgo,9,Anne Dodsworth,2,United Package,2017-04-10,2017-05-08,2017-04-27,462.0,184.8,False,17.0,False
-10507,ANTON,Antonio Moreno Taquería,México D.F.,7,Robert King,1,Speedy Express,2017-04-10,2017-05-08,2017-04-17,881.25,352.5,False,7.0,False
-10508,OTTIK,Ottilies Käseladen,Köln,1,Nancy Davolio,2,United Package,2017-04-11,2017-05-09,2017-05-08,240.0,96.0,False,27.0,False
-10509,BLAUS,Blauer See Delikatessen,Mannheim,4,Margaret Peacock,1,Speedy Express,2017-04-12,2017-05-10,2017-04-24,136.8,54.72,False,12.0,False
-10510,SAVEA,Save-a-lot Markets,Boise,6,Michael Suyama,3,Federal Shipping,2017-04-13,2017-05-11,2017-04-23,4735.44,1894.1799999999998,False,10.0,False
-10511,BONAP,Bon app',Marsella,4,Margaret Peacock,3,Federal Shipping,2017-04-13,2017-05-11,2017-04-16,3000.0,1200.0,False,3.0,False
-10512,FAMIA,Familia Arquibaldo,São Paulo,7,Robert King,2,United Package,2017-04-16,2017-05-14,2017-04-19,618.0,247.2,False,3.0,False
-10513,WANDK,Die Wandernde Kuh,Stuttgart,7,Robert King,1,Speedy Express,2017-04-17,2017-05-29,2017-04-23,2427.5,971.0,False,6.0,False
-10514,ERNSH,Ernst Handel,Graz,3,Janet Leverling,2,United Package,2017-04-17,2017-05-15,2017-05-11,8623.45,3449.38,False,24.0,False
-10515,QUICK,QUICK-Stop,Cunewalde,2,Andrew Fuller,1,Speedy Express,2017-04-18,2017-05-02,2017-05-18,10588.5,4235.4,False,30.0,True
-10516,HUNGO,Hungry Owl All-Night Grocers,Cork,2,Andrew Fuller,3,Federal Shipping,2017-04-19,2017-05-17,2017-04-26,2614.5,1045.8,False,7.0,False
-10517,NORTS,North/South,Londres,3,Janet Leverling,3,Federal Shipping,2017-04-19,2017-05-17,2017-04-24,352.0,140.8,False,5.0,False
-10518,TORTU,Tortuga Restaurante,México D.F.,4,Margaret Peacock,2,United Package,2017-04-20,2017-05-04,2017-04-30,4150.05,1660.02,False,10.0,False
-10519,CHOPS,Centro comercial Moctezuma,México D.F.,6,Michael Suyama,3,Federal Shipping,2017-04-23,2017-05-21,2017-04-26,2356.0,942.4,False,3.0,False
-10520,SANTG,Santé Gourmet,Stavern,7,Robert King,1,Speedy Express,2017-04-24,2017-05-22,2017-04-26,200.0,80.0,False,2.0,False
-10521,CACTU,Cactus Comidas para llevar,Buenos Aires,8,Laura Callahan,2,United Package,2017-04-24,2017-05-22,2017-04-27,225.5,90.2,False,3.0,False
-10522,LEHMS,Lehmanns Marktstand,Fráncfort,4,Margaret Peacock,1,Speedy Express,2017-04-25,2017-05-23,2017-05-01,2657.8,1063.12,False,6.0,False
-10523,SEVES,Seven Seas Imports,Londres,7,Robert King,2,United Package,2017-04-26,2017-05-24,2017-05-25,2715.9,1086.3600000000001,False,29.0,True
-10524,BERGS,Berglunds snabbköp,Luleå,1,Nancy Davolio,2,United Package,2017-04-26,2017-05-24,2017-05-02,3192.65,1277.06,False,6.0,False
-10525,BONAP,Bon app',Marsella,1,Nancy Davolio,2,United Package,2017-04-27,2017-05-25,2017-05-18,846.0,338.4,False,21.0,False
-10526,WARTH,Wartian Herkku,Oulu,4,Margaret Peacock,2,United Package,2017-04-30,2017-05-28,2017-05-10,1344.0,537.6,False,10.0,False
-10527,QUICK,QUICK-Stop,Cunewalde,7,Robert King,1,Speedy Express,2017-04-30,2017-05-28,2017-05-02,1670.0,668.0,False,2.0,False
-10528,GREAL,Great Lakes Food Market,Eugene,6,Michael Suyama,2,United Package,2017-05-01,2017-05-15,2017-05-04,396.2,158.48000000000002,False,3.0,False
-10529,MAISD,Maison Dewey,Bruselas,5,Steven Buchanan,2,United Package,2017-05-02,2017-05-30,2017-05-04,946.0,378.4,False,2.0,False
-10530,PICCO,Piccolo und mehr,Salzburgo,3,Janet Leverling,2,United Package,2017-05-03,2017-05-31,2017-05-07,4180.0,1672.0,False,4.0,False
-10531,OCEAN,Océano Atlántico Ltda.,Buenos Aires,7,Robert King,1,Speedy Express,2017-05-03,2017-05-31,2017-05-14,110.0,44.0,False,11.0,False
-10532,EASTC,Eastern Connection,Londres,7,Robert King,3,Federal Shipping,2017-05-04,2017-06-01,2017-05-07,796.35,318.53999999999996,False,3.0,False
-10533,FOLKO,Folk och fä HB,Bräcke,8,Laura Callahan,1,Speedy Express,2017-05-07,2017-06-04,2017-05-17,2295.2,918.0799999999999,False,10.0,False
-10534,LEHMS,Lehmanns Marktstand,Fráncfort,8,Laura Callahan,2,United Package,2017-05-07,2017-06-04,2017-05-09,517.4,206.95999999999998,False,2.0,False
-10535,ANTON,Antonio Moreno Taquería,México D.F.,4,Margaret Peacock,1,Speedy Express,2017-05-08,2017-06-05,2017-05-16,2156.5,862.6,False,8.0,False
-10536,LEHMS,Lehmanns Marktstand,Fráncfort,3,Janet Leverling,2,United Package,2017-05-09,2017-06-06,2017-06-01,2085.0,834.0,False,23.0,False
-10537,RICSU,Richter Supermarkt,Génova,1,Nancy Davolio,1,Speedy Express,2017-05-09,2017-05-23,2017-05-14,1823.8,729.52,False,5.0,False
-10538,BSBEV,B's Beverages,Londres,9,Anne Dodsworth,3,Federal Shipping,2017-05-10,2017-06-07,2017-05-11,139.8,55.92,False,1.0,False
-10539,BSBEV,B's Beverages,Londres,6,Michael Suyama,3,Federal Shipping,2017-05-11,2017-06-08,2017-05-18,355.5,142.2,False,7.0,False
-10540,QUICK,QUICK-Stop,Cunewalde,3,Janet Leverling,3,Federal Shipping,2017-05-14,2017-06-11,2017-06-08,10191.7,4076.68,False,25.0,False
-10541,HANAR,Hanari Carnes,Rio de Janeiro,2,Andrew Fuller,1,Speedy Express,2017-05-14,2017-06-11,2017-05-24,2162.8,865.12,False,10.0,False
-10542,KOENE,Königlich Essen,Brandenburgo,1,Nancy Davolio,3,Federal Shipping,2017-05-15,2017-06-12,2017-05-21,493.8,197.51999999999998,False,6.0,False
-10543,LILAS,LILA-Supermercado,Barquisimeto,8,Laura Callahan,2,United Package,2017-05-16,2017-06-13,2017-05-18,1770.0,708.0,False,2.0,False
-10544,LONEP,Lonesome Pine Restaurant,Portland,4,Margaret Peacock,1,Speedy Express,2017-05-16,2017-06-13,2017-05-25,417.2,166.88,False,9.0,False
-10545,LAZYK,Lazy K Kountry Store,Walla Walla,8,Laura Callahan,2,United Package,2017-05-17,2017-06-14,2017-06-21,210.0,84.0,False,35.0,True
-10546,VICTE,Victuailles en stock,Lyon,1,Nancy Davolio,3,Federal Shipping,2017-05-18,2017-06-15,2017-05-22,2812.0,1124.8,False,4.0,False
-10547,SEVES,Seven Seas Imports,Londres,3,Janet Leverling,2,United Package,2017-05-18,2017-06-15,2017-05-28,1908.0,763.2,False,10.0,False
-10548,TOMSP,Toms Spezialitäten,Münster,3,Janet Leverling,2,United Package,2017-05-21,2017-06-18,2017-05-28,275.1,110.03999999999999,False,7.0,False
-10549,QUICK,QUICK-Stop,Cunewalde,5,Steven Buchanan,1,Speedy Express,2017-05-22,2017-06-05,2017-05-25,4181.5,1672.6,False,3.0,False
-10550,GODOS,Godos Cocina Típica,Sevilla,7,Robert King,3,Federal Shipping,2017-05-23,2017-06-20,2017-06-01,749.0,299.6,False,9.0,False
-10551,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,4,Margaret Peacock,3,Federal Shipping,2017-05-23,2017-07-04,2017-06-01,1836.0,734.4,False,9.0,False
-10552,HILAA,HILARIÓN-Abastos,San Cristóbal,2,Andrew Fuller,1,Speedy Express,2017-05-24,2017-06-21,2017-05-31,880.5,352.2,False,7.0,False
-10553,WARTH,Wartian Herkku,Oulu,2,Andrew Fuller,2,United Package,2017-05-25,2017-06-22,2017-05-29,1546.3,618.52,False,4.0,False
-10554,OTTIK,Ottilies Käseladen,Köln,4,Margaret Peacock,3,Federal Shipping,2017-05-25,2017-06-22,2017-05-31,1819.5,727.8,False,6.0,False
-10555,SAVEA,Save-a-lot Markets,Boise,6,Michael Suyama,3,Federal Shipping,2017-05-28,2017-06-25,2017-05-30,3680.5,1472.2,False,2.0,False
-10556,SIMOB,Simons bistro,København,2,Andrew Fuller,1,Speedy Express,2017-05-29,2017-07-10,2017-06-08,835.2,334.08,False,10.0,False
-10557,LEHMS,Lehmanns Marktstand,Fráncfort,9,Anne Dodsworth,2,United Package,2017-05-29,2017-06-12,2017-06-01,1152.5,461.0,False,3.0,False
-10558,AROUT,Around the Horn,Londres,1,Nancy Davolio,2,United Package,2017-05-30,2017-06-27,2017-06-05,2142.9,857.16,False,6.0,False
-10559,BLONP,Blondel père et fils,Estrasburgo,6,Michael Suyama,1,Speedy Express,2017-05-31,2017-06-28,2017-06-08,547.8,219.12,False,8.0,False
-10560,FRANK,Frankenversand,München,8,Laura Callahan,1,Speedy Express,2017-06-01,2017-06-29,2017-06-04,1257.3,502.92,False,3.0,False
-10561,FOLKO,Folk och fä HB,Bräcke,2,Andrew Fuller,2,United Package,2017-06-01,2017-06-29,2017-06-04,2844.5,1137.8,False,3.0,False
-10562,REGGC,Reggiani Caseifici,Reggio Emilia,1,Nancy Davolio,1,Speedy Express,2017-06-04,2017-07-02,2017-06-07,543.0,217.2,False,3.0,False
-10563,RICAR,Ricardo Adocicados,Rio de Janeiro,2,Andrew Fuller,2,United Package,2017-06-05,2017-07-17,2017-06-19,965.0,386.0,False,14.0,False
-10564,RATTC,Rattlesnake Canyon Grocery,Albuquerque,4,Margaret Peacock,3,Federal Shipping,2017-06-05,2017-07-03,2017-06-11,1299.0,519.6,False,6.0,False
-10565,MEREP,Mère Paillarde,Montreal,8,Laura Callahan,2,United Package,2017-06-06,2017-07-04,2017-06-13,711.0,284.4,False,7.0,False
-10566,BLONP,Blondel père et fils,Estrasburgo,9,Anne Dodsworth,1,Speedy Express,2017-06-07,2017-07-05,2017-06-13,2040.0,816.0,False,6.0,False
-10567,HUNGO,Hungry Owl All-Night Grocers,Cork,1,Nancy Davolio,1,Speedy Express,2017-06-07,2017-07-05,2017-06-12,3109.0,1243.6,False,5.0,False
-10568,GALED,Galería del gastrónomo,Barcelona,3,Janet Leverling,3,Federal Shipping,2017-06-08,2017-07-06,2017-07-04,155.0,62.0,False,26.0,False
-10569,RATTC,Rattlesnake Canyon Grocery,Albuquerque,5,Steven Buchanan,1,Speedy Express,2017-06-11,2017-07-09,2017-07-06,977.5,391.0,False,25.0,False
-10570,MEREP,Mère Paillarde,Montreal,3,Janet Leverling,3,Federal Shipping,2017-06-12,2017-07-10,2017-06-14,2595.0,1038.0,False,2.0,False
-10571,ERNSH,Ernst Handel,Graz,8,Laura Callahan,3,Federal Shipping,2017-06-12,2017-07-24,2017-06-29,647.75,259.1,False,17.0,False
-10572,BERGS,Berglunds snabbköp,Luleå,3,Janet Leverling,2,United Package,2017-06-13,2017-07-11,2017-06-20,1565.65,626.26,False,7.0,False
-10573,ANTON,Antonio Moreno Taquería,México D.F.,7,Robert King,3,Federal Shipping,2017-06-14,2017-07-12,2017-06-15,2082.0,832.8,False,1.0,False
-10574,TRAIH,Trail's Head Gourmet Provisioners,Kirkland,4,Margaret Peacock,2,United Package,2017-06-14,2017-07-12,2017-06-25,764.3,305.71999999999997,False,11.0,False
-10575,MORGK,Morgenstern Gesundkost,Leipzig,5,Steven Buchanan,1,Speedy Express,2017-06-15,2017-06-29,2017-06-25,2147.4,858.96,False,10.0,False
-10576,TORTU,Tortuga Restaurante,México D.F.,3,Janet Leverling,3,Federal Shipping,2017-06-18,2017-07-02,2017-06-25,838.45,335.38,False,7.0,False
-10577,TRAIH,Trail's Head Gourmet Provisioners,Kirkland,9,Anne Dodsworth,2,United Package,2017-06-18,2017-07-30,2017-06-25,569.0,227.6,False,7.0,False
-10578,BSBEV,B's Beverages,Londres,4,Margaret Peacock,3,Federal Shipping,2017-06-19,2017-07-17,2017-07-20,477.0,190.8,False,31.0,True
-10579,LETSS,Let's Stop N Shop,San Francisco,1,Nancy Davolio,2,United Package,2017-06-20,2017-07-18,2017-06-29,317.75,127.1,False,9.0,False
-10580,OTTIK,Ottilies Käseladen,Köln,4,Margaret Peacock,3,Federal Shipping,2017-06-21,2017-07-19,2017-06-26,1067.1,426.84,False,5.0,False
-10581,FAMIA,Familia Arquibaldo,São Paulo,3,Janet Leverling,1,Speedy Express,2017-06-21,2017-07-19,2017-06-27,387.5,155.0,False,6.0,False
-10582,BLAUS,Blauer See Delikatessen,Mannheim,3,Janet Leverling,2,United Package,2017-06-22,2017-07-20,2017-07-09,330.0,132.0,False,17.0,False
-10583,WARTH,Wartian Herkku,Oulu,2,Andrew Fuller,2,United Package,2017-06-25,2017-07-23,2017-06-29,2413.9,965.56,False,4.0,False
-10584,BLONP,Blondel père et fils,Estrasburgo,4,Margaret Peacock,1,Speedy Express,2017-06-25,2017-07-23,2017-06-29,625.0,250.0,False,4.0,False
-10585,WELLI,Wellington Importadora,Resende,7,Robert King,1,Speedy Express,2017-06-26,2017-07-24,2017-07-05,142.5,57.0,False,9.0,False
-10586,REGGC,Reggiani Caseifici,Reggio Emilia,9,Anne Dodsworth,1,Speedy Express,2017-06-27,2017-07-25,2017-07-04,28.0,11.2,False,7.0,False
-10587,QUEDE,Que Delícia,Rio de Janeiro,1,Nancy Davolio,1,Speedy Express,2017-06-27,2017-07-25,2017-07-04,807.38,322.95,False,7.0,False
-10588,QUICK,QUICK-Stop,Cunewalde,2,Andrew Fuller,3,Federal Shipping,2017-06-28,2017-07-26,2017-07-05,3900.0,1560.0,False,7.0,False
-10589,GREAL,Great Lakes Food Market,Eugene,8,Laura Callahan,2,United Package,2017-06-29,2017-07-27,2017-07-09,72.0,28.8,False,10.0,False
-10590,MEREP,Mère Paillarde,Montreal,4,Margaret Peacock,3,Federal Shipping,2017-07-02,2017-07-30,2017-07-09,1140.0,456.0,False,7.0,False
-10591,VAFFE,Vaffeljernet,Århus,1,Nancy Davolio,1,Speedy Express,2017-07-02,2017-07-16,2017-07-11,812.5,325.0,False,9.0,False
-10592,LEHMS,Lehmanns Marktstand,Fráncfort,3,Janet Leverling,1,Speedy Express,2017-07-03,2017-07-31,2017-07-11,543.65,217.46,False,8.0,False
-10593,LEHMS,Lehmanns Marktstand,Fráncfort,7,Robert King,2,United Package,2017-07-04,2017-08-01,2017-08-08,2493.0,997.2,False,35.0,True
-10594,OLDWO,Old World Delicatessen,Anchorage,3,Janet Leverling,2,United Package,2017-07-04,2017-08-01,2017-07-11,565.5,226.2,False,7.0,False
-10595,ERNSH,Ernst Handel,Graz,2,Andrew Fuller,1,Speedy Express,2017-07-05,2017-08-02,2017-07-09,6300.0,2520.0,False,4.0,False
-10596,WHITC,White Clover Markets,Seattle,8,Laura Callahan,1,Speedy Express,2017-07-06,2017-08-03,2017-08-07,1476.1,590.44,False,32.0,True
-10597,PICCO,Piccolo und mehr,Salzburgo,7,Robert King,3,Federal Shipping,2017-07-06,2017-08-03,2017-07-13,800.1,320.04,False,7.0,False
-10598,RATTC,Rattlesnake Canyon Grocery,Albuquerque,1,Nancy Davolio,3,Federal Shipping,2017-07-09,2017-08-06,2017-07-13,2388.5,955.4,False,4.0,False
-10599,BSBEV,B's Beverages,Londres,6,Michael Suyama,3,Federal Shipping,2017-07-10,2017-08-21,2017-07-16,493.0,197.2,False,6.0,False
-10600,HUNGC,Hungry Coyote Import Store,Elgin,4,Margaret Peacock,1,Speedy Express,2017-07-11,2017-08-08,2017-07-16,479.8,191.92,False,5.0,False
-10601,HILAA,HILARIÓN-Abastos,San Cristóbal,7,Robert King,1,Speedy Express,2017-07-11,2017-08-22,2017-07-17,2285.0,914.0,False,6.0,False
-10602,VAFFE,Vaffeljernet,Århus,8,Laura Callahan,2,United Package,2017-07-12,2017-08-09,2017-07-17,65.0,26.0,False,5.0,False
-10603,SAVEA,Save-a-lot Markets,Boise,8,Laura Callahan,2,United Package,2017-07-13,2017-08-10,2017-08-03,1508.0,603.2,False,21.0,False
-10604,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,1,Nancy Davolio,1,Speedy Express,2017-07-13,2017-08-10,2017-07-24,256.5,102.6,False,11.0,False
-10605,MEREP,Mère Paillarde,Montreal,1,Nancy Davolio,2,United Package,2017-07-16,2017-08-13,2017-07-24,4326.0,1730.4,False,8.0,False
-10606,TRADH,Tradição Hipermercados,São Paulo,4,Margaret Peacock,3,Federal Shipping,2017-07-17,2017-08-14,2017-07-26,1413.0,565.2,False,9.0,False
-10607,SAVEA,Save-a-lot Markets,Boise,5,Steven Buchanan,1,Speedy Express,2017-07-17,2017-08-14,2017-07-20,6475.4,2590.16,False,3.0,False
-10608,TOMSP,Toms Spezialitäten,Münster,4,Margaret Peacock,2,United Package,2017-07-18,2017-08-15,2017-07-27,1064.0,425.6,False,9.0,False
-10609,DUMON,Du monde entier,Nantes,7,Robert King,2,United Package,2017-07-19,2017-08-16,2017-07-25,424.0,169.6,False,6.0,False
-10610,LAMAI,La maison d'Asie,Toulouse,8,Laura Callahan,1,Speedy Express,2017-07-20,2017-08-17,2017-08-01,399.0,159.6,False,12.0,False
-10611,WOLZA,Wolski Zajazd,Warszawa,6,Michael Suyama,2,United Package,2017-07-20,2017-08-17,2017-07-27,808.0,323.2,False,7.0,False
-10612,SAVEA,Save-a-lot Markets,Boise,1,Nancy Davolio,2,United Package,2017-07-23,2017-08-20,2017-07-27,6375.0,2550.0,False,4.0,False
-10613,HILAA,HILARIÓN-Abastos,San Cristóbal,4,Margaret Peacock,2,United Package,2017-07-24,2017-08-21,2017-07-27,358.0,143.2,False,3.0,False
-10614,BLAUS,Blauer See Delikatessen,Mannheim,8,Laura Callahan,3,Federal Shipping,2017-07-24,2017-08-21,2017-07-27,464.0,185.6,False,3.0,False
-10615,WILMK,Wilman Kala,Helsinki,2,Andrew Fuller,3,Federal Shipping,2017-07-25,2017-08-22,2017-08-01,120.0,48.0,False,7.0,False
-10616,GREAL,Great Lakes Food Market,Eugene,1,Nancy Davolio,2,United Package,2017-07-26,2017-08-23,2017-07-31,5032.0,2012.8,False,5.0,False
-10617,GREAL,Great Lakes Food Market,Eugene,4,Margaret Peacock,2,United Package,2017-07-26,2017-08-23,2017-07-30,1650.0,660.0,False,4.0,False
-10618,MEREP,Mère Paillarde,Montreal,1,Nancy Davolio,1,Speedy Express,2017-07-27,2017-09-07,2017-08-03,2697.5,1079.0,False,7.0,False
-10619,MEREP,Mère Paillarde,Montreal,3,Janet Leverling,3,Federal Shipping,2017-07-30,2017-08-27,2017-08-02,1260.0,504.0,False,3.0,False
-10620,LAUGB,Laughing Bacchus Wine Cellars,Vancouver,2,Andrew Fuller,3,Federal Shipping,2017-07-31,2017-08-28,2017-08-09,57.5,23.0,False,9.0,False
-10621,ISLAT,Island Trading,Cowes,4,Margaret Peacock,2,United Package,2017-07-31,2017-08-28,2017-08-06,758.5,303.4,False,6.0,False
-10622,RICAR,Ricardo Adocicados,Rio de Janeiro,4,Margaret Peacock,3,Federal Shipping,2017-08-01,2017-08-29,2017-08-06,605.0,242.0,False,5.0,False
-10623,FRANK,Frankenversand,München,8,Laura Callahan,2,United Package,2017-08-02,2017-08-30,2017-08-07,1429.75,571.9,False,5.0,False
-10624,THECR,The Cracker Box,Butte,4,Margaret Peacock,2,United Package,2017-08-02,2017-08-30,2017-08-14,1393.24,557.3,False,12.0,False
-10625,ANATR,Ana Trujillo Emparedados y helados,México D.F.,3,Janet Leverling,1,Speedy Express,2017-08-03,2017-08-31,2017-08-09,479.75,191.9,False,6.0,False
-10626,BERGS,Berglunds snabbköp,Luleå,1,Nancy Davolio,2,United Package,2017-08-06,2017-09-03,2017-08-15,1503.6,601.44,False,9.0,False
-10627,SAVEA,Save-a-lot Markets,Boise,8,Laura Callahan,3,Federal Shipping,2017-08-06,2017-09-17,2017-08-16,1264.5,505.8,False,10.0,False
-10628,BLONP,Blondel père et fils,Estrasburgo,4,Margaret Peacock,3,Federal Shipping,2017-08-07,2017-09-04,2017-08-15,450.0,180.0,False,8.0,False
-10629,GODOS,Godos Cocina Típica,Sevilla,4,Margaret Peacock,3,Federal Shipping,2017-08-07,2017-09-04,2017-08-15,2775.05,1110.02,False,8.0,False
-10630,KOENE,Königlich Essen,Brandenburgo,1,Nancy Davolio,2,United Package,2017-08-08,2017-09-05,2017-08-14,918.0,367.2,False,6.0,False
-10631,LAMAI,La maison d'Asie,Toulouse,8,Laura Callahan,1,Speedy Express,2017-08-09,2017-09-06,2017-08-10,62.0,24.8,False,1.0,False
-10632,WANDK,Die Wandernde Kuh,Stuttgart,8,Laura Callahan,1,Speedy Express,2017-08-09,2017-09-06,2017-08-14,620.0,248.0,False,5.0,False
-10633,ERNSH,Ernst Handel,Graz,7,Robert King,3,Federal Shipping,2017-08-10,2017-09-07,2017-08-13,6483.05,2593.2200000000003,False,3.0,False
-10634,FOLIG,Folies gourmandes,Lille,4,Margaret Peacock,3,Federal Shipping,2017-08-10,2017-09-07,2017-08-16,4985.5,1994.2,False,6.0,False
-10635,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,8,Laura Callahan,3,Federal Shipping,2017-08-13,2017-09-10,2017-08-16,1380.25,552.1,False,3.0,False
-10636,WARTH,Wartian Herkku,Oulu,4,Margaret Peacock,1,Speedy Express,2017-08-14,2017-09-11,2017-08-21,629.5,251.8,False,7.0,False
-10637,QUEEN,Queen Cozinha,São Paulo,6,Michael Suyama,1,Speedy Express,2017-08-14,2017-09-11,2017-08-21,2896.25,1158.5,False,7.0,False
-10638,LINOD,LINO-Delicateses,I. de Margarita,3,Janet Leverling,1,Speedy Express,2017-08-15,2017-09-12,2017-08-27,2720.05,1088.02,False,12.0,False
-10639,SANTG,Santé Gourmet,Stavern,7,Robert King,3,Federal Shipping,2017-08-15,2017-09-12,2017-08-22,500.0,200.0,False,7.0,False
-10640,WANDK,Die Wandernde Kuh,Stuttgart,4,Margaret Peacock,1,Speedy Express,2017-08-16,2017-09-13,2017-08-23,945.0,378.0,False,7.0,False
-10641,HILAA,HILARIÓN-Abastos,San Cristóbal,4,Margaret Peacock,2,United Package,2017-08-17,2017-09-14,2017-08-21,2054.0,821.6,False,4.0,False
-10642,SIMOB,Simons bistro,København,7,Robert King,3,Federal Shipping,2017-08-17,2017-09-14,2017-08-31,870.0,348.0,False,14.0,False
-10643,ALFKI,Alfreds Futterkiste,Berlín,6,Michael Suyama,2,United Package,2017-08-20,2017-09-17,2017-08-28,1086.0,434.40000000000003,False,8.0,False
-10644,WELLI,Wellington Importadora,Resende,3,Janet Leverling,2,United Package,2017-08-20,2017-09-17,2017-08-27,1422.0,568.8,False,7.0,False
-10645,HANAR,Hanari Carnes,Rio de Janeiro,4,Margaret Peacock,1,Speedy Express,2017-08-21,2017-09-18,2017-08-28,1535.0,614.0,False,7.0,False
-10646,HUNGO,Hungry Owl All-Night Grocers,Cork,9,Anne Dodsworth,3,Federal Shipping,2017-08-22,2017-10-03,2017-08-29,1928.0,771.2,False,7.0,False
-10647,QUEDE,Que Delícia,Rio de Janeiro,4,Margaret Peacock,2,United Package,2017-08-22,2017-09-05,2017-08-29,636.0,254.4,False,7.0,False
-10648,RICAR,Ricardo Adocicados,Rio de Janeiro,5,Steven Buchanan,2,United Package,2017-08-23,2017-10-04,2017-09-04,382.5,153.0,False,12.0,False
-10649,MAISD,Maison Dewey,Bruselas,5,Steven Buchanan,3,Federal Shipping,2017-08-23,2017-09-20,2017-08-24,1434.0,573.6,False,1.0,False
-10650,FAMIA,Familia Arquibaldo,São Paulo,5,Steven Buchanan,3,Federal Shipping,2017-08-24,2017-09-21,2017-08-29,1820.2,728.0799999999999,False,5.0,False
-10651,WANDK,Die Wandernde Kuh,Stuttgart,8,Laura Callahan,2,United Package,2017-08-27,2017-09-24,2017-09-06,530.4,212.16,False,10.0,False
-10652,GOURL,Gourmet Lanchonetes,Campinas,4,Margaret Peacock,2,United Package,2017-08-27,2017-09-24,2017-09-03,331.78,132.71,False,7.0,False
-10653,FRANK,Frankenversand,München,1,Nancy Davolio,1,Speedy Express,2017-08-28,2017-09-25,2017-09-14,1203.5,481.4,False,17.0,False
-10654,BERGS,Berglunds snabbköp,Luleå,5,Steven Buchanan,1,Speedy Express,2017-08-28,2017-09-25,2017-09-06,668.7,267.48,False,9.0,False
-10655,REGGC,Reggiani Caseifici,Reggio Emilia,1,Nancy Davolio,2,United Package,2017-08-29,2017-09-26,2017-09-06,193.0,77.2,False,8.0,False
-10656,GREAL,Great Lakes Food Market,Eugene,6,Michael Suyama,1,Speedy Express,2017-08-30,2017-09-27,2017-09-05,671.35,268.54,False,6.0,False
-10657,SAVEA,Save-a-lot Markets,Boise,2,Andrew Fuller,2,United Package,2017-08-30,2017-09-27,2017-09-10,4371.6,1748.64,False,11.0,False
-10658,QUICK,QUICK-Stop,Cunewalde,4,Margaret Peacock,1,Speedy Express,2017-08-31,2017-09-28,2017-09-03,4668.0,1867.2,False,3.0,False
-10659,QUEEN,Queen Cozinha,São Paulo,7,Robert King,2,United Package,2017-08-31,2017-09-28,2017-09-05,1291.6,516.64,False,5.0,False
-10660,HUNGC,Hungry Coyote Import Store,Elgin,8,Laura Callahan,1,Speedy Express,2017-09-03,2017-10-01,2017-10-10,1701.0,680.4,False,37.0,True
-10661,HUNGO,Hungry Owl All-Night Grocers,Cork,7,Robert King,3,Federal Shipping,2017-09-04,2017-10-02,2017-09-10,703.25,281.3,False,6.0,False
-10662,LONEP,Lonesome Pine Restaurant,Portland,3,Janet Leverling,2,United Package,2017-09-04,2017-10-02,2017-09-13,125.0,50.0,False,9.0,False
-10663,BONAP,Bon app',Marsella,2,Andrew Fuller,2,United Package,2017-09-05,2017-09-19,2017-09-28,2032.0,812.8,False,23.0,True
-10664,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,1,Nancy Davolio,3,Federal Shipping,2017-09-05,2017-10-03,2017-09-14,1515.75,606.3,False,9.0,False
-10665,LONEP,Lonesome Pine Restaurant,Portland,1,Nancy Davolio,2,United Package,2017-09-06,2017-10-04,2017-09-12,1295.0,518.0,False,6.0,False
-10666,RICSU,Richter Supermarkt,Génova,7,Robert King,2,United Package,2017-09-07,2017-10-05,2017-09-17,4666.94,1866.78,False,10.0,False
-10667,ERNSH,Ernst Handel,Graz,7,Robert King,1,Speedy Express,2017-09-07,2017-10-05,2017-09-14,1921.0,768.4,False,7.0,False
-10668,WANDK,Die Wandernde Kuh,Stuttgart,1,Nancy Davolio,2,United Package,2017-09-10,2017-10-08,2017-09-18,694.75,277.9,False,8.0,False
-10669,SIMOB,Simons bistro,København,2,Andrew Fuller,1,Speedy Express,2017-09-10,2017-10-08,2017-09-17,570.0,228.0,False,7.0,False
-10670,FRANK,Frankenversand,München,4,Margaret Peacock,1,Speedy Express,2017-09-11,2017-10-09,2017-09-13,2301.75,920.7,False,2.0,False
-10671,FRANR,France restauration,Nantes,1,Nancy Davolio,1,Speedy Express,2017-09-12,2017-10-10,2017-09-19,920.1,368.03999999999996,False,7.0,False
-10672,BERGS,Berglunds snabbköp,Luleå,9,Anne Dodsworth,2,United Package,2017-09-12,2017-09-26,2017-09-21,4210.5,1684.2,False,9.0,False
-10673,WILMK,Wilman Kala,Helsinki,2,Andrew Fuller,1,Speedy Express,2017-09-13,2017-10-11,2017-09-14,412.35,164.94,False,1.0,False
-10674,ISLAT,Island Trading,Cowes,4,Margaret Peacock,2,United Package,2017-09-13,2017-10-11,2017-09-25,45.0,18.0,False,12.0,False
-10675,FRANK,Frankenversand,München,5,Steven Buchanan,2,United Package,2017-09-14,2017-10-12,2017-09-18,1423.0,569.2,False,4.0,False
-10676,TORTU,Tortuga Restaurante,México D.F.,2,Andrew Fuller,2,United Package,2017-09-17,2017-10-15,2017-09-24,534.85,213.94,False,7.0,False
-10677,ANTON,Antonio Moreno Taquería,México D.F.,1,Nancy Davolio,3,Federal Shipping,2017-09-17,2017-10-15,2017-09-21,956.9,382.76,False,4.0,False
-10678,SAVEA,Save-a-lot Markets,Boise,7,Robert King,3,Federal Shipping,2017-09-18,2017-10-16,2017-10-11,5256.5,2102.6,False,23.0,False
-10679,BLONP,Blondel père et fils,Estrasburgo,8,Laura Callahan,3,Federal Shipping,2017-09-18,2017-10-16,2017-09-25,660.0,264.0,False,7.0,False
-10680,OLDWO,Old World Delicatessen,Anchorage,1,Nancy Davolio,1,Speedy Express,2017-09-19,2017-10-17,2017-09-21,1682.5,673.0,False,2.0,False
-10681,GREAL,Great Lakes Food Market,Eugene,3,Janet Leverling,3,Federal Shipping,2017-09-20,2017-10-18,2017-09-25,1327.0,530.8,False,5.0,False
-10682,ANTON,Antonio Moreno Taquería,México D.F.,3,Janet Leverling,2,United Package,2017-09-20,2017-10-18,2017-09-26,375.5,150.2,False,6.0,False
-10683,DUMON,Du monde entier,Nantes,2,Andrew Fuller,1,Speedy Express,2017-09-21,2017-10-19,2017-09-26,63.0,25.2,False,5.0,False
-10684,OTTIK,Ottilies Käseladen,Köln,3,Janet Leverling,1,Speedy Express,2017-09-21,2017-10-19,2017-09-25,1768.0,707.2,False,4.0,False
-10685,GOURL,Gourmet Lanchonetes,Campinas,4,Margaret Peacock,2,United Package,2017-09-24,2017-10-08,2017-09-28,801.1,320.44,False,4.0,False
-10686,PICCO,Piccolo und mehr,Salzburgo,2,Andrew Fuller,1,Speedy Express,2017-09-25,2017-10-23,2017-10-03,1638.45,655.38,False,8.0,False
-10687,HUNGO,Hungry Owl All-Night Grocers,Cork,9,Anne Dodsworth,2,United Package,2017-09-25,2017-10-23,2017-10-25,6201.9,2480.76,False,30.0,True
-10688,VAFFE,Vaffeljernet,Århus,4,Margaret Peacock,2,United Package,2017-09-26,2017-10-10,2017-10-02,3490.0,1396.0000000000002,False,6.0,False
-10689,BERGS,Berglunds snabbköp,Luleå,1,Nancy Davolio,2,United Package,2017-09-26,2017-10-24,2017-10-02,630.0,252.0,False,6.0,False
-10690,HANAR,Hanari Carnes,Rio de Janeiro,1,Nancy Davolio,1,Speedy Express,2017-09-27,2017-10-25,2017-09-28,1150.0,460.0,False,1.0,False
-10691,QUICK,QUICK-Stop,Cunewalde,2,Andrew Fuller,2,United Package,2017-09-28,2017-11-09,2017-10-17,10164.800000000001,4065.92,False,19.0,False
-10692,ALFKI,Alfreds Futterkiste,Berlín,4,Margaret Peacock,2,United Package,2017-09-28,2017-10-26,2017-10-08,878.0,351.2,False,10.0,False
-10693,WHITC,White Clover Markets,Seattle,3,Janet Leverling,3,Federal Shipping,2017-10-01,2017-10-15,2017-10-05,2334.0,933.6,False,4.0,False
-10694,QUICK,QUICK-Stop,Cunewalde,8,Laura Callahan,3,Federal Shipping,2017-10-01,2017-10-29,2017-10-04,4825.0,1930.0,False,3.0,False
-10695,WILMK,Wilman Kala,Helsinki,7,Robert King,1,Speedy Express,2017-10-02,2017-11-13,2017-10-09,642.0,256.8,False,7.0,False
-10696,WHITC,White Clover Markets,Seattle,8,Laura Callahan,3,Federal Shipping,2017-10-03,2017-11-14,2017-10-09,996.0,398.4,False,6.0,False
-10697,LINOD,LINO-Delicateses,I. de Margarita,3,Janet Leverling,1,Speedy Express,2017-10-03,2017-10-31,2017-10-09,1073.9,429.56,False,6.0,False
-10698,ERNSH,Ernst Handel,Graz,4,Margaret Peacock,1,Speedy Express,2017-10-04,2017-11-01,2017-10-12,3600.73,1440.29,False,8.0,False
-10699,MORGK,Morgenstern Gesundkost,Leipzig,3,Janet Leverling,3,Federal Shipping,2017-10-04,2017-11-01,2017-10-08,114.0,45.6,False,4.0,False
-10700,SAVEA,Save-a-lot Markets,Boise,3,Janet Leverling,1,Speedy Express,2017-10-05,2017-11-02,2017-10-11,2048.0,819.2,False,6.0,False
-10701,HUNGO,Hungry Owl All-Night Grocers,Cork,6,Michael Suyama,3,Federal Shipping,2017-10-08,2017-10-22,2017-10-10,3370.0,1348.0,False,2.0,False
-10702,ALFKI,Alfreds Futterkiste,Berlín,4,Margaret Peacock,1,Speedy Express,2017-10-08,2017-11-19,2017-10-16,330.0,132.0,False,8.0,False
-10703,FOLKO,Folk och fä HB,Bräcke,6,Michael Suyama,2,United Package,2017-10-09,2017-11-06,2017-10-15,2545.0,1018.0,False,6.0,False
-10704,QUEEN,Queen Cozinha,São Paulo,6,Michael Suyama,1,Speedy Express,2017-10-09,2017-11-06,2017-11-02,595.5,238.2,False,24.0,False
-10705,HILAA,HILARIÓN-Abastos,San Cristóbal,9,Anne Dodsworth,2,United Package,2017-10-10,2017-11-07,2017-11-13,378.0,151.2,False,34.0,True
-10706,OLDWO,Old World Delicatessen,Anchorage,8,Laura Callahan,3,Federal Shipping,2017-10-11,2017-11-08,2017-10-16,1893.0,757.2,False,5.0,False
-10707,AROUT,Around the Horn,Londres,4,Margaret Peacock,3,Federal Shipping,2017-10-11,2017-10-25,2017-10-18,1704.0,681.6,False,7.0,False
-10708,THEBI,The Big Cheese,Portland,6,Michael Suyama,2,United Package,2017-10-12,2017-11-23,2017-10-31,180.4,72.16,False,19.0,False
-10709,GOURL,Gourmet Lanchonetes,Campinas,1,Nancy Davolio,3,Federal Shipping,2017-10-12,2017-11-09,2017-11-15,3424.0,1369.6,False,34.0,True
-10710,FRANS,Franchi S.p.A.,Torino,1,Nancy Davolio,1,Speedy Express,2017-10-15,2017-11-12,2017-10-18,93.5,37.4,False,3.0,False
-10711,SAVEA,Save-a-lot Markets,Boise,5,Steven Buchanan,2,United Package,2017-10-16,2017-11-27,2017-10-24,4451.7,1780.68,False,8.0,False
-10712,HUNGO,Hungry Owl All-Night Grocers,Cork,3,Janet Leverling,1,Speedy Express,2017-10-16,2017-11-13,2017-10-26,1238.4,495.36,False,10.0,False
-10713,SAVEA,Save-a-lot Markets,Boise,1,Nancy Davolio,1,Speedy Express,2017-10-17,2017-11-14,2017-10-19,2827.9,1131.1599999999999,False,2.0,False
-10714,SAVEA,Save-a-lot Markets,Boise,5,Steven Buchanan,3,Federal Shipping,2017-10-17,2017-11-14,2017-10-22,2941.0,1176.4,False,5.0,False
-10715,BONAP,Bon app',Marsella,3,Janet Leverling,1,Speedy Express,2017-10-18,2017-11-01,2017-10-24,1296.0,518.4,False,6.0,False
-10716,RANCH,Rancho grande,Buenos Aires,4,Margaret Peacock,2,United Package,2017-10-19,2017-11-16,2017-10-22,706.0,282.4,False,3.0,False
-10717,FRANK,Frankenversand,München,1,Nancy Davolio,2,United Package,2017-10-19,2017-11-16,2017-10-24,1331.75,532.7,False,5.0,False
-10718,KOENE,Königlich Essen,Brandenburgo,1,Nancy Davolio,3,Federal Shipping,2017-10-22,2017-11-19,2017-10-24,3463.0,1385.2,False,2.0,False
-10719,LETSS,Let's Stop N Shop,San Francisco,8,Laura Callahan,2,United Package,2017-10-22,2017-11-19,2017-10-31,1125.67,450.27,False,9.0,False
-10720,QUEDE,Que Delícia,Rio de Janeiro,8,Laura Callahan,2,United Package,2017-10-23,2017-11-06,2017-10-31,550.0,220.0,False,8.0,False
-10721,QUICK,QUICK-Stop,Cunewalde,5,Steven Buchanan,3,Federal Shipping,2017-10-24,2017-11-21,2017-10-26,972.5,389.0,False,2.0,False
-10722,SAVEA,Save-a-lot Markets,Boise,8,Laura Callahan,1,Speedy Express,2017-10-24,2017-12-05,2017-10-30,1570.0,628.0,False,6.0,False
-10723,WHITC,White Clover Markets,Seattle,3,Janet Leverling,1,Speedy Express,2017-10-25,2017-11-22,2017-11-20,468.45,187.38,False,26.0,False
-10724,MEREP,Mère Paillarde,Montreal,8,Laura Callahan,2,United Package,2017-10-25,2017-12-06,2017-10-31,638.5,255.4,False,6.0,False
-10725,FAMIA,Familia Arquibaldo,São Paulo,4,Margaret Peacock,3,Federal Shipping,2017-10-26,2017-11-23,2017-10-31,287.8,115.12,False,5.0,False
-10726,EASTC,Eastern Connection,Londres,4,Margaret Peacock,1,Speedy Express,2017-10-29,2017-11-12,2017-11-30,655.0,262.0,False,32.0,True
-10727,REGGC,Reggiani Caseifici,Reggio Emilia,2,Andrew Fuller,1,Speedy Express,2017-10-29,2017-11-26,2017-11-30,1710.0,684.0,False,32.0,True
-10728,QUEEN,Queen Cozinha,São Paulo,4,Margaret Peacock,2,United Package,2017-10-30,2017-11-27,2017-11-06,1296.75,518.7,False,7.0,False
-10729,LINOD,LINO-Delicateses,I. de Margarita,8,Laura Callahan,3,Federal Shipping,2017-10-30,2017-12-11,2017-11-09,1850.0,740.0,False,10.0,False
-10730,BONAP,Bon app',Marsella,5,Steven Buchanan,1,Speedy Express,2017-10-31,2017-11-28,2017-11-09,509.75,203.9,False,9.0,False
-10731,CHOPS,Centro comercial Moctezuma,México D.F.,7,Robert King,1,Speedy Express,2017-11-01,2017-11-29,2017-11-09,1990.0,796.0,False,8.0,False
-10732,BONAP,Bon app',Marsella,3,Janet Leverling,1,Speedy Express,2017-11-01,2017-11-29,2017-11-02,360.0,144.0,False,1.0,False
-10733,BERGS,Berglunds snabbköp,Luleå,1,Nancy Davolio,3,Federal Shipping,2017-11-02,2017-11-30,2017-11-05,1459.0,583.6,False,3.0,False
-10734,GOURL,Gourmet Lanchonetes,Campinas,2,Andrew Fuller,3,Federal Shipping,2017-11-02,2017-11-30,2017-11-07,1498.35,599.34,False,5.0,False
-10735,LETSS,Let's Stop N Shop,San Francisco,6,Michael Suyama,2,United Package,2017-11-05,2017-12-03,2017-11-16,596.0,238.4,False,11.0,False
-10736,HUNGO,Hungry Owl All-Night Grocers,Cork,9,Anne Dodsworth,2,United Package,2017-11-06,2017-12-04,2017-11-16,997.0,398.8,False,10.0,False
-10737,VINET,Vins et alcools Chevalier,Reims,2,Andrew Fuller,2,United Package,2017-11-06,2017-12-04,2017-11-13,139.8,55.92,False,7.0,False
-10738,SPECD,Spécialités du monde,París,2,Andrew Fuller,1,Speedy Express,2017-11-07,2017-12-05,2017-11-13,52.35,20.94,False,6.0,False
-10739,VINET,Vins et alcools Chevalier,Reims,3,Janet Leverling,3,Federal Shipping,2017-11-07,2017-12-05,2017-11-12,240.0,96.0,False,5.0,False
-10740,WHITC,White Clover Markets,Seattle,4,Margaret Peacock,2,United Package,2017-11-08,2017-12-06,2017-11-20,1770.0,708.0,False,12.0,False
-10741,BERGS,Berglunds snabbköp,Luleå,4,Margaret Peacock,3,Federal Shipping,2017-11-09,2017-11-23,2017-11-13,285.0,114.0,False,4.0,False
-10742,BOTTM,Bottom-Dollar Markets,Tsawassen,3,Janet Leverling,3,Federal Shipping,2017-11-09,2017-12-07,2017-11-13,3118.0,1247.2,False,4.0,False
-10743,AROUT,Around the Horn,Londres,1,Nancy Davolio,2,United Package,2017-11-12,2017-12-10,2017-11-16,336.0,134.4,False,4.0,False
-10744,VAFFE,Vaffeljernet,Århus,6,Michael Suyama,1,Speedy Express,2017-11-12,2017-12-10,2017-11-19,920.0,368.0,False,7.0,False
-10745,QUICK,QUICK-Stop,Cunewalde,9,Anne Dodsworth,1,Speedy Express,2017-11-13,2017-12-11,2017-11-22,4529.799999999999,1811.92,False,9.0,False
-10746,CHOPS,Centro comercial Moctezuma,México D.F.,1,Nancy Davolio,3,Federal Shipping,2017-11-14,2017-12-12,2017-11-16,2311.7,924.68,False,2.0,False
-10747,PICCO,Piccolo und mehr,Salzburgo,6,Michael Suyama,1,Speedy Express,2017-11-14,2017-12-12,2017-11-21,1912.85,765.14,False,7.0,False
-10748,SAVEA,Save-a-lot Markets,Boise,3,Janet Leverling,1,Speedy Express,2017-11-15,2017-12-13,2017-11-23,2196.0,878.4,False,8.0,False
-10749,ISLAT,Island Trading,Cowes,4,Margaret Peacock,2,United Package,2017-11-15,2017-12-13,2017-12-14,1080.0,432.0,False,29.0,True
-10750,WARTH,Wartian Herkku,Oulu,9,Anne Dodsworth,1,Speedy Express,2017-11-16,2017-12-14,2017-11-19,1871.25,748.5,False,3.0,False
-10751,RICSU,Richter Supermarkt,Génova,3,Janet Leverling,3,Federal Shipping,2017-11-19,2017-12-17,2017-11-28,1701.46,680.58,False,9.0,False
-10752,NORTS,North/South,Londres,2,Andrew Fuller,3,Federal Shipping,2017-11-19,2017-12-17,2017-11-23,252.0,100.80000000000001,False,4.0,False
-10753,FRANS,Franchi S.p.A.,Torino,3,Janet Leverling,1,Speedy Express,2017-11-20,2017-12-18,2017-11-22,88.0,35.2,False,2.0,False
-10754,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,6,Michael Suyama,3,Federal Shipping,2017-11-20,2017-12-18,2017-11-22,55.2,22.08,False,2.0,False
-10755,BONAP,Bon app',Marsella,4,Margaret Peacock,2,United Package,2017-11-21,2017-12-19,2017-11-23,2598.0,1039.2,False,2.0,False
-10756,SPLIR,Split Rail Beer & Ale,Lander,8,Laura Callahan,2,United Package,2017-11-22,2017-12-20,2017-11-27,2487.5,995.0,False,5.0,False
-10757,SAVEA,Save-a-lot Markets,Boise,6,Michael Suyama,1,Speedy Express,2017-11-22,2017-12-20,2017-12-10,3082.0,1232.8,False,18.0,False
-10758,RICSU,Richter Supermarkt,Génova,3,Janet Leverling,3,Federal Shipping,2017-11-23,2017-12-21,2017-11-29,1644.6,657.84,False,6.0,False
-10759,ANATR,Ana Trujillo Emparedados y helados,México D.F.,3,Janet Leverling,3,Federal Shipping,2017-11-23,2017-12-21,2017-12-07,320.0,128.0,False,14.0,False
-10760,MAISD,Maison Dewey,Bruselas,4,Margaret Peacock,1,Speedy Express,2017-11-26,2017-12-24,2017-12-05,3304.0,1321.6,False,9.0,False
-10761,RATTC,Rattlesnake Canyon Grocery,Albuquerque,5,Steven Buchanan,2,United Package,2017-11-27,2017-12-25,2017-12-03,629.5,251.8,False,6.0,False
-10762,FOLKO,Folk och fä HB,Bräcke,3,Janet Leverling,1,Speedy Express,2017-11-27,2017-12-25,2017-12-04,4337.0,1734.8000000000002,False,7.0,False
-10763,FOLIG,Folies gourmandes,Lille,3,Janet Leverling,3,Federal Shipping,2017-11-28,2017-12-26,2017-12-03,616.0,246.4,False,5.0,False
-10764,ERNSH,Ernst Handel,Graz,6,Michael Suyama,3,Federal Shipping,2017-11-28,2017-12-26,2017-12-03,2540.0,1016.0,False,5.0,False
-10765,QUICK,QUICK-Stop,Cunewalde,3,Janet Leverling,3,Federal Shipping,2017-11-29,2017-12-27,2017-12-04,1684.0,673.6,False,5.0,False
-10766,OTTIK,Ottilies Käseladen,Köln,4,Margaret Peacock,1,Speedy Express,2017-11-30,2017-12-28,2017-12-04,2310.0,924.0,False,4.0,False
-10767,SUPRD,Suprêmes délices,Charleroi,4,Margaret Peacock,3,Federal Shipping,2017-11-30,2017-12-28,2017-12-10,28.0,11.2,False,10.0,False
-10768,AROUT,Around the Horn,Londres,3,Janet Leverling,2,United Package,2017-12-03,2017-12-31,2017-12-10,1477.0,590.8,False,7.0,False
-10769,VAFFE,Vaffeljernet,Århus,3,Janet Leverling,1,Speedy Express,2017-12-03,2017-12-31,2017-12-07,1704.0,681.6,False,4.0,False
-10770,HANAR,Hanari Carnes,Rio de Janeiro,8,Laura Callahan,3,Federal Shipping,2017-12-04,2018-01-01,2017-12-12,315.0,126.0,False,8.0,False
-10771,ERNSH,Ernst Handel,Graz,9,Anne Dodsworth,2,United Package,2017-12-05,2018-01-02,2017-12-28,344.0,137.6,False,23.0,False
-10772,LEHMS,Lehmanns Marktstand,Fráncfort,3,Janet Leverling,2,United Package,2017-12-05,2018-01-02,2017-12-14,3603.22,1441.29,False,9.0,False
-10773,ERNSH,Ernst Handel,Graz,1,Nancy Davolio,3,Federal Shipping,2017-12-06,2018-01-03,2017-12-11,2216.25,886.5,False,5.0,False
-10774,FOLKO,Folk och fä HB,Bräcke,4,Margaret Peacock,1,Speedy Express,2017-12-06,2017-12-20,2017-12-07,875.0,350.0,False,1.0,False
-10775,THECR,The Cracker Box,Butte,7,Robert King,1,Speedy Express,2017-12-07,2018-01-04,2017-12-21,228.0,91.2,False,14.0,False
-10776,ERNSH,Ernst Handel,Graz,1,Nancy Davolio,3,Federal Shipping,2017-12-10,2018-01-07,2017-12-13,6984.5,2793.8,False,3.0,False
-10777,GOURL,Gourmet Lanchonetes,Campinas,7,Robert King,2,United Package,2017-12-10,2017-12-24,2018-01-16,280.0,112.0,False,37.0,True
-10778,BERGS,Berglunds snabbköp,Luleå,3,Janet Leverling,1,Speedy Express,2017-12-11,2018-01-08,2017-12-19,96.5,38.6,False,8.0,False
-10779,MORGK,Morgenstern Gesundkost,Leipzig,3,Janet Leverling,2,United Package,2017-12-11,2018-01-08,2018-01-09,1335.0,534.0,False,29.0,True
-10780,LILAS,LILA-Supermercado,Barquisimeto,2,Andrew Fuller,1,Speedy Express,2017-12-11,2017-12-25,2017-12-20,720.0,288.0,False,9.0,False
-10781,WARTH,Wartian Herkku,Oulu,2,Andrew Fuller,3,Federal Shipping,2017-12-12,2018-01-09,2017-12-14,1132.35,452.94,False,2.0,False
-10782,CACTU,Cactus Comidas para llevar,Buenos Aires,9,Anne Dodsworth,3,Federal Shipping,2017-12-12,2018-01-09,2017-12-17,12.5,5.0,False,5.0,False
-10783,HANAR,Hanari Carnes,Rio de Janeiro,4,Margaret Peacock,2,United Package,2017-12-13,2018-01-10,2017-12-14,1442.5,577.0,False,1.0,False
-10784,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,4,Margaret Peacock,3,Federal Shipping,2017-12-13,2018-01-10,2017-12-17,1650.0,660.0,False,4.0,False
-10785,GROSR,GROSELLA-Restaurante,Caracas,1,Nancy Davolio,3,Federal Shipping,2017-12-13,2018-01-10,2017-12-19,387.5,155.0,False,6.0,False
-10786,QUEEN,Queen Cozinha,São Paulo,8,Laura Callahan,1,Speedy Express,2017-12-14,2018-01-11,2017-12-18,1913.85,765.54,False,4.0,False
-10787,LAMAI,La maison d'Asie,Toulouse,2,Andrew Fuller,1,Speedy Express,2017-12-14,2017-12-28,2017-12-21,2760.8,1104.3200000000002,False,7.0,False
-10788,QUICK,QUICK-Stop,Cunewalde,1,Nancy Davolio,2,United Package,2017-12-17,2018-01-14,2018-01-14,770.0,308.0,False,28.0,False
-10789,FOLIG,Folies gourmandes,Lille,1,Nancy Davolio,2,United Package,2017-12-17,2018-01-14,2017-12-26,3687.0,1474.8,False,9.0,False
-10790,GOURL,Gourmet Lanchonetes,Campinas,6,Michael Suyama,1,Speedy Express,2017-12-17,2018-01-14,2017-12-21,850.0,340.0,False,4.0,False
-10791,FRANK,Frankenversand,München,6,Michael Suyama,2,United Package,2017-12-18,2018-01-15,2017-12-27,1926.06,770.4200000000001,False,9.0,False
-10792,WOLZA,Wolski Zajazd,Warszawa,1,Nancy Davolio,3,Federal Shipping,2017-12-18,2018-01-15,2017-12-26,399.85,159.94,False,8.0,False
-10793,AROUT,Around the Horn,Londres,3,Janet Leverling,3,Federal Shipping,2017-12-19,2018-01-16,2018-01-03,191.1,76.44,False,15.0,False
-10794,QUEDE,Que Delícia,Rio de Janeiro,6,Michael Suyama,1,Speedy Express,2017-12-19,2018-01-16,2017-12-28,393.45,157.38,False,9.0,False
-10795,ERNSH,Ernst Handel,Graz,8,Laura Callahan,2,United Package,2017-12-19,2018-01-16,2018-01-15,2499.25,999.7,False,27.0,False
-10796,HILAA,HILARIÓN-Abastos,San Cristóbal,3,Janet Leverling,1,Speedy Express,2017-12-20,2018-01-17,2018-01-09,2878.08,1151.23,False,20.0,False
-10797,DRACD,Drachenblut Delikatessen,Aachen,7,Robert King,2,United Package,2017-12-20,2018-01-17,2017-12-31,420.0,168.0,False,11.0,False
-10798,ISLAT,Island Trading,Cowes,2,Andrew Fuller,1,Speedy Express,2017-12-21,2018-01-18,2017-12-31,446.6,178.64,False,10.0,False
-10799,KOENE,Königlich Essen,Brandenburgo,9,Anne Dodsworth,3,Federal Shipping,2017-12-21,2018-02-01,2017-12-31,1585.0,634.0,False,10.0,False
-10800,SEVES,Seven Seas Imports,Londres,1,Nancy Davolio,3,Federal Shipping,2017-12-21,2018-01-18,2017-12-31,1632.15,652.86,False,10.0,False
-10801,BOLID,Bólido Comidas preparadas,Madrid,4,Margaret Peacock,2,United Package,2017-12-24,2018-01-21,2017-12-26,4035.8,1614.3200000000002,False,2.0,False
-10802,SIMOB,Simons bistro,København,4,Margaret Peacock,2,United Package,2017-12-24,2018-01-21,2017-12-28,3923.75,1569.5,False,4.0,False
-10803,WELLI,Wellington Importadora,Resende,4,Margaret Peacock,1,Speedy Express,2017-12-25,2018-01-22,2018-01-01,1255.8,502.32,False,7.0,False
-10804,SEVES,Seven Seas Imports,Londres,6,Michael Suyama,2,United Package,2017-12-25,2018-01-22,2018-01-02,2290.4,916.16,False,8.0,False
-10805,THEBI,The Big Cheese,Portland,2,Andrew Fuller,3,Federal Shipping,2017-12-25,2018-01-22,2018-01-04,2775.0,1110.0,False,10.0,False
-10806,VICTE,Victuailles en stock,Lyon,3,Janet Leverling,2,United Package,2017-12-26,2018-01-23,2017-12-31,572.1,228.84,False,5.0,False
-10807,FRANS,Franchi S.p.A.,Torino,4,Margaret Peacock,1,Speedy Express,2017-12-26,2018-01-23,2018-01-25,18.4,7.36,False,30.0,True
-10808,OLDWO,Old World Delicatessen,Anchorage,2,Andrew Fuller,3,Federal Shipping,2017-12-27,2018-01-24,2018-01-04,1660.0,664.0,False,8.0,False
-10809,WELLI,Wellington Importadora,Resende,7,Robert King,1,Speedy Express,2017-12-27,2018-01-24,2018-01-02,140.0,56.0,False,6.0,False
-10810,LAUGB,Laughing Bacchus Wine Cellars,Vancouver,2,Andrew Fuller,3,Federal Shipping,2017-12-27,2018-01-24,2018-01-02,187.0,74.8,False,6.0,False
-10811,LINOD,LINO-Delicateses,I. de Margarita,8,Laura Callahan,1,Speedy Express,2017-12-28,2018-01-25,2018-01-03,852.0,340.8,False,6.0,False
-10812,REGGC,Reggiani Caseifici,Reggio Emilia,5,Steven Buchanan,1,Speedy Express,2017-12-28,2018-01-25,2018-01-07,1852.0,740.8,False,10.0,False
-10813,RICAR,Ricardo Adocicados,Rio de Janeiro,1,Nancy Davolio,1,Speedy Express,2017-12-31,2018-01-28,2018-01-04,648.0,259.2,False,4.0,False
-10814,VICTE,Victuailles en stock,Lyon,3,Janet Leverling,3,Federal Shipping,2017-12-31,2018-01-28,2018-01-09,2070.0,828.0,False,9.0,False
-10815,SAVEA,Save-a-lot Markets,Boise,2,Andrew Fuller,3,Federal Shipping,2017-12-31,2018-01-28,2018-01-09,40.0,16.0,False,9.0,False
-10816,GREAL,Great Lakes Food Market,Eugene,4,Margaret Peacock,2,United Package,2018-01-01,2018-01-29,2018-01-30,8891.0,3556.4,False,29.0,True
-10817,KOENE,Königlich Essen,Brandenburgo,3,Janet Leverling,2,United Package,2018-01-01,2018-01-15,2018-01-08,11490.7,4596.28,False,7.0,False
-10818,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,7,Robert King,3,Federal Shipping,2018-01-02,2018-01-30,2018-01-07,833.0,333.2,False,5.0,False
-10819,CACTU,Cactus Comidas para llevar,Buenos Aires,2,Andrew Fuller,3,Federal Shipping,2018-01-02,2018-01-30,2018-01-11,477.0,190.8,False,9.0,False
-10820,RATTC,Rattlesnake Canyon Grocery,Albuquerque,3,Janet Leverling,2,United Package,2018-01-02,2018-01-30,2018-01-08,1140.0,456.0,False,6.0,False
-10821,SPLIR,Split Rail Beer & Ale,Lander,1,Nancy Davolio,1,Speedy Express,2018-01-03,2018-01-31,2018-01-10,678.0,271.2,False,7.0,False
-10822,TRAIH,Trail's Head Gourmet Provisioners,Kirkland,6,Michael Suyama,3,Federal Shipping,2018-01-03,2018-01-31,2018-01-11,237.9,95.16,False,8.0,False
-10823,LILAS,LILA-Supermercado,Barquisimeto,5,Steven Buchanan,2,United Package,2018-01-04,2018-02-01,2018-01-08,3107.5,1243.0,False,4.0,False
-10824,FOLKO,Folk och fä HB,Bräcke,8,Laura Callahan,1,Speedy Express,2018-01-04,2018-02-01,2018-01-25,250.8,100.32,False,21.0,False
-10825,DRACD,Drachenblut Delikatessen,Aachen,1,Nancy Davolio,1,Speedy Express,2018-01-04,2018-02-01,2018-01-09,1030.76,412.29999999999995,False,5.0,False
-10826,BLONP,Blondel père et fils,Estrasburgo,6,Michael Suyama,1,Speedy Express,2018-01-07,2018-02-04,2018-02-01,730.0,292.0,False,25.0,False
-10827,BONAP,Bon app',Marsella,1,Nancy Davolio,2,United Package,2018-01-07,2018-01-21,2018-02-01,843.0,337.2,False,25.0,True
-10828,RANCH,Rancho grande,Buenos Aires,9,Anne Dodsworth,1,Speedy Express,2018-01-08,2018-01-22,2018-01-30,932.0,372.8,False,22.0,True
-10829,ISLAT,Island Trading,Cowes,9,Anne Dodsworth,1,Speedy Express,2018-01-08,2018-02-05,2018-01-18,1764.0,705.6,False,10.0,False
-10830,TRADH,Tradição Hipermercados,São Paulo,4,Margaret Peacock,2,United Package,2018-01-08,2018-02-19,2018-01-16,1974.0,789.6,False,8.0,False
-10831,SANTG,Santé Gourmet,Stavern,3,Janet Leverling,2,United Package,2018-01-09,2018-02-06,2018-01-18,2684.4,1073.76,False,9.0,False
-10832,LAMAI,La maison d'Asie,Toulouse,2,Andrew Fuller,2,United Package,2018-01-09,2018-02-06,2018-01-14,568.95,227.58,False,5.0,False
-10833,OTTIK,Ottilies Käseladen,Köln,6,Michael Suyama,2,United Package,2018-01-10,2018-02-07,2018-01-18,1007.7,403.08,False,8.0,False
-10834,TRADH,Tradição Hipermercados,São Paulo,1,Nancy Davolio,3,Federal Shipping,2018-01-10,2018-02-07,2018-01-14,1508.12,603.25,False,4.0,False
-10835,ALFKI,Alfreds Futterkiste,Berlín,1,Nancy Davolio,3,Federal Shipping,2018-01-10,2018-02-07,2018-01-16,851.0,340.4,False,6.0,False
-10836,ERNSH,Ernst Handel,Graz,7,Robert King,1,Speedy Express,2018-01-11,2018-02-08,2018-01-16,4705.5,1882.2,False,5.0,False
-10837,BERGS,Berglunds snabbköp,Luleå,9,Anne Dodsworth,3,Federal Shipping,2018-01-11,2018-02-08,2018-01-18,1254.0,501.6,False,7.0,False
-10838,LINOD,LINO-Delicateses,I. de Margarita,3,Janet Leverling,3,Federal Shipping,2018-01-14,2018-02-11,2018-01-18,2584.5,1033.8,False,4.0,False
-10839,TRADH,Tradição Hipermercados,São Paulo,3,Janet Leverling,3,Federal Shipping,2018-01-14,2018-02-11,2018-01-17,919.5,367.8,False,3.0,False
-10840,LINOD,LINO-Delicateses,I. de Margarita,4,Margaret Peacock,2,United Package,2018-01-14,2018-02-25,2018-02-11,264.0,105.6,False,28.0,False
-10841,SUPRD,Suprêmes délices,Charleroi,5,Steven Buchanan,2,United Package,2018-01-15,2018-02-12,2018-01-24,4581.0,1832.4,False,9.0,False
-10842,TORTU,Tortuga Restaurante,México D.F.,1,Nancy Davolio,3,Federal Shipping,2018-01-15,2018-02-12,2018-01-24,975.0,390.0,False,9.0,False
-10843,VICTE,Victuailles en stock,Lyon,4,Margaret Peacock,2,United Package,2018-01-16,2018-02-13,2018-01-21,212.0,84.8,False,5.0,False
-10844,PICCO,Piccolo und mehr,Salzburgo,8,Laura Callahan,2,United Package,2018-01-16,2018-02-13,2018-01-21,735.0,294.0,False,5.0,False
-10845,QUICK,QUICK-Stop,Cunewalde,8,Laura Callahan,1,Speedy Express,2018-01-16,2018-01-30,2018-01-25,4059.0,1623.6,False,9.0,False
-10846,SUPRD,Suprêmes délices,Charleroi,2,Andrew Fuller,3,Federal Shipping,2018-01-17,2018-02-28,2018-01-18,1112.0,444.8,False,1.0,False
-10847,SAVEA,Save-a-lot Markets,Boise,4,Margaret Peacock,3,Federal Shipping,2018-01-17,2018-01-31,2018-02-05,6164.9,2465.96,False,19.0,True
-10848,CONSH,Consolidated Holdings,Londres,7,Robert King,2,United Package,2018-01-18,2018-02-15,2018-01-24,931.5,372.6,False,6.0,False
-10849,KOENE,Königlich Essen,Brandenburgo,9,Anne Dodsworth,2,United Package,2018-01-18,2018-02-15,2018-01-25,1052.1399999999999,420.86,False,7.0,False
-10850,VICTE,Victuailles en stock,Lyon,1,Nancy Davolio,1,Speedy Express,2018-01-18,2018-03-01,2018-01-25,740.0,296.0,False,7.0,False
-10851,RICAR,Ricardo Adocicados,Rio de Janeiro,5,Steven Buchanan,1,Speedy Express,2018-01-21,2018-02-18,2018-01-28,2740.0,1096.0,False,7.0,False
-10852,RATTC,Rattlesnake Canyon Grocery,Albuquerque,8,Laura Callahan,1,Speedy Express,2018-01-21,2018-02-04,2018-01-25,2984.0,1193.6,False,4.0,False
-10853,BLAUS,Blauer See Delikatessen,Mannheim,9,Anne Dodsworth,2,United Package,2018-01-22,2018-02-19,2018-01-29,625.0,250.0,False,7.0,False
-10854,ERNSH,Ernst Handel,Graz,3,Janet Leverling,2,United Package,2018-01-22,2018-02-19,2018-01-31,3490.0,1396.0,False,9.0,False
-10855,OLDWO,Old World Delicatessen,Anchorage,3,Janet Leverling,1,Speedy Express,2018-01-22,2018-02-19,2018-01-30,2275.25,910.1,False,8.0,False
-10856,ANTON,Antonio Moreno Taquería,México D.F.,3,Janet Leverling,2,United Package,2018-01-23,2018-02-20,2018-02-05,660.0,264.0,False,13.0,False
-10857,BERGS,Berglunds snabbköp,Luleå,8,Laura Callahan,2,United Package,2018-01-23,2018-02-20,2018-02-01,2630.95,1052.38,False,9.0,False
-10858,LACOR,La corne d'abondance,Versalles,2,Andrew Fuller,1,Speedy Express,2018-01-24,2018-02-21,2018-01-29,649.0,259.6,False,5.0,False
-10859,FRANK,Frankenversand,München,1,Nancy Davolio,2,United Package,2018-01-24,2018-02-21,2018-01-28,1438.25,575.3,False,4.0,False
-10860,FRANR,France restauration,Nantes,3,Janet Leverling,3,Federal Shipping,2018-01-24,2018-02-21,2018-01-30,519.0,207.6,False,6.0,False
-10861,WHITC,White Clover Markets,Seattle,4,Margaret Peacock,2,United Package,2018-01-25,2018-02-22,2018-02-12,3523.4,1409.3600000000001,False,18.0,False
-10862,LEHMS,Lehmanns Marktstand,Fráncfort,8,Laura Callahan,2,United Package,2018-01-25,2018-03-08,2018-01-28,581.0,232.4,False,3.0,False
-10863,HILAA,HILARIÓN-Abastos,San Cristóbal,4,Margaret Peacock,2,United Package,2018-01-28,2018-02-25,2018-02-12,519.0,207.6,False,15.0,False
-10864,AROUT,Around the Horn,Londres,4,Margaret Peacock,2,United Package,2018-01-28,2018-02-25,2018-02-04,282.0,112.8,False,7.0,False
-10865,QUICK,QUICK-Stop,Cunewalde,2,Andrew Fuller,1,Speedy Express,2018-01-28,2018-02-11,2018-02-07,17250.0,6900.0,False,10.0,False
-10866,BERGS,Berglunds snabbköp,Luleå,5,Steven Buchanan,1,Speedy Express,2018-01-29,2018-02-26,2018-02-07,1461.6,584.64,False,9.0,False
-10867,LONEP,Lonesome Pine Restaurant,Portland,6,Michael Suyama,1,Speedy Express,2018-01-29,2018-03-12,2018-02-06,98.4,39.36,False,8.0,False
-10868,QUEEN,Queen Cozinha,São Paulo,7,Robert King,2,United Package,2018-01-30,2018-02-27,2018-02-18,2004.6,801.84,False,19.0,False
-10869,SEVES,Seven Seas Imports,Londres,5,Steven Buchanan,1,Speedy Express,2018-01-30,2018-02-27,2018-02-04,1630.0,652.0,False,5.0,False
-10870,WHITC,White Clover Markets,Seattle,5,Steven Buchanan,3,Federal Shipping,2018-01-30,2018-02-27,2018-02-08,160.0,64.0,False,9.0,False
-10871,BONAP,Bon app',Marsella,9,Anne Dodsworth,2,United Package,2018-01-31,2018-02-28,2018-02-05,2083.4,833.36,False,5.0,False
-10872,GODOS,Godos Cocina Típica,Sevilla,5,Steven Buchanan,2,United Package,2018-01-31,2018-02-28,2018-02-04,2166.8,866.72,False,4.0,False
-10873,WILMK,Wilman Kala,Helsinki,4,Margaret Peacock,1,Speedy Express,2018-02-01,2018-03-01,2018-02-04,336.8,134.72,False,3.0,False
-10874,GODOS,Godos Cocina Típica,Sevilla,5,Steven Buchanan,2,United Package,2018-02-01,2018-03-01,2018-02-06,310.0,124.0,False,5.0,False
-10875,BERGS,Berglunds snabbköp,Luleå,4,Margaret Peacock,2,United Package,2018-02-01,2018-03-01,2018-02-26,729.5,291.8,False,25.0,False
-10876,BONAP,Bon app',Marsella,7,Robert King,3,Federal Shipping,2018-02-04,2018-03-04,2018-02-07,917.0,366.8,False,3.0,False
-10877,RICAR,Ricardo Adocicados,Rio de Janeiro,1,Nancy Davolio,1,Speedy Express,2018-02-04,2018-03-04,2018-02-14,2086.0,834.4,False,10.0,False
-10878,QUICK,QUICK-Stop,Cunewalde,4,Margaret Peacock,1,Speedy Express,2018-02-05,2018-03-05,2018-02-07,1620.0,648.0,False,2.0,False
-10879,WILMK,Wilman Kala,Helsinki,3,Janet Leverling,3,Federal Shipping,2018-02-05,2018-03-05,2018-02-07,611.3,244.51999999999998,False,2.0,False
-10880,FOLKO,Folk och fä HB,Bräcke,7,Robert King,1,Speedy Express,2018-02-05,2018-03-19,2018-02-13,1875.0,750.0,False,8.0,False
-10881,CACTU,Cactus Comidas para llevar,Buenos Aires,4,Margaret Peacock,1,Speedy Express,2018-02-06,2018-03-06,2018-02-13,150.0,60.0,False,7.0,False
-10882,SAVEA,Save-a-lot Markets,Boise,4,Margaret Peacock,3,Federal Shipping,2018-02-06,2018-03-06,2018-02-15,988.4,395.36,False,9.0,False
-10883,LONEP,Lonesome Pine Restaurant,Portland,8,Laura Callahan,3,Federal Shipping,2018-02-07,2018-03-07,2018-02-15,36.0,14.4,False,8.0,False
-10884,LETSS,Let's Stop N Shop,San Francisco,4,Margaret Peacock,2,United Package,2018-02-07,2018-03-07,2018-02-08,1450.6,580.24,False,1.0,False
-10885,SUPRD,Suprêmes délices,Charleroi,6,Michael Suyama,3,Federal Shipping,2018-02-07,2018-03-07,2018-02-13,1209.0,483.6,False,6.0,False
-10886,HANAR,Hanari Carnes,Rio de Janeiro,1,Nancy Davolio,1,Speedy Express,2018-02-08,2018-03-08,2018-02-25,3127.5,1251.0,False,17.0,False
-10887,GALED,Galería del gastrónomo,Barcelona,8,Laura Callahan,3,Federal Shipping,2018-02-08,2018-03-08,2018-02-11,70.0,28.0,False,3.0,False
-10888,GODOS,Godos Cocina Típica,Sevilla,1,Nancy Davolio,2,United Package,2018-02-11,2018-03-11,2018-02-18,605.0,242.0,False,7.0,False
-10889,RATTC,Rattlesnake Canyon Grocery,Albuquerque,9,Anne Dodsworth,3,Federal Shipping,2018-02-11,2018-03-11,2018-02-18,11380.0,4552.0,False,7.0,False
-10890,DUMON,Du monde entier,Nantes,7,Robert King,1,Speedy Express,2018-02-11,2018-03-11,2018-02-13,860.1,344.04,False,2.0,False
-10891,LEHMS,Lehmanns Marktstand,Fráncfort,7,Robert King,2,United Package,2018-02-12,2018-03-12,2018-02-14,388.35,155.34,False,2.0,False
-10892,MAISD,Maison Dewey,Bruselas,4,Margaret Peacock,2,United Package,2018-02-12,2018-03-12,2018-02-14,2200.0,880.0,False,2.0,False
-10893,KOENE,Königlich Essen,Brandenburgo,9,Anne Dodsworth,2,United Package,2018-02-13,2018-03-13,2018-02-15,5502.11,2200.84,False,2.0,False
-10894,SAVEA,Save-a-lot Markets,Boise,1,Nancy Davolio,1,Speedy Express,2018-02-13,2018-03-13,2018-02-15,2898.0,1159.2,False,2.0,False
-10895,ERNSH,Ernst Handel,Graz,3,Janet Leverling,1,Speedy Express,2018-02-13,2018-03-13,2018-02-18,6379.4,2551.76,False,5.0,False
-10896,MAISD,Maison Dewey,Bruselas,7,Robert King,3,Federal Shipping,2018-02-14,2018-03-14,2018-02-22,750.5,300.2,False,8.0,False
-10897,HUNGO,Hungry Owl All-Night Grocers,Cork,3,Janet Leverling,2,United Package,2018-02-14,2018-03-14,2018-02-20,10835.240000000002,4334.1,False,6.0,False
-10898,OCEAN,Océano Atlántico Ltda.,Buenos Aires,4,Margaret Peacock,2,United Package,2018-02-15,2018-03-15,2018-03-01,30.0,12.0,False,14.0,False
-10899,LILAS,LILA-Supermercado,Barquisimeto,5,Steven Buchanan,3,Federal Shipping,2018-02-15,2018-03-15,2018-02-21,144.0,57.6,False,6.0,False
-10900,WELLI,Wellington Importadora,Resende,1,Nancy Davolio,2,United Package,2018-02-15,2018-03-15,2018-02-27,45.0,18.0,False,12.0,False
-10901,HILAA,HILARIÓN-Abastos,San Cristóbal,4,Margaret Peacock,1,Speedy Express,2018-02-18,2018-03-18,2018-02-21,934.5,373.8,False,3.0,False
-10902,FOLKO,Folk och fä HB,Bräcke,1,Nancy Davolio,1,Speedy Express,2018-02-18,2018-03-18,2018-02-26,1015.8,406.32,False,8.0,False
-10903,HANAR,Hanari Carnes,Rio de Janeiro,3,Janet Leverling,3,Federal Shipping,2018-02-19,2018-03-19,2018-02-27,932.05,372.82,False,8.0,False
-10904,WHITC,White Clover Markets,Seattle,3,Janet Leverling,3,Federal Shipping,2018-02-19,2018-03-19,2018-02-22,1924.25,769.7,False,3.0,False
-10905,WELLI,Wellington Importadora,Resende,9,Anne Dodsworth,2,United Package,2018-02-19,2018-03-19,2018-03-01,360.0,144.0,False,10.0,False
-10906,WOLZA,Wolski Zajazd,Warszawa,4,Margaret Peacock,3,Federal Shipping,2018-02-20,2018-03-06,2018-02-26,427.5,171.0,False,6.0,False
-10907,SPECD,Spécialités du monde,París,6,Michael Suyama,3,Federal Shipping,2018-02-20,2018-03-20,2018-02-22,108.5,43.4,False,2.0,False
-10908,REGGC,Reggiani Caseifici,Reggio Emilia,4,Margaret Peacock,2,United Package,2018-02-21,2018-03-21,2018-03-01,698.0,279.2,False,8.0,False
-10909,SANTG,Santé Gourmet,Stavern,1,Nancy Davolio,2,United Package,2018-02-21,2018-03-21,2018-03-05,670.0,268.0,False,12.0,False
-10910,WILMK,Wilman Kala,Helsinki,1,Nancy Davolio,3,Federal Shipping,2018-02-21,2018-03-21,2018-02-27,452.9,181.16,False,6.0,False
-10911,GODOS,Godos Cocina Típica,Sevilla,3,Janet Leverling,1,Speedy Express,2018-02-21,2018-03-21,2018-02-28,858.0,343.2,False,7.0,False
-10912,HUNGO,Hungry Owl All-Night Grocers,Cork,2,Andrew Fuller,2,United Package,2018-02-21,2018-03-21,2018-03-13,8267.4,3306.96,False,20.0,False
-10913,QUEEN,Queen Cozinha,São Paulo,4,Margaret Peacock,1,Speedy Express,2018-02-21,2018-03-21,2018-02-27,958.75,383.5,False,6.0,False
-10914,QUEEN,Queen Cozinha,São Paulo,6,Michael Suyama,1,Speedy Express,2018-02-22,2018-03-22,2018-02-25,537.5,215.0,False,3.0,False
-10915,TORTU,Tortuga Restaurante,México D.F.,2,Andrew Fuller,2,United Package,2018-02-22,2018-03-22,2018-02-25,539.5,215.8,False,3.0,False
-10916,RANCH,Rancho grande,Buenos Aires,1,Nancy Davolio,2,United Package,2018-02-22,2018-03-22,2018-03-04,686.7,274.68,False,10.0,False
-10917,ROMEY,Romero y tomillo,Madrid,4,Margaret Peacock,2,United Package,2018-02-25,2018-03-25,2018-03-06,365.89,146.36,False,9.0,False
-10918,BOTTM,Bottom-Dollar Markets,Tsawassen,3,Janet Leverling,3,Federal Shipping,2018-02-25,2018-03-25,2018-03-06,1930.0,772.0,False,9.0,False
-10919,LINOD,LINO-Delicateses,I. de Margarita,2,Andrew Fuller,2,United Package,2018-02-25,2018-03-25,2018-02-27,1122.8,449.12,False,2.0,False
-10920,AROUT,Around the Horn,Londres,4,Margaret Peacock,2,United Package,2018-02-26,2018-03-26,2018-03-04,390.0,156.0,False,6.0,False
-10921,VAFFE,Vaffeljernet,Århus,1,Nancy Davolio,1,Speedy Express,2018-02-26,2018-04-09,2018-03-04,1936.0,774.4,False,6.0,False
-10922,HANAR,Hanari Carnes,Rio de Janeiro,5,Steven Buchanan,3,Federal Shipping,2018-02-26,2018-03-26,2018-02-28,742.5,297.0,False,2.0,False
-10923,LAMAI,La maison d'Asie,Toulouse,7,Robert King,3,Federal Shipping,2018-02-26,2018-04-09,2018-03-08,936.0,374.4,False,10.0,False
-10924,BERGS,Berglunds snabbköp,Luleå,3,Janet Leverling,2,United Package,2018-02-27,2018-03-27,2018-04-03,2034.5,813.8000000000001,False,35.0,True
-10925,HANAR,Hanari Carnes,Rio de Janeiro,3,Janet Leverling,1,Speedy Express,2018-02-27,2018-03-27,2018-03-08,559.0,223.6,False,9.0,False
-10926,ANATR,Ana Trujillo Emparedados y helados,México D.F.,4,Margaret Peacock,3,Federal Shipping,2018-02-27,2018-03-27,2018-03-06,514.4,205.76,False,7.0,False
-10927,LACOR,La corne d'abondance,Versalles,4,Margaret Peacock,1,Speedy Express,2018-02-28,2018-03-28,2018-04-03,800.0,320.0,False,34.0,True
-10928,GALED,Galería del gastrónomo,Barcelona,1,Nancy Davolio,1,Speedy Express,2018-02-28,2018-03-28,2018-03-13,137.5,55.0,False,13.0,False
-10929,FRANK,Frankenversand,München,6,Michael Suyama,1,Speedy Express,2018-02-28,2018-03-28,2018-03-07,1174.75,469.9,False,7.0,False
-10930,SUPRD,Suprêmes délices,Charleroi,4,Margaret Peacock,3,Federal Shipping,2018-03-01,2018-04-12,2018-03-13,2455.0,982.0,False,12.0,False
-10931,RICSU,Richter Supermarkt,Génova,4,Margaret Peacock,2,United Package,2018-03-01,2018-03-15,2018-03-14,837.0,334.8,False,13.0,False
-10932,BONAP,Bon app',Marsella,8,Laura Callahan,1,Speedy Express,2018-03-01,2018-03-29,2018-03-19,1925.5,770.2,False,18.0,False
-10933,ISLAT,Island Trading,Cowes,6,Michael Suyama,3,Federal Shipping,2018-03-01,2018-03-29,2018-03-11,920.6,368.24,False,10.0,False
-10934,LEHMS,Lehmanns Marktstand,Fráncfort,3,Janet Leverling,3,Federal Shipping,2018-03-04,2018-04-01,2018-03-07,500.0,200.0,False,3.0,False
-10935,WELLI,Wellington Importadora,Resende,4,Margaret Peacock,3,Federal Shipping,2018-03-04,2018-04-01,2018-03-13,700.0,280.0,False,9.0,False
-10936,GREAL,Great Lakes Food Market,Eugene,3,Janet Leverling,2,United Package,2018-03-04,2018-04-01,2018-03-13,570.0,228.0,False,9.0,False
-10937,CACTU,Cactus Comidas para llevar,Buenos Aires,7,Robert King,3,Federal Shipping,2018-03-05,2018-03-19,2018-03-08,644.8,257.91999999999996,False,3.0,False
-10938,QUICK,QUICK-Stop,Cunewalde,3,Janet Leverling,2,United Package,2018-03-05,2018-04-02,2018-03-11,3642.5,1457.0,False,6.0,False
-10939,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,2,Andrew Fuller,2,United Package,2018-03-05,2018-04-02,2018-03-08,750.0,300.0,False,3.0,False
-10940,BONAP,Bon app',Marsella,8,Laura Callahan,3,Federal Shipping,2018-03-06,2018-04-03,2018-03-18,360.0,144.0,False,12.0,False
-10941,SAVEA,Save-a-lot Markets,Boise,7,Robert King,2,United Package,2018-03-06,2018-04-03,2018-03-15,4769.0,1907.6,False,9.0,False
-10942,REGGC,Reggiani Caseifici,Reggio Emilia,9,Anne Dodsworth,3,Federal Shipping,2018-03-06,2018-04-03,2018-03-13,560.0,224.0,False,7.0,False
-10943,BSBEV,B's Beverages,Londres,4,Margaret Peacock,2,United Package,2018-03-06,2018-04-03,2018-03-14,711.0,284.4,False,8.0,False
-10944,BOTTM,Bottom-Dollar Markets,Tsawassen,6,Michael Suyama,3,Federal Shipping,2018-03-07,2018-03-21,2018-03-08,1139.1,455.64,False,1.0,False
-10945,MORGK,Morgenstern Gesundkost,Leipzig,4,Margaret Peacock,1,Speedy Express,2018-03-07,2018-04-04,2018-03-13,245.0,98.0,False,6.0,False
-10946,VAFFE,Vaffeljernet,Århus,1,Nancy Davolio,2,United Package,2018-03-07,2018-04-04,2018-03-14,1407.5,563.0,False,7.0,False
-10947,BSBEV,B's Beverages,Londres,3,Janet Leverling,2,United Package,2018-03-08,2018-04-05,2018-03-11,220.0,88.0,False,3.0,False
-10948,GODOS,Godos Cocina Típica,Sevilla,3,Janet Leverling,3,Federal Shipping,2018-03-08,2018-04-05,2018-03-14,2362.25,944.9,False,6.0,False
-10949,BOTTM,Bottom-Dollar Markets,Tsawassen,2,Andrew Fuller,3,Federal Shipping,2018-03-08,2018-04-05,2018-03-12,4422.0,1768.8000000000002,False,4.0,False
-10950,MAGAA,Magazzini Alimentari Riuniti,Bérgamo,1,Nancy Davolio,2,United Package,2018-03-11,2018-04-08,2018-03-18,110.0,44.0,False,7.0,False
-10951,RICSU,Richter Supermarkt,Génova,9,Anne Dodsworth,2,United Package,2018-03-11,2018-04-22,2018-04-02,482.9,193.16,False,22.0,False
-10952,ALFKI,Alfreds Futterkiste,Berlín,1,Nancy Davolio,1,Speedy Express,2018-03-11,2018-04-22,2018-03-19,491.2,196.48,False,8.0,False
-10953,AROUT,Around the Horn,Londres,9,Anne Dodsworth,2,United Package,2018-03-11,2018-03-25,2018-03-20,4675.0,1870.0,False,9.0,False
-10954,LINOD,LINO-Delicateses,I. de Margarita,5,Steven Buchanan,1,Speedy Express,2018-03-12,2018-04-23,2018-03-15,1902.1,760.8399999999999,False,3.0,False
-10955,FOLKO,Folk och fä HB,Bräcke,8,Laura Callahan,2,United Package,2018-03-12,2018-04-09,2018-03-15,93.0,37.2,False,3.0,False
-10956,BLAUS,Blauer See Delikatessen,Mannheim,6,Michael Suyama,2,United Package,2018-03-12,2018-04-23,2018-03-15,677.0,270.8,False,3.0,False
-10957,HILAA,HILARIÓN-Abastos,San Cristóbal,8,Laura Callahan,3,Federal Shipping,2018-03-13,2018-04-10,2018-03-22,1762.7,705.08,False,9.0,False
-10958,OCEAN,Océano Atlántico Ltda.,Buenos Aires,7,Robert King,2,United Package,2018-03-13,2018-04-10,2018-03-22,781.0,312.4,False,9.0,False
-10959,GOURL,Gourmet Lanchonetes,Campinas,6,Michael Suyama,2,United Package,2018-03-13,2018-04-24,2018-03-18,155.0,62.0,False,5.0,False
-10960,HILAA,HILARIÓN-Abastos,San Cristóbal,3,Janet Leverling,1,Speedy Express,2018-03-14,2018-03-28,2018-04-03,276.6,110.64,False,20.0,True
-10961,QUEEN,Queen Cozinha,São Paulo,8,Laura Callahan,1,Speedy Express,2018-03-14,2018-04-11,2018-03-25,1122.0,448.8,False,11.0,False
-10962,QUICK,QUICK-Stop,Cunewalde,8,Laura Callahan,2,United Package,2018-03-14,2018-04-11,2018-03-18,3584.0,1433.6000000000001,False,4.0,False
-10963,FURIB,Furia Bacalhau e Frutos do Mar,Lisboa,9,Anne Dodsworth,3,Federal Shipping,2018-03-14,2018-04-11,2018-03-21,68.0,27.2,False,7.0,False
-10964,SPECD,Spécialités du monde,París,3,Janet Leverling,2,United Package,2018-03-15,2018-04-12,2018-03-19,2052.5,821.0,False,4.0,False
-10965,OLDWO,Old World Delicatessen,Anchorage,6,Michael Suyama,3,Federal Shipping,2018-03-15,2018-04-12,2018-03-25,848.0,339.2,False,10.0,False
-10966,CHOPS,Centro comercial Moctezuma,México D.F.,4,Margaret Peacock,1,Speedy Express,2018-03-15,2018-04-12,2018-04-03,1255.6,502.24,False,19.0,False
-10967,TOMSP,Toms Spezialitäten,Münster,2,Andrew Fuller,2,United Package,2018-03-18,2018-04-15,2018-03-28,910.4,364.15999999999997,False,10.0,False
-10968,ERNSH,Ernst Handel,Graz,1,Nancy Davolio,3,Federal Shipping,2018-03-18,2018-04-15,2018-03-27,1408.0,563.2,False,9.0,False
-10969,COMMI,Comércio Mineiro,São Paulo,1,Nancy Davolio,2,United Package,2018-03-18,2018-04-15,2018-03-25,108.0,43.2,False,7.0,False
-10970,BOLID,Bólido Comidas preparadas,Madrid,9,Anne Dodsworth,1,Speedy Express,2018-03-19,2018-04-02,2018-04-19,280.0,112.0,False,31.0,True
-10971,FRANR,France restauration,Nantes,2,Andrew Fuller,2,United Package,2018-03-19,2018-04-16,2018-03-28,1733.06,693.22,False,9.0,False
-10972,LACOR,La corne d'abondance,Versalles,4,Margaret Peacock,2,United Package,2018-03-19,2018-04-16,2018-03-21,251.5,100.6,False,2.0,False
-10973,LACOR,La corne d'abondance,Versalles,6,Michael Suyama,2,United Package,2018-03-19,2018-04-16,2018-03-22,291.55,116.62,False,3.0,False
-10974,SPLIR,Split Rail Beer & Ale,Lander,3,Janet Leverling,3,Federal Shipping,2018-03-20,2018-04-03,2018-03-29,439.0,175.6,False,9.0,False
-10975,BOTTM,Bottom-Dollar Markets,Tsawassen,1,Nancy Davolio,3,Federal Shipping,2018-03-20,2018-04-17,2018-03-22,717.5,287.0,False,2.0,False
-10976,HILAA,HILARIÓN-Abastos,San Cristóbal,1,Nancy Davolio,1,Speedy Express,2018-03-20,2018-05-01,2018-03-29,912.0,364.8,False,9.0,False
-10977,FOLKO,Folk och fä HB,Bräcke,8,Laura Callahan,3,Federal Shipping,2018-03-21,2018-04-18,2018-04-05,2233.0,893.2,False,15.0,False
-10978,MAISD,Maison Dewey,Bruselas,9,Anne Dodsworth,2,United Package,2018-03-21,2018-04-18,2018-04-18,1500.7,600.28,False,28.0,False
-10979,ERNSH,Ernst Handel,Graz,8,Laura Callahan,2,United Package,2018-03-21,2018-04-18,2018-03-26,4813.5,1925.4,False,5.0,False
-10980,FOLKO,Folk och fä HB,Bräcke,4,Margaret Peacock,1,Speedy Express,2018-03-22,2018-05-03,2018-04-12,310.0,124.0,False,21.0,False
-10981,HANAR,Hanari Carnes,Rio de Janeiro,1,Nancy Davolio,2,United Package,2018-03-22,2018-04-19,2018-03-28,15810.0,6324.0,False,6.0,False
-10982,BOTTM,Bottom-Dollar Markets,Tsawassen,2,Andrew Fuller,1,Speedy Express,2018-03-22,2018-04-19,2018-04-03,1014.0,405.6,False,12.0,False
-10983,SAVEA,Save-a-lot Markets,Boise,2,Andrew Fuller,2,United Package,2018-03-22,2018-04-19,2018-04-01,796.5,318.6,False,10.0,False
-10984,SAVEA,Save-a-lot Markets,Boise,1,Nancy Davolio,3,Federal Shipping,2018-03-25,2018-04-22,2018-03-29,1809.75,723.9,False,4.0,False
-10985,HUNGO,Hungry Owl All-Night Grocers,Cork,2,Andrew Fuller,1,Speedy Express,2018-03-25,2018-04-22,2018-03-28,2248.2,899.28,False,3.0,False
-10986,OCEAN,Océano Atlántico Ltda.,Buenos Aires,8,Laura Callahan,2,United Package,2018-03-25,2018-04-22,2018-04-16,2220.0,888.0,False,22.0,False
-10987,EASTC,Eastern Connection,Londres,8,Laura Callahan,1,Speedy Express,2018-03-26,2018-04-23,2018-04-01,2772.0,1108.8,False,6.0,False
-10988,RATTC,Rattlesnake Canyon Grocery,Albuquerque,3,Janet Leverling,2,United Package,2018-03-26,2018-04-23,2018-04-05,3772.0,1508.8,False,10.0,False
-10989,QUEDE,Que Delícia,Rio de Janeiro,2,Andrew Fuller,1,Speedy Express,2018-03-26,2018-04-23,2018-03-28,1353.6,541.44,False,2.0,False
-10990,ERNSH,Ernst Handel,Graz,2,Andrew Fuller,3,Federal Shipping,2018-03-27,2018-05-08,2018-04-02,4931.0,1972.4,False,6.0,False
-10991,QUICK,QUICK-Stop,Cunewalde,1,Nancy Davolio,1,Speedy Express,2018-03-27,2018-04-24,2018-04-02,2870.0,1148.0,False,6.0,False
-10992,THEBI,The Big Cheese,Portland,1,Nancy Davolio,3,Federal Shipping,2018-03-27,2018-04-24,2018-03-29,69.6,27.84,False,2.0,False
-10993,FOLKO,Folk och fä HB,Bräcke,7,Robert King,3,Federal Shipping,2018-03-27,2018-04-24,2018-04-05,6527.25,2610.9,False,9.0,False
-10994,VAFFE,Vaffeljernet,Århus,2,Andrew Fuller,3,Federal Shipping,2018-03-28,2018-04-11,2018-04-04,990.0,396.0,False,7.0,False
-10995,PERIC,Pericles Comidas clásicas,México D.F.,1,Nancy Davolio,3,Federal Shipping,2018-03-28,2018-04-25,2018-04-01,1196.0,478.4,False,4.0,False
-10996,QUICK,QUICK-Stop,Cunewalde,4,Margaret Peacock,2,United Package,2018-03-28,2018-04-25,2018-04-05,560.0,224.0,False,8.0,False
-10997,LILAS,LILA-Supermercado,Barquisimeto,8,Laura Callahan,2,United Package,2018-03-29,2018-05-10,2018-04-08,1980.0,792.0,False,10.0,False
-10998,WOLZA,Wolski Zajazd,Warszawa,8,Laura Callahan,2,United Package,2018-03-29,2018-04-12,2018-04-12,686.0,274.4,False,14.0,False
-10999,OTTIK,Ottilies Käseladen,Köln,6,Michael Suyama,2,United Package,2018-03-29,2018-04-26,2018-04-05,1261.0,504.4,False,7.0,False
-11000,RATTC,Rattlesnake Canyon Grocery,Albuquerque,2,Andrew Fuller,3,Federal Shipping,2018-04-01,2018-04-29,2018-04-09,1075.0,430.0,False,8.0,False
-11001,FOLKO,Folk och fä HB,Bräcke,2,Andrew Fuller,2,United Package,2018-04-01,2018-04-29,2018-04-09,2769.0,1107.6,False,8.0,False
-11002,SAVEA,Save-a-lot Markets,Boise,4,Margaret Peacock,1,Speedy Express,2018-04-01,2018-04-29,2018-04-11,1902.0,760.8,False,10.0,False
-11003,THECR,The Cracker Box,Butte,3,Janet Leverling,3,Federal Shipping,2018-04-01,2018-04-29,2018-04-03,326.0,130.39999999999998,False,2.0,False
-11004,MAISD,Maison Dewey,Bruselas,3,Janet Leverling,1,Speedy Express,2018-04-02,2018-04-30,2018-04-15,295.38,118.15,False,13.0,False
-11005,WILMK,Wilman Kala,Helsinki,2,Andrew Fuller,1,Speedy Express,2018-04-02,2018-04-30,2018-04-05,586.0,234.4,False,3.0,False
-11006,GREAL,Great Lakes Food Market,Eugene,3,Janet Leverling,2,United Package,2018-04-02,2018-04-30,2018-04-10,391.58000000000004,156.63,False,8.0,False
-11007,PRINI,Princesa Isabel Vinhos,Lisboa,8,Laura Callahan,2,United Package,2018-04-03,2018-05-01,2018-04-08,2633.9,1053.56,False,5.0,False
-11008,ERNSH,Ernst Handel,Graz,7,Robert King,3,Federal Shipping,2018-04-03,2018-05-01,,4903.5,1961.3999999999999,True,,
-11009,GODOS,Godos Cocina Típica,Sevilla,2,Andrew Fuller,1,Speedy Express,2018-04-03,2018-05-01,2018-04-05,702.0,280.8,False,2.0,False
-11010,REGGC,Reggiani Caseifici,Reggio Emilia,2,Andrew Fuller,2,United Package,2018-04-04,2018-05-02,2018-04-16,645.0,258.0,False,12.0,False
-11011,ALFKI,Alfreds Futterkiste,Berlín,3,Janet Leverling,1,Speedy Express,2018-04-04,2018-05-02,2018-04-08,960.0,384.0,False,4.0,False
-11012,FRANK,Frankenversand,München,1,Nancy Davolio,3,Federal Shipping,2018-04-04,2018-04-18,2018-04-12,2974.0,1189.6,False,8.0,False
-11013,ROMEY,Romero y tomillo,Madrid,2,Andrew Fuller,1,Speedy Express,2018-04-04,2018-05-02,2018-04-05,361.0,144.4,False,1.0,False
-11014,LINOD,LINO-Delicateses,I. de Margarita,2,Andrew Fuller,3,Federal Shipping,2018-04-05,2018-05-03,2018-04-10,270.2,108.08,False,5.0,False
-11015,SANTG,Santé Gourmet,Stavern,2,Andrew Fuller,2,United Package,2018-04-05,2018-04-19,2018-04-15,622.35,248.94,False,10.0,False
-11016,AROUT,Around the Horn,Londres,9,Anne Dodsworth,2,United Package,2018-04-05,2018-05-03,2018-04-08,491.5,196.6,False,3.0,False
-11017,ERNSH,Ernst Handel,Graz,9,Anne Dodsworth,2,United Package,2018-04-08,2018-05-06,2018-04-15,6750.0,2700.0,False,7.0,False
-11018,LONEP,Lonesome Pine Restaurant,Portland,4,Margaret Peacock,2,United Package,2018-04-08,2018-05-06,2018-04-11,1575.0,630.0,False,3.0,False
-11019,RANCH,Rancho grande,Buenos Aires,6,Michael Suyama,3,Federal Shipping,2018-04-08,2018-05-06,,76.0,30.4,True,,
-11020,OTTIK,Ottilies Käseladen,Köln,2,Andrew Fuller,2,United Package,2018-04-09,2018-05-07,2018-04-11,744.0,297.6,False,2.0,False
-11021,QUICK,QUICK-Stop,Cunewalde,3,Janet Leverling,1,Speedy Express,2018-04-09,2018-05-07,2018-04-16,6941.49,2776.6,False,7.0,False
-11022,HANAR,Hanari Carnes,Rio de Janeiro,9,Anne Dodsworth,2,United Package,2018-04-09,2018-05-07,2018-04-29,1402.0,560.8,False,20.0,False
-11023,BSBEV,B's Beverages,Londres,1,Nancy Davolio,2,United Package,2018-04-09,2018-04-23,2018-04-19,1500.0,600.0,False,10.0,False
-11024,EASTC,Eastern Connection,Londres,4,Margaret Peacock,1,Speedy Express,2018-04-10,2018-05-08,2018-04-15,1966.81,786.72,False,5.0,False
-11025,WARTH,Wartian Herkku,Oulu,6,Michael Suyama,3,Federal Shipping,2018-04-10,2018-05-08,2018-04-19,300.0,120.0,False,9.0,False
-11026,FRANS,Franchi S.p.A.,Torino,4,Margaret Peacock,1,Speedy Express,2018-04-10,2018-05-08,2018-04-23,1030.0,412.0,False,13.0,False
-11027,BOTTM,Bottom-Dollar Markets,Tsawassen,1,Nancy Davolio,1,Speedy Express,2018-04-11,2018-05-09,2018-04-15,1170.3,468.12,False,4.0,False
-11028,KOENE,Königlich Essen,Brandenburgo,2,Andrew Fuller,1,Speedy Express,2018-04-11,2018-05-09,2018-04-17,2160.0,864.0,False,6.0,False
-11029,CHOPS,Centro comercial Moctezuma,México D.F.,4,Margaret Peacock,1,Speedy Express,2018-04-11,2018-05-09,2018-04-22,1286.8,514.72,False,11.0,False
-11030,SAVEA,Save-a-lot Markets,Boise,7,Robert King,2,United Package,2018-04-12,2018-05-10,2018-04-22,16321.9,6528.76,False,10.0,False
-11031,SAVEA,Save-a-lot Markets,Boise,6,Michael Suyama,2,United Package,2018-04-12,2018-05-10,2018-04-19,2393.5,957.4,False,7.0,False
-11032,WHITC,White Clover Markets,Seattle,2,Andrew Fuller,3,Federal Shipping,2018-04-12,2018-05-10,2018-04-18,8902.5,3561.0,False,6.0,False
-11033,RICSU,Richter Supermarkt,Génova,7,Robert King,3,Federal Shipping,2018-04-12,2018-05-10,2018-04-18,3592.0,1436.8,False,6.0,False
-11034,OLDWO,Old World Delicatessen,Anchorage,8,Laura Callahan,1,Speedy Express,2018-04-15,2018-05-27,2018-04-22,554.4,221.76,False,7.0,False
-11035,SUPRD,Suprêmes délices,Charleroi,2,Andrew Fuller,2,United Package,2018-04-15,2018-05-13,2018-04-19,1754.5,701.8,False,4.0,False
-11036,DRACD,Drachenblut Delikatessen,Aachen,8,Laura Callahan,3,Federal Shipping,2018-04-15,2018-05-13,2018-04-17,1692.0,676.8,False,2.0,False
-11037,GODOS,Godos Cocina Típica,Sevilla,7,Robert King,1,Speedy Express,2018-04-16,2018-05-14,2018-04-22,60.0,24.0,False,6.0,False
-11038,SUPRD,Suprêmes délices,Charleroi,1,Nancy Davolio,2,United Package,2018-04-16,2018-05-14,2018-04-25,751.0,300.40000000000003,False,9.0,False
-11039,LINOD,LINO-Delicateses,I. de Margarita,1,Nancy Davolio,2,United Package,2018-04-16,2018-05-14,,3090.0,1236.0,True,,
-11040,GREAL,Great Lakes Food Market,Eugene,4,Margaret Peacock,3,Federal Shipping,2018-04-17,2018-05-15,,200.0,80.0,True,,
-11041,CHOPS,Centro comercial Moctezuma,México D.F.,3,Janet Leverling,2,United Package,2018-04-17,2018-05-15,2018-04-23,1887.0,754.8,False,6.0,False
-11042,COMMI,Comércio Mineiro,São Paulo,2,Andrew Fuller,1,Speedy Express,2018-04-17,2018-05-01,2018-04-26,405.75,162.3,False,9.0,False
-11043,SPECD,Spécialités du monde,París,5,Steven Buchanan,2,United Package,2018-04-17,2018-05-15,2018-04-24,210.0,84.0,False,7.0,False
-11044,WOLZA,Wolski Zajazd,Warszawa,4,Margaret Peacock,1,Speedy Express,2018-04-18,2018-05-16,2018-04-26,591.6,236.64,False,8.0,False
-11045,BOTTM,Bottom-Dollar Markets,Tsawassen,6,Michael Suyama,2,United Package,2018-04-18,2018-05-16,,1309.5,523.8,True,,
-11046,WANDK,Die Wandernde Kuh,Stuttgart,8,Laura Callahan,2,United Package,2018-04-18,2018-05-16,2018-04-19,1564.0,625.6,False,1.0,False
-11047,EASTC,Eastern Connection,Londres,7,Robert King,3,Federal Shipping,2018-04-19,2018-05-17,2018-04-26,1090.5,436.2,False,7.0,False
-11048,BOTTM,Bottom-Dollar Markets,Tsawassen,7,Robert King,3,Federal Shipping,2018-04-19,2018-05-17,2018-04-25,525.0,210.0,False,6.0,False
-11049,GOURL,Gourmet Lanchonetes,Campinas,3,Janet Leverling,1,Speedy Express,2018-04-19,2018-05-17,2018-04-29,342.0,136.8,False,10.0,False
-11050,FOLKO,Folk och fä HB,Bräcke,8,Laura Callahan,2,United Package,2018-04-22,2018-05-20,2018-04-30,900.0,360.0,False,8.0,False
-11051,LAMAI,La maison d'Asie,Toulouse,7,Robert King,3,Federal Shipping,2018-04-22,2018-05-20,,45.0,18.0,True,,
-11052,HANAR,Hanari Carnes,Rio de Janeiro,3,Janet Leverling,1,Speedy Express,2018-04-22,2018-05-20,2018-04-26,1665.0,666.0,False,4.0,False
-11053,PICCO,Piccolo und mehr,Salzburgo,2,Andrew Fuller,2,United Package,2018-04-22,2018-05-20,2018-04-24,3658.75,1463.5,False,2.0,False
-11054,CACTU,Cactus Comidas para llevar,Buenos Aires,8,Laura Callahan,1,Speedy Express,2018-04-23,2018-05-21,,305.0,122.0,True,,
-11055,HILAA,HILARIÓN-Abastos,San Cristóbal,7,Robert King,2,United Package,2018-04-23,2018-05-21,2018-04-30,1727.5,691.0,False,7.0,False
-11056,EASTC,Eastern Connection,Londres,8,Laura Callahan,2,United Package,2018-04-23,2018-05-07,2018-04-26,3740.0,1496.0,False,3.0,False
-11057,NORTS,North/South,Londres,3,Janet Leverling,3,Federal Shipping,2018-04-24,2018-05-22,2018-04-26,45.0,18.0,False,2.0,False
-11058,BLAUS,Blauer See Delikatessen,Mannheim,9,Anne Dodsworth,3,Federal Shipping,2018-04-24,2018-05-22,,858.0,343.20000000000005,True,,
-11059,RICAR,Ricardo Adocicados,Rio de Janeiro,2,Andrew Fuller,2,United Package,2018-04-24,2018-06-05,,1838.0,735.2,True,,
-11060,FRANS,Franchi S.p.A.,Torino,2,Andrew Fuller,2,United Package,2018-04-25,2018-05-23,2018-04-29,266.0,106.4,False,4.0,False
-11061,GREAL,Great Lakes Food Market,Eugene,4,Margaret Peacock,3,Federal Shipping,2018-04-25,2018-06-06,,510.0,204.0,True,,
-11062,REGGC,Reggiani Caseifici,Reggio Emilia,4,Margaret Peacock,2,United Package,2018-04-25,2018-05-23,,508.0,203.2,True,,
-11063,HUNGO,Hungry Owl All-Night Grocers,Cork,3,Janet Leverling,2,United Package,2018-04-25,2018-05-23,2018-05-01,1445.5,578.2,False,6.0,False
-11064,SAVEA,Save-a-lot Markets,Boise,1,Nancy Davolio,1,Speedy Express,2018-04-26,2018-05-24,2018-04-29,4722.3,1888.92,False,3.0,False
-11065,LILAS,LILA-Supermercado,Barquisimeto,8,Laura Callahan,1,Speedy Express,2018-04-26,2018-05-24,,252.56,101.02000000000001,True,,
-11066,WHITC,White Clover Markets,Seattle,7,Robert King,2,United Package,2018-04-26,2018-05-24,2018-04-29,928.75,371.5,False,3.0,False
-11067,DRACD,Drachenblut Delikatessen,Aachen,1,Nancy Davolio,2,United Package,2018-04-29,2018-05-13,2018-05-01,86.85,34.74,False,2.0,False
-11068,QUEEN,Queen Cozinha,São Paulo,8,Laura Callahan,2,United Package,2018-04-29,2018-05-27,,2384.8,953.92,True,,
-11069,TORTU,Tortuga Restaurante,México D.F.,1,Nancy Davolio,2,United Package,2018-04-29,2018-05-27,2018-05-01,360.0,144.0,False,2.0,False
-11070,LEHMS,Lehmanns Marktstand,Fráncfort,2,Andrew Fuller,1,Speedy Express,2018-04-30,2018-05-28,,1873.5,749.4,True,,
-11071,LILAS,LILA-Supermercado,Barquisimeto,1,Nancy Davolio,1,Speedy Express,2018-04-30,2018-05-28,,510.0,204.0,True,,
-11072,ERNSH,Ernst Handel,Graz,4,Margaret Peacock,2,United Package,2018-04-30,2018-05-28,,5218.0,2087.2,True,,
-11073,PERIC,Pericles Comidas clásicas,México D.F.,2,Andrew Fuller,2,United Package,2018-04-30,2018-05-28,,300.0,120.0,True,,
-11074,SIMOB,Simons bistro,København,7,Robert King,2,United Package,2018-05-01,2018-05-29,,244.3,97.72,True,,
-11075,RICSU,Richter Supermarkt,Génova,8,Laura Callahan,2,United Package,2018-05-01,2018-05-29,,586.0,234.4,True,,
-11076,BONAP,Bon app',Marsella,4,Margaret Peacock,2,United Package,2018-05-01,2018-05-29,,1057.0,422.8,True,,
-11077,RATTC,Rattlesnake Canyon Grocery,Albuquerque,1,Nancy Davolio,2,United Package,2018-05-01,2018-05-29,,1374.6,549.84,True,,
+FechaPedido,FechaEntrega,FechaEnvio,Empleado
+2016-06-29,2016-07-27,2016-07-11,Steven Buchanan
+2016-06-30,2016-08-11,2016-07-05,Michael Suyama
+2016-07-03,2016-07-31,2016-07-07,Margaret Peacock
+2016-07-03,2016-07-31,2016-07-10,Janet Leverling
+2016-07-04,2016-08-01,2016-07-06,Margaret Peacock
+2016-07-05,2016-07-19,2016-07-11,Janet Leverling
+2016-07-06,2016-08-03,2016-07-18,Steven Buchanan
+2016-07-07,2016-08-04,2016-07-10,Anne Dodsworth
+2016-07-10,2016-08-07,2016-07-12,Janet Leverling
+2016-07-11,2016-08-08,2016-07-17,Margaret Peacock
+2016-07-12,2016-08-09,2016-07-18,Nancy Davolio
+2016-07-13,2016-08-10,2016-07-20,Margaret Peacock
+2016-07-14,2016-08-11,2016-07-24,Margaret Peacock
+2016-07-14,2016-08-11,2016-07-25,Margaret Peacock
+2016-07-17,2016-08-14,2016-07-20,Laura Callahan
+2016-07-18,2016-08-15,2016-07-26,Anne Dodsworth
+2016-07-19,2016-08-16,2016-08-18,Michael Suyama
+2016-07-20,2016-08-17,2016-08-07,Andrew Fuller
+2016-07-21,2016-09-01,2016-07-26,Janet Leverling
+2016-07-24,2016-08-21,2016-08-01,Margaret Peacock
+2016-07-25,2016-08-22,2016-07-28,Laura Callahan
+2016-07-26,2016-08-09,2016-08-04,Steven Buchanan
+2016-07-27,2016-08-24,2016-07-28,Nancy Davolio
+2016-07-27,2016-08-24,2016-08-25,Michael Suyama
+2016-07-28,2016-08-25,2016-08-01,Michael Suyama
+2016-07-31,2016-08-28,2016-08-07,Janet Leverling
+2016-08-01,2016-08-29,2016-08-11,Michael Suyama
+2016-08-02,2016-08-30,2016-08-04,Nancy Davolio
+2016-08-03,2016-08-17,2016-08-09,Laura Callahan
+2016-08-04,2016-09-01,2016-08-08,Andrew Fuller
+2016-08-07,2016-09-04,2016-08-11,Laura Callahan
+2016-08-08,2016-09-05,2016-08-11,Laura Callahan
+2016-08-09,2016-09-06,2016-09-07,Andrew Fuller
+2016-08-09,2016-08-23,2016-08-16,Margaret Peacock
+2016-08-10,2016-09-07,2016-08-16,Margaret Peacock
+2016-08-11,2016-09-08,2016-08-18,Janet Leverling
+2016-08-14,2016-09-11,2016-08-22,Margaret Peacock
+2016-08-15,2016-09-12,2016-08-21,Nancy Davolio
+2016-08-16,2016-09-13,2016-08-25,Laura Callahan
+2016-08-17,2016-09-14,2016-08-23,Laura Callahan
+2016-08-18,2016-09-15,2016-08-29,Margaret Peacock
+2016-08-21,2016-09-18,2016-08-23,Robert King
+2016-08-22,2016-09-19,2016-08-29,Laura Callahan
+2016-08-22,2016-09-19,2016-08-30,Michael Suyama
+2016-08-23,2016-09-20,2016-08-28,Nancy Davolio
+2016-08-24,2016-09-21,2016-09-06,Nancy Davolio
+2016-08-25,2016-09-22,2016-08-31,Margaret Peacock
+2016-08-28,2016-09-25,2016-09-05,Andrew Fuller
+2016-08-29,2016-09-26,2016-09-06,Michael Suyama
+2016-08-30,2016-10-11,2016-09-05,Steven Buchanan
+2016-08-31,2016-09-28,2016-09-06,Michael Suyama
+2016-09-01,2016-09-29,2016-09-08,Margaret Peacock
+2016-09-04,2016-10-02,2016-09-13,Andrew Fuller
+2016-09-04,2016-10-02,2016-09-12,Laura Callahan
+2016-09-05,2016-10-03,2016-10-04,Margaret Peacock
+2016-09-06,2016-10-04,2016-09-13,Robert King
+2016-09-07,2016-10-05,2016-09-12,Nancy Davolio
+2016-09-08,2016-10-06,2016-10-04,Laura Callahan
+2016-09-11,2016-10-09,2016-09-18,Nancy Davolio
+2016-09-12,2016-10-10,2016-09-20,Andrew Fuller
+2016-09-13,2016-10-11,2016-09-19,Robert King
+2016-09-14,2016-10-12,2016-10-18,Janet Leverling
+2016-09-15,2016-10-13,2016-09-22,Laura Callahan
+2016-09-15,2016-09-29,2016-09-21,Nancy Davolio
+2016-09-18,2016-10-16,2016-09-28,Andrew Fuller
+2016-09-19,2016-10-17,2016-09-29,Andrew Fuller
+2016-09-20,2016-10-18,2016-09-29,Nancy Davolio
+2016-09-21,2016-10-19,2016-09-28,Margaret Peacock
+2016-09-22,2016-10-20,2016-10-03,Nancy Davolio
+2016-09-25,2016-10-23,2016-10-05,Michael Suyama
+2016-09-26,2016-10-24,2016-09-29,Laura Callahan
+2016-09-27,2016-10-25,2016-10-06,Robert King
+2016-09-28,2016-10-12,2016-10-13,Steven Buchanan
+2016-09-28,2016-10-26,2016-10-06,Janet Leverling
+2016-09-29,2016-10-27,2016-10-18,Robert King
+2016-10-02,2016-10-30,2016-10-09,Margaret Peacock
+2016-10-03,2016-10-31,2016-10-05,Anne Dodsworth
+2016-10-04,2016-10-18,2016-10-09,Nancy Davolio
+2016-10-05,2016-11-02,2016-10-09,Margaret Peacock
+2016-10-06,2016-11-03,2016-10-09,Andrew Fuller
+2016-10-09,2016-11-06,2016-10-12,Margaret Peacock
+2016-10-10,2016-11-21,2016-10-18,Margaret Peacock
+2016-10-11,2016-11-08,2016-10-23,Janet Leverling
+2016-10-11,2016-11-22,2016-10-16,Anne Dodsworth
+2016-10-12,2016-11-23,2016-10-16,Janet Leverling
+2016-10-13,2016-11-10,2016-10-20,Steven Buchanan
+2016-10-16,2016-11-13,2016-10-23,Laura Callahan
+2016-10-17,2016-11-14,2016-10-19,Robert King
+2016-10-18,2016-11-15,2016-10-20,Robert King
+2016-10-19,2016-11-16,2016-10-24,Margaret Peacock
+2016-10-20,2016-11-17,2016-10-24,Margaret Peacock
+2016-10-23,2016-11-20,2016-10-30,Andrew Fuller
+2016-10-24,2016-11-21,2016-11-03,Nancy Davolio
+2016-10-24,2016-11-21,2016-10-31,Robert King
+2016-10-25,2016-11-08,2016-10-30,Margaret Peacock
+2016-10-26,2016-11-23,2016-11-01,Margaret Peacock
+2016-10-27,2016-11-24,2016-10-31,Margaret Peacock
+2016-10-30,2016-11-27,2016-11-06,Andrew Fuller
+2016-10-31,2016-12-12,2016-11-03,Janet Leverling
+2016-11-01,2016-11-29,2016-11-03,Margaret Peacock
+2016-11-02,2016-11-30,2016-11-10,Margaret Peacock
+2016-11-03,2016-12-01,2016-11-10,Robert King
+2016-11-06,2016-12-04,2016-11-28,Michael Suyama
+2016-11-06,2016-12-04,2016-11-15,Nancy Davolio
+2016-11-07,2016-11-21,2016-11-13,Janet Leverling
+2016-11-08,2016-12-06,2016-11-20,Robert King
+2016-11-09,2016-12-07,2016-11-15,Laura Callahan
+2016-11-10,2016-12-08,2016-11-15,Michael Suyama
+2016-11-13,2016-12-11,2016-11-22,Michael Suyama
+2016-11-14,2016-12-12,2016-11-27,Nancy Davolio
+2016-11-15,2016-12-13,2016-11-22,Steven Buchanan
+2016-11-16,2016-12-14,2016-11-21,Steven Buchanan
+2016-11-17,2016-12-15,2016-11-27,Margaret Peacock
+2016-11-17,2016-12-15,2016-11-28,Nancy Davolio
+2016-11-20,2016-12-18,2016-11-23,Janet Leverling
+2016-11-21,2016-12-19,2016-11-29,Margaret Peacock
+2016-11-21,2017-01-02,2016-11-29,Nancy Davolio
+2016-11-22,2016-12-20,2016-11-27,Janet Leverling
+2016-11-23,2017-01-04,2016-12-25,Laura Callahan
+2016-11-23,2016-12-21,2016-11-27,Robert King
+2016-11-24,2016-12-22,2016-11-27,Andrew Fuller
+2016-11-27,2016-12-25,2016-12-04,Laura Callahan
+2016-11-28,2016-12-26,2016-12-22,Michael Suyama
+2016-11-28,2016-12-26,2016-12-19,Nancy Davolio
+2016-11-29,2016-12-27,2016-12-04,Steven Buchanan
+2016-11-30,2016-12-28,2016-12-06,Margaret Peacock
+2016-11-30,2016-12-28,2016-12-04,Nancy Davolio
+2016-12-01,2016-12-29,2016-12-04,Janet Leverling
+2016-12-04,2017-01-01,2016-12-08,Nancy Davolio
+2016-12-04,2017-01-01,2016-12-08,Nancy Davolio
+2016-12-05,2017-01-02,2016-12-14,Steven Buchanan
+2016-12-06,2017-01-03,2016-12-08,Andrew Fuller
+2016-12-07,2017-01-04,2017-01-11,Laura Callahan
+2016-12-07,2017-01-04,2016-12-08,Janet Leverling
+2016-12-08,2017-01-05,2016-12-11,Margaret Peacock
+2016-12-11,2017-01-08,2016-12-13,Laura Callahan
+2016-12-11,2017-01-08,2016-12-15,Janet Leverling
+2016-12-12,2017-01-09,2016-12-18,Nancy Davolio
+2016-12-13,2016-12-27,2016-12-20,Anne Dodsworth
+2016-12-13,2017-01-10,2016-12-15,Nancy Davolio
+2016-12-14,2017-01-11,2016-12-15,Andrew Fuller
+2016-12-15,2017-01-12,2016-12-19,Margaret Peacock
+2016-12-18,2017-01-15,2016-12-21,Michael Suyama
+2016-12-18,2017-01-15,2016-12-26,Janet Leverling
+2016-12-19,2017-01-16,2016-12-27,Andrew Fuller
+2016-12-20,2017-01-17,2016-12-29,Nancy Davolio
+2016-12-20,2017-01-17,2016-12-29,Nancy Davolio
+2016-12-21,2017-01-18,2016-12-29,Michael Suyama
+2016-12-22,2017-01-05,2017-01-01,Nancy Davolio
+2016-12-22,2017-01-19,2016-12-28,Steven Buchanan
+2016-12-25,2017-01-22,2017-01-04,Andrew Fuller
+2016-12-26,2017-01-09,2017-01-03,Laura Callahan
+2016-12-27,2017-01-24,2017-01-11,Nancy Davolio
+2016-12-27,2017-01-24,2017-01-05,Nancy Davolio
+2016-12-28,2017-02-08,2017-01-05,Laura Callahan
+2016-12-29,2017-01-26,2017-01-04,Margaret Peacock
+2016-12-29,2017-01-26,2017-01-03,Andrew Fuller
+2017-01-01,2017-01-29,2017-01-17,Nancy Davolio
+2017-01-02,2017-02-13,2017-01-08,Robert King
+2017-01-02,2017-01-30,2017-01-25,Andrew Fuller
+2017-01-03,2017-01-31,2017-01-09,Laura Callahan
+2017-01-04,2017-02-01,2017-01-09,Janet Leverling
+2017-01-05,2017-02-02,2017-01-10,Janet Leverling
+2017-01-05,2017-02-02,2017-01-16,Anne Dodsworth
+2017-01-08,2017-02-05,2017-01-10,Laura Callahan
+2017-01-09,2017-02-06,2017-01-11,Janet Leverling
+2017-01-09,2017-02-06,2017-01-12,Andrew Fuller
+2017-01-10,2017-02-07,2017-01-19,Janet Leverling
+2017-01-11,2017-02-08,2017-01-22,Laura Callahan
+2017-01-11,2017-02-08,2017-01-23,Margaret Peacock
+2017-01-12,2017-02-09,2017-01-19,Margaret Peacock
+2017-01-15,2017-02-12,2017-01-25,Margaret Peacock
+2017-01-16,2017-02-13,2017-01-22,Janet Leverling
+2017-01-16,2017-02-27,2017-01-22,Laura Callahan
+2017-01-17,2017-02-14,2017-01-26,Andrew Fuller
+2017-01-18,2017-02-01,2017-02-19,Michael Suyama
+2017-01-18,2017-02-15,2017-01-22,Robert King
+2017-01-19,2017-02-16,2017-02-09,Michael Suyama
+2017-01-22,2017-02-19,2017-02-01,Margaret Peacock
+2017-01-22,2017-02-19,2017-02-26,Margaret Peacock
+2017-01-23,2017-02-20,2017-01-30,Robert King
+2017-01-24,2017-03-07,2017-02-02,Janet Leverling
+2017-01-25,2017-02-08,2017-01-29,Margaret Peacock
+2017-01-25,2017-02-08,2017-02-02,Margaret Peacock
+2017-01-26,2017-02-09,2017-02-02,Janet Leverling
+2017-01-29,2017-02-26,2017-02-27,Janet Leverling
+2017-01-29,2017-02-26,2017-02-08,Janet Leverling
+2017-01-30,2017-03-13,2017-02-02,Laura Callahan
+2017-01-31,2017-02-28,2017-02-06,Janet Leverling
+2017-01-31,2017-02-28,2017-02-07,Laura Callahan
+2017-02-01,2017-03-01,2017-02-09,Janet Leverling
+2017-02-02,2017-03-02,2017-02-05,Michael Suyama
+2017-02-05,2017-03-05,2017-02-23,Margaret Peacock
+2017-02-05,2017-03-19,2017-03-09,Janet Leverling
+2017-02-06,2017-03-06,2017-02-13,Janet Leverling
+2017-02-07,2017-03-07,2017-02-09,Laura Callahan
+2017-02-07,2017-03-07,2017-02-16,Janet Leverling
+2017-02-08,2017-03-08,2017-02-15,Janet Leverling
+2017-02-09,2017-03-09,2017-02-14,Michael Suyama
+2017-02-09,2017-03-09,2017-03-02,Margaret Peacock
+2017-02-12,2017-03-12,2017-02-19,Margaret Peacock
+2017-02-13,2017-03-13,2017-02-22,Janet Leverling
+2017-02-14,2017-03-14,2017-03-06,Laura Callahan
+2017-02-14,2017-02-28,2017-03-07,Margaret Peacock
+2017-02-15,2017-03-15,2017-02-21,Laura Callahan
+2017-02-16,2017-03-16,2017-02-21,Nancy Davolio
+2017-02-16,2017-03-16,2017-02-20,Margaret Peacock
+2017-02-19,2017-04-02,2017-02-26,Laura Callahan
+2017-02-20,2017-04-03,2017-02-23,Laura Callahan
+2017-02-20,2017-03-20,2017-02-26,Andrew Fuller
+2017-02-21,2017-03-21,2017-02-27,Robert King
+2017-02-22,2017-03-22,2017-02-23,Margaret Peacock
+2017-02-23,2017-03-23,2017-02-26,Laura Callahan
+2017-02-23,2017-03-23,2017-02-28,Nancy Davolio
+2017-02-26,2017-03-26,2017-03-13,Andrew Fuller
+2017-02-27,2017-03-27,2017-03-01,Steven Buchanan
+2017-02-27,2017-03-27,2017-03-09,Margaret Peacock
+2017-02-28,2017-03-28,2017-03-09,Nancy Davolio
+2017-03-01,2017-03-29,2017-03-08,Margaret Peacock
+2017-03-01,2017-03-29,2017-03-06,Laura Callahan
+2017-03-02,2017-03-30,2017-03-07,Janet Leverling
+2017-03-05,2017-04-02,2017-03-09,Nancy Davolio
+2017-03-06,2017-04-03,2017-03-09,Margaret Peacock
+2017-03-06,2017-04-03,2017-03-13,Andrew Fuller
+2017-03-07,2017-04-04,2017-03-14,Laura Callahan
+2017-03-08,2017-03-22,2017-03-16,Nancy Davolio
+2017-03-08,2017-04-05,2017-03-16,Steven Buchanan
+2017-03-09,2017-04-06,2017-03-30,Anne Dodsworth
+2017-03-12,2017-04-09,2017-03-19,Laura Callahan
+2017-03-12,2017-04-09,2017-03-20,Steven Buchanan
+2017-03-13,2017-03-27,2017-03-21,Andrew Fuller
+2017-03-14,2017-04-11,2017-03-16,Janet Leverling
+2017-03-15,2017-04-12,2017-03-19,Michael Suyama
+2017-03-15,2017-04-12,2017-03-20,Laura Callahan
+2017-03-16,2017-04-13,2017-04-05,Nancy Davolio
+2017-03-19,2017-04-16,2017-04-20,Robert King
+2017-03-19,2017-04-16,2017-03-27,Janet Leverling
+2017-03-20,2017-04-03,2017-03-26,Margaret Peacock
+2017-03-21,2017-04-18,2017-03-28,Nancy Davolio
+2017-03-21,2017-04-18,2017-03-23,Andrew Fuller
+2017-03-22,2017-04-19,2017-03-28,Laura Callahan
+2017-03-23,2017-04-20,2017-04-04,Michael Suyama
+2017-03-26,2017-04-23,2017-03-29,Robert King
+2017-03-26,2017-04-23,2017-04-03,Laura Callahan
+2017-03-27,2017-04-24,2017-04-06,Janet Leverling
+2017-03-28,2017-04-25,2017-04-05,Margaret Peacock
+2017-03-28,2017-04-25,2017-04-04,Margaret Peacock
+2017-03-29,2017-04-26,2017-04-06,Janet Leverling
+2017-03-30,2017-04-27,2017-04-02,Robert King
+2017-03-30,2017-04-27,2017-04-02,Robert King
+2017-04-02,2017-04-30,2017-04-06,Laura Callahan
+2017-04-03,2017-05-01,2017-04-11,Margaret Peacock
+2017-04-04,2017-05-02,2017-04-12,Michael Suyama
+2017-04-04,2017-05-02,2017-04-11,Anne Dodsworth
+2017-04-05,2017-05-03,2017-04-24,Andrew Fuller
+2017-04-06,2017-05-04,2017-04-11,Michael Suyama
+2017-04-06,2017-05-04,2017-04-13,Margaret Peacock
+2017-04-09,2017-05-07,2017-04-16,Janet Leverling
+2017-04-10,2017-05-08,2017-04-27,Anne Dodsworth
+2017-04-10,2017-05-08,2017-04-17,Robert King
+2017-04-11,2017-05-09,2017-05-08,Nancy Davolio
+2017-04-12,2017-05-10,2017-04-24,Margaret Peacock
+2017-04-13,2017-05-11,2017-04-23,Michael Suyama
+2017-04-13,2017-05-11,2017-04-16,Margaret Peacock
+2017-04-16,2017-05-14,2017-04-19,Robert King
+2017-04-17,2017-05-29,2017-04-23,Robert King
+2017-04-17,2017-05-15,2017-05-11,Janet Leverling
+2017-04-18,2017-05-02,2017-05-18,Andrew Fuller
+2017-04-19,2017-05-17,2017-04-26,Andrew Fuller
+2017-04-19,2017-05-17,2017-04-24,Janet Leverling
+2017-04-20,2017-05-04,2017-04-30,Margaret Peacock
+2017-04-23,2017-05-21,2017-04-26,Michael Suyama
+2017-04-24,2017-05-22,2017-04-26,Robert King
+2017-04-24,2017-05-22,2017-04-27,Laura Callahan
+2017-04-25,2017-05-23,2017-05-01,Margaret Peacock
+2017-04-26,2017-05-24,2017-05-25,Robert King
+2017-04-26,2017-05-24,2017-05-02,Nancy Davolio
+2017-04-27,2017-05-25,2017-05-18,Nancy Davolio
+2017-04-30,2017-05-28,2017-05-10,Margaret Peacock
+2017-04-30,2017-05-28,2017-05-02,Robert King
+2017-05-01,2017-05-15,2017-05-04,Michael Suyama
+2017-05-02,2017-05-30,2017-05-04,Steven Buchanan
+2017-05-03,2017-05-31,2017-05-07,Janet Leverling
+2017-05-03,2017-05-31,2017-05-14,Robert King
+2017-05-04,2017-06-01,2017-05-07,Robert King
+2017-05-07,2017-06-04,2017-05-17,Laura Callahan
+2017-05-07,2017-06-04,2017-05-09,Laura Callahan
+2017-05-08,2017-06-05,2017-05-16,Margaret Peacock
+2017-05-09,2017-06-06,2017-06-01,Janet Leverling
+2017-05-09,2017-05-23,2017-05-14,Nancy Davolio
+2017-05-10,2017-06-07,2017-05-11,Anne Dodsworth
+2017-05-11,2017-06-08,2017-05-18,Michael Suyama
+2017-05-14,2017-06-11,2017-06-08,Janet Leverling
+2017-05-14,2017-06-11,2017-05-24,Andrew Fuller
+2017-05-15,2017-06-12,2017-05-21,Nancy Davolio
+2017-05-16,2017-06-13,2017-05-18,Laura Callahan
+2017-05-16,2017-06-13,2017-05-25,Margaret Peacock
+2017-05-17,2017-06-14,2017-06-21,Laura Callahan
+2017-05-18,2017-06-15,2017-05-22,Nancy Davolio
+2017-05-18,2017-06-15,2017-05-28,Janet Leverling
+2017-05-21,2017-06-18,2017-05-28,Janet Leverling
+2017-05-22,2017-06-05,2017-05-25,Steven Buchanan
+2017-05-23,2017-06-20,2017-06-01,Robert King
+2017-05-23,2017-07-04,2017-06-01,Margaret Peacock
+2017-05-24,2017-06-21,2017-05-31,Andrew Fuller
+2017-05-25,2017-06-22,2017-05-29,Andrew Fuller
+2017-05-25,2017-06-22,2017-05-31,Margaret Peacock
+2017-05-28,2017-06-25,2017-05-30,Michael Suyama
+2017-05-29,2017-07-10,2017-06-08,Andrew Fuller
+2017-05-29,2017-06-12,2017-06-01,Anne Dodsworth
+2017-05-30,2017-06-27,2017-06-05,Nancy Davolio
+2017-05-31,2017-06-28,2017-06-08,Michael Suyama
+2017-06-01,2017-06-29,2017-06-04,Laura Callahan
+2017-06-01,2017-06-29,2017-06-04,Andrew Fuller
+2017-06-04,2017-07-02,2017-06-07,Nancy Davolio
+2017-06-05,2017-07-17,2017-06-19,Andrew Fuller
+2017-06-05,2017-07-03,2017-06-11,Margaret Peacock
+2017-06-06,2017-07-04,2017-06-13,Laura Callahan
+2017-06-07,2017-07-05,2017-06-13,Anne Dodsworth
+2017-06-07,2017-07-05,2017-06-12,Nancy Davolio
+2017-06-08,2017-07-06,2017-07-04,Janet Leverling
+2017-06-11,2017-07-09,2017-07-06,Steven Buchanan
+2017-06-12,2017-07-10,2017-06-14,Janet Leverling
+2017-06-12,2017-07-24,2017-06-29,Laura Callahan
+2017-06-13,2017-07-11,2017-06-20,Janet Leverling
+2017-06-14,2017-07-12,2017-06-15,Robert King
+2017-06-14,2017-07-12,2017-06-25,Margaret Peacock
+2017-06-15,2017-06-29,2017-06-25,Steven Buchanan
+2017-06-18,2017-07-02,2017-06-25,Janet Leverling
+2017-06-18,2017-07-30,2017-06-25,Anne Dodsworth
+2017-06-19,2017-07-17,2017-07-20,Margaret Peacock
+2017-06-20,2017-07-18,2017-06-29,Nancy Davolio
+2017-06-21,2017-07-19,2017-06-26,Margaret Peacock
+2017-06-21,2017-07-19,2017-06-27,Janet Leverling
+2017-06-22,2017-07-20,2017-07-09,Janet Leverling
+2017-06-25,2017-07-23,2017-06-29,Andrew Fuller
+2017-06-25,2017-07-23,2017-06-29,Margaret Peacock
+2017-06-26,2017-07-24,2017-07-05,Robert King
+2017-06-27,2017-07-25,2017-07-04,Anne Dodsworth
+2017-06-27,2017-07-25,2017-07-04,Nancy Davolio
+2017-06-28,2017-07-26,2017-07-05,Andrew Fuller
+2017-06-29,2017-07-27,2017-07-09,Laura Callahan
+2017-07-02,2017-07-30,2017-07-09,Margaret Peacock
+2017-07-02,2017-07-16,2017-07-11,Nancy Davolio
+2017-07-03,2017-07-31,2017-07-11,Janet Leverling
+2017-07-04,2017-08-01,2017-08-08,Robert King
+2017-07-04,2017-08-01,2017-07-11,Janet Leverling
+2017-07-05,2017-08-02,2017-07-09,Andrew Fuller
+2017-07-06,2017-08-03,2017-08-07,Laura Callahan
+2017-07-06,2017-08-03,2017-07-13,Robert King
+2017-07-09,2017-08-06,2017-07-13,Nancy Davolio
+2017-07-10,2017-08-21,2017-07-16,Michael Suyama
+2017-07-11,2017-08-08,2017-07-16,Margaret Peacock
+2017-07-11,2017-08-22,2017-07-17,Robert King
+2017-07-12,2017-08-09,2017-07-17,Laura Callahan
+2017-07-13,2017-08-10,2017-08-03,Laura Callahan
+2017-07-13,2017-08-10,2017-07-24,Nancy Davolio
+2017-07-16,2017-08-13,2017-07-24,Nancy Davolio
+2017-07-17,2017-08-14,2017-07-26,Margaret Peacock
+2017-07-17,2017-08-14,2017-07-20,Steven Buchanan
+2017-07-18,2017-08-15,2017-07-27,Margaret Peacock
+2017-07-19,2017-08-16,2017-07-25,Robert King
+2017-07-20,2017-08-17,2017-08-01,Laura Callahan
+2017-07-20,2017-08-17,2017-07-27,Michael Suyama
+2017-07-23,2017-08-20,2017-07-27,Nancy Davolio
+2017-07-24,2017-08-21,2017-07-27,Margaret Peacock
+2017-07-24,2017-08-21,2017-07-27,Laura Callahan
+2017-07-25,2017-08-22,2017-08-01,Andrew Fuller
+2017-07-26,2017-08-23,2017-07-31,Nancy Davolio
+2017-07-26,2017-08-23,2017-07-30,Margaret Peacock
+2017-07-27,2017-09-07,2017-08-03,Nancy Davolio
+2017-07-30,2017-08-27,2017-08-02,Janet Leverling
+2017-07-31,2017-08-28,2017-08-09,Andrew Fuller
+2017-07-31,2017-08-28,2017-08-06,Margaret Peacock
+2017-08-01,2017-08-29,2017-08-06,Margaret Peacock
+2017-08-02,2017-08-30,2017-08-07,Laura Callahan
+2017-08-02,2017-08-30,2017-08-14,Margaret Peacock
+2017-08-03,2017-08-31,2017-08-09,Janet Leverling
+2017-08-06,2017-09-03,2017-08-15,Nancy Davolio
+2017-08-06,2017-09-17,2017-08-16,Laura Callahan
+2017-08-07,2017-09-04,2017-08-15,Margaret Peacock
+2017-08-07,2017-09-04,2017-08-15,Margaret Peacock
+2017-08-08,2017-09-05,2017-08-14,Nancy Davolio
+2017-08-09,2017-09-06,2017-08-10,Laura Callahan
+2017-08-09,2017-09-06,2017-08-14,Laura Callahan
+2017-08-10,2017-09-07,2017-08-13,Robert King
+2017-08-10,2017-09-07,2017-08-16,Margaret Peacock
+2017-08-13,2017-09-10,2017-08-16,Laura Callahan
+2017-08-14,2017-09-11,2017-08-21,Margaret Peacock
+2017-08-14,2017-09-11,2017-08-21,Michael Suyama
+2017-08-15,2017-09-12,2017-08-27,Janet Leverling
+2017-08-15,2017-09-12,2017-08-22,Robert King
+2017-08-16,2017-09-13,2017-08-23,Margaret Peacock
+2017-08-17,2017-09-14,2017-08-21,Margaret Peacock
+2017-08-17,2017-09-14,2017-08-31,Robert King
+2017-08-20,2017-09-17,2017-08-28,Michael Suyama
+2017-08-20,2017-09-17,2017-08-27,Janet Leverling
+2017-08-21,2017-09-18,2017-08-28,Margaret Peacock
+2017-08-22,2017-10-03,2017-08-29,Anne Dodsworth
+2017-08-22,2017-09-05,2017-08-29,Margaret Peacock
+2017-08-23,2017-10-04,2017-09-04,Steven Buchanan
+2017-08-23,2017-09-20,2017-08-24,Steven Buchanan
+2017-08-24,2017-09-21,2017-08-29,Steven Buchanan
+2017-08-27,2017-09-24,2017-09-06,Laura Callahan
+2017-08-27,2017-09-24,2017-09-03,Margaret Peacock
+2017-08-28,2017-09-25,2017-09-14,Nancy Davolio
+2017-08-28,2017-09-25,2017-09-06,Steven Buchanan
+2017-08-29,2017-09-26,2017-09-06,Nancy Davolio
+2017-08-30,2017-09-27,2017-09-05,Michael Suyama
+2017-08-30,2017-09-27,2017-09-10,Andrew Fuller
+2017-08-31,2017-09-28,2017-09-03,Margaret Peacock
+2017-08-31,2017-09-28,2017-09-05,Robert King
+2017-09-03,2017-10-01,2017-10-10,Laura Callahan
+2017-09-04,2017-10-02,2017-09-10,Robert King
+2017-09-04,2017-10-02,2017-09-13,Janet Leverling
+2017-09-05,2017-09-19,2017-09-28,Andrew Fuller
+2017-09-05,2017-10-03,2017-09-14,Nancy Davolio
+2017-09-06,2017-10-04,2017-09-12,Nancy Davolio
+2017-09-07,2017-10-05,2017-09-17,Robert King
+2017-09-07,2017-10-05,2017-09-14,Robert King
+2017-09-10,2017-10-08,2017-09-18,Nancy Davolio
+2017-09-10,2017-10-08,2017-09-17,Andrew Fuller
+2017-09-11,2017-10-09,2017-09-13,Margaret Peacock
+2017-09-12,2017-10-10,2017-09-19,Nancy Davolio
+2017-09-12,2017-09-26,2017-09-21,Anne Dodsworth
+2017-09-13,2017-10-11,2017-09-14,Andrew Fuller
+2017-09-13,2017-10-11,2017-09-25,Margaret Peacock
+2017-09-14,2017-10-12,2017-09-18,Steven Buchanan
+2017-09-17,2017-10-15,2017-09-24,Andrew Fuller
+2017-09-17,2017-10-15,2017-09-21,Nancy Davolio
+2017-09-18,2017-10-16,2017-10-11,Robert King
+2017-09-18,2017-10-16,2017-09-25,Laura Callahan
+2017-09-19,2017-10-17,2017-09-21,Nancy Davolio
+2017-09-20,2017-10-18,2017-09-25,Janet Leverling
+2017-09-20,2017-10-18,2017-09-26,Janet Leverling
+2017-09-21,2017-10-19,2017-09-26,Andrew Fuller
+2017-09-21,2017-10-19,2017-09-25,Janet Leverling
+2017-09-24,2017-10-08,2017-09-28,Margaret Peacock
+2017-09-25,2017-10-23,2017-10-03,Andrew Fuller
+2017-09-25,2017-10-23,2017-10-25,Anne Dodsworth
+2017-09-26,2017-10-10,2017-10-02,Margaret Peacock
+2017-09-26,2017-10-24,2017-10-02,Nancy Davolio
+2017-09-27,2017-10-25,2017-09-28,Nancy Davolio
+2017-09-28,2017-11-09,2017-10-17,Andrew Fuller
+2017-09-28,2017-10-26,2017-10-08,Margaret Peacock
+2017-10-01,2017-10-15,2017-10-05,Janet Leverling
+2017-10-01,2017-10-29,2017-10-04,Laura Callahan
+2017-10-02,2017-11-13,2017-10-09,Robert King
+2017-10-03,2017-11-14,2017-10-09,Laura Callahan
+2017-10-03,2017-10-31,2017-10-09,Janet Leverling
+2017-10-04,2017-11-01,2017-10-12,Margaret Peacock
+2017-10-04,2017-11-01,2017-10-08,Janet Leverling
+2017-10-05,2017-11-02,2017-10-11,Janet Leverling
+2017-10-08,2017-10-22,2017-10-10,Michael Suyama
+2017-10-08,2017-11-19,2017-10-16,Margaret Peacock
+2017-10-09,2017-11-06,2017-10-15,Michael Suyama
+2017-10-09,2017-11-06,2017-11-02,Michael Suyama
+2017-10-10,2017-11-07,2017-11-13,Anne Dodsworth
+2017-10-11,2017-11-08,2017-10-16,Laura Callahan
+2017-10-11,2017-10-25,2017-10-18,Margaret Peacock
+2017-10-12,2017-11-23,2017-10-31,Michael Suyama
+2017-10-12,2017-11-09,2017-11-15,Nancy Davolio
+2017-10-15,2017-11-12,2017-10-18,Nancy Davolio
+2017-10-16,2017-11-27,2017-10-24,Steven Buchanan
+2017-10-16,2017-11-13,2017-10-26,Janet Leverling
+2017-10-17,2017-11-14,2017-10-19,Nancy Davolio
+2017-10-17,2017-11-14,2017-10-22,Steven Buchanan
+2017-10-18,2017-11-01,2017-10-24,Janet Leverling
+2017-10-19,2017-11-16,2017-10-22,Margaret Peacock
+2017-10-19,2017-11-16,2017-10-24,Nancy Davolio
+2017-10-22,2017-11-19,2017-10-24,Nancy Davolio
+2017-10-22,2017-11-19,2017-10-31,Laura Callahan
+2017-10-23,2017-11-06,2017-10-31,Laura Callahan
+2017-10-24,2017-11-21,2017-10-26,Steven Buchanan
+2017-10-24,2017-12-05,2017-10-30,Laura Callahan
+2017-10-25,2017-11-22,2017-11-20,Janet Leverling
+2017-10-25,2017-12-06,2017-10-31,Laura Callahan
+2017-10-26,2017-11-23,2017-10-31,Margaret Peacock
+2017-10-29,2017-11-12,2017-11-30,Margaret Peacock
+2017-10-29,2017-11-26,2017-11-30,Andrew Fuller
+2017-10-30,2017-11-27,2017-11-06,Margaret Peacock
+2017-10-30,2017-12-11,2017-11-09,Laura Callahan
+2017-10-31,2017-11-28,2017-11-09,Steven Buchanan
+2017-11-01,2017-11-29,2017-11-09,Robert King
+2017-11-01,2017-11-29,2017-11-02,Janet Leverling
+2017-11-02,2017-11-30,2017-11-05,Nancy Davolio
+2017-11-02,2017-11-30,2017-11-07,Andrew Fuller
+2017-11-05,2017-12-03,2017-11-16,Michael Suyama
+2017-11-06,2017-12-04,2017-11-16,Anne Dodsworth
+2017-11-06,2017-12-04,2017-11-13,Andrew Fuller
+2017-11-07,2017-12-05,2017-11-13,Andrew Fuller
+2017-11-07,2017-12-05,2017-11-12,Janet Leverling
+2017-11-08,2017-12-06,2017-11-20,Margaret Peacock
+2017-11-09,2017-11-23,2017-11-13,Margaret Peacock
+2017-11-09,2017-12-07,2017-11-13,Janet Leverling
+2017-11-12,2017-12-10,2017-11-16,Nancy Davolio
+2017-11-12,2017-12-10,2017-11-19,Michael Suyama
+2017-11-13,2017-12-11,2017-11-22,Anne Dodsworth
+2017-11-14,2017-12-12,2017-11-16,Nancy Davolio
+2017-11-14,2017-12-12,2017-11-21,Michael Suyama
+2017-11-15,2017-12-13,2017-11-23,Janet Leverling
+2017-11-15,2017-12-13,2017-12-14,Margaret Peacock
+2017-11-16,2017-12-14,2017-11-19,Anne Dodsworth
+2017-11-19,2017-12-17,2017-11-28,Janet Leverling
+2017-11-19,2017-12-17,2017-11-23,Andrew Fuller
+2017-11-20,2017-12-18,2017-11-22,Janet Leverling
+2017-11-20,2017-12-18,2017-11-22,Michael Suyama
+2017-11-21,2017-12-19,2017-11-23,Margaret Peacock
+2017-11-22,2017-12-20,2017-11-27,Laura Callahan
+2017-11-22,2017-12-20,2017-12-10,Michael Suyama
+2017-11-23,2017-12-21,2017-11-29,Janet Leverling
+2017-11-23,2017-12-21,2017-12-07,Janet Leverling
+2017-11-26,2017-12-24,2017-12-05,Margaret Peacock
+2017-11-27,2017-12-25,2017-12-03,Steven Buchanan
+2017-11-27,2017-12-25,2017-12-04,Janet Leverling
+2017-11-28,2017-12-26,2017-12-03,Janet Leverling
+2017-11-28,2017-12-26,2017-12-03,Michael Suyama
+2017-11-29,2017-12-27,2017-12-04,Janet Leverling
+2017-11-30,2017-12-28,2017-12-04,Margaret Peacock
+2017-11-30,2017-12-28,2017-12-10,Margaret Peacock
+2017-12-03,2017-12-31,2017-12-10,Janet Leverling
+2017-12-03,2017-12-31,2017-12-07,Janet Leverling
+2017-12-04,2018-01-01,2017-12-12,Laura Callahan
+2017-12-05,2018-01-02,2017-12-28,Anne Dodsworth
+2017-12-05,2018-01-02,2017-12-14,Janet Leverling
+2017-12-06,2018-01-03,2017-12-11,Nancy Davolio
+2017-12-06,2017-12-20,2017-12-07,Margaret Peacock
+2017-12-07,2018-01-04,2017-12-21,Robert King
+2017-12-10,2018-01-07,2017-12-13,Nancy Davolio
+2017-12-10,2017-12-24,2018-01-16,Robert King
+2017-12-11,2018-01-08,2017-12-19,Janet Leverling
+2017-12-11,2018-01-08,2018-01-09,Janet Leverling
+2017-12-11,2017-12-25,2017-12-20,Andrew Fuller
+2017-12-12,2018-01-09,2017-12-14,Andrew Fuller
+2017-12-12,2018-01-09,2017-12-17,Anne Dodsworth
+2017-12-13,2018-01-10,2017-12-14,Margaret Peacock
+2017-12-13,2018-01-10,2017-12-17,Margaret Peacock
+2017-12-13,2018-01-10,2017-12-19,Nancy Davolio
+2017-12-14,2018-01-11,2017-12-18,Laura Callahan
+2017-12-14,2017-12-28,2017-12-21,Andrew Fuller
+2017-12-17,2018-01-14,2018-01-14,Nancy Davolio
+2017-12-17,2018-01-14,2017-12-26,Nancy Davolio
+2017-12-17,2018-01-14,2017-12-21,Michael Suyama
+2017-12-18,2018-01-15,2017-12-27,Michael Suyama
+2017-12-18,2018-01-15,2017-12-26,Nancy Davolio
+2017-12-19,2018-01-16,2018-01-03,Janet Leverling
+2017-12-19,2018-01-16,2017-12-28,Michael Suyama
+2017-12-19,2018-01-16,2018-01-15,Laura Callahan
+2017-12-20,2018-01-17,2018-01-09,Janet Leverling
+2017-12-20,2018-01-17,2017-12-31,Robert King
+2017-12-21,2018-01-18,2017-12-31,Andrew Fuller
+2017-12-21,2018-02-01,2017-12-31,Anne Dodsworth
+2017-12-21,2018-01-18,2017-12-31,Nancy Davolio
+2017-12-24,2018-01-21,2017-12-26,Margaret Peacock
+2017-12-24,2018-01-21,2017-12-28,Margaret Peacock
+2017-12-25,2018-01-22,2018-01-01,Margaret Peacock
+2017-12-25,2018-01-22,2018-01-02,Michael Suyama
+2017-12-25,2018-01-22,2018-01-04,Andrew Fuller
+2017-12-26,2018-01-23,2017-12-31,Janet Leverling
+2017-12-26,2018-01-23,2018-01-25,Margaret Peacock
+2017-12-27,2018-01-24,2018-01-04,Andrew Fuller
+2017-12-27,2018-01-24,2018-01-02,Robert King
+2017-12-27,2018-01-24,2018-01-02,Andrew Fuller
+2017-12-28,2018-01-25,2018-01-03,Laura Callahan
+2017-12-28,2018-01-25,2018-01-07,Steven Buchanan
+2017-12-31,2018-01-28,2018-01-04,Nancy Davolio
+2017-12-31,2018-01-28,2018-01-09,Janet Leverling
+2017-12-31,2018-01-28,2018-01-09,Andrew Fuller
+2018-01-01,2018-01-29,2018-01-30,Margaret Peacock
+2018-01-01,2018-01-15,2018-01-08,Janet Leverling
+2018-01-02,2018-01-30,2018-01-07,Robert King
+2018-01-02,2018-01-30,2018-01-11,Andrew Fuller
+2018-01-02,2018-01-30,2018-01-08,Janet Leverling
+2018-01-03,2018-01-31,2018-01-10,Nancy Davolio
+2018-01-03,2018-01-31,2018-01-11,Michael Suyama
+2018-01-04,2018-02-01,2018-01-08,Steven Buchanan
+2018-01-04,2018-02-01,2018-01-25,Laura Callahan
+2018-01-04,2018-02-01,2018-01-09,Nancy Davolio
+2018-01-07,2018-02-04,2018-02-01,Michael Suyama
+2018-01-07,2018-01-21,2018-02-01,Nancy Davolio
+2018-01-08,2018-01-22,2018-01-30,Anne Dodsworth
+2018-01-08,2018-02-05,2018-01-18,Anne Dodsworth
+2018-01-08,2018-02-19,2018-01-16,Margaret Peacock
+2018-01-09,2018-02-06,2018-01-18,Janet Leverling
+2018-01-09,2018-02-06,2018-01-14,Andrew Fuller
+2018-01-10,2018-02-07,2018-01-18,Michael Suyama
+2018-01-10,2018-02-07,2018-01-14,Nancy Davolio
+2018-01-10,2018-02-07,2018-01-16,Nancy Davolio
+2018-01-11,2018-02-08,2018-01-16,Robert King
+2018-01-11,2018-02-08,2018-01-18,Anne Dodsworth
+2018-01-14,2018-02-11,2018-01-18,Janet Leverling
+2018-01-14,2018-02-11,2018-01-17,Janet Leverling
+2018-01-14,2018-02-25,2018-02-11,Margaret Peacock
+2018-01-15,2018-02-12,2018-01-24,Steven Buchanan
+2018-01-15,2018-02-12,2018-01-24,Nancy Davolio
+2018-01-16,2018-02-13,2018-01-21,Margaret Peacock
+2018-01-16,2018-02-13,2018-01-21,Laura Callahan
+2018-01-16,2018-01-30,2018-01-25,Laura Callahan
+2018-01-17,2018-02-28,2018-01-18,Andrew Fuller
+2018-01-17,2018-01-31,2018-02-05,Margaret Peacock
+2018-01-18,2018-02-15,2018-01-24,Robert King
+2018-01-18,2018-02-15,2018-01-25,Anne Dodsworth
+2018-01-18,2018-03-01,2018-01-25,Nancy Davolio
+2018-01-21,2018-02-18,2018-01-28,Steven Buchanan
+2018-01-21,2018-02-04,2018-01-25,Laura Callahan
+2018-01-22,2018-02-19,2018-01-29,Anne Dodsworth
+2018-01-22,2018-02-19,2018-01-31,Janet Leverling
+2018-01-22,2018-02-19,2018-01-30,Janet Leverling
+2018-01-23,2018-02-20,2018-02-05,Janet Leverling
+2018-01-23,2018-02-20,2018-02-01,Laura Callahan
+2018-01-24,2018-02-21,2018-01-29,Andrew Fuller
+2018-01-24,2018-02-21,2018-01-28,Nancy Davolio
+2018-01-24,2018-02-21,2018-01-30,Janet Leverling
+2018-01-25,2018-02-22,2018-02-12,Margaret Peacock
+2018-01-25,2018-03-08,2018-01-28,Laura Callahan
+2018-01-28,2018-02-25,2018-02-12,Margaret Peacock
+2018-01-28,2018-02-25,2018-02-04,Margaret Peacock
+2018-01-28,2018-02-11,2018-02-07,Andrew Fuller
+2018-01-29,2018-02-26,2018-02-07,Steven Buchanan
+2018-01-29,2018-03-12,2018-02-06,Michael Suyama
+2018-01-30,2018-02-27,2018-02-18,Robert King
+2018-01-30,2018-02-27,2018-02-04,Steven Buchanan
+2018-01-30,2018-02-27,2018-02-08,Steven Buchanan
+2018-01-31,2018-02-28,2018-02-05,Anne Dodsworth
+2018-01-31,2018-02-28,2018-02-04,Steven Buchanan
+2018-02-01,2018-03-01,2018-02-04,Margaret Peacock
+2018-02-01,2018-03-01,2018-02-06,Steven Buchanan
+2018-02-01,2018-03-01,2018-02-26,Margaret Peacock
+2018-02-04,2018-03-04,2018-02-07,Robert King
+2018-02-04,2018-03-04,2018-02-14,Nancy Davolio
+2018-02-05,2018-03-05,2018-02-07,Margaret Peacock
+2018-02-05,2018-03-05,2018-02-07,Janet Leverling
+2018-02-05,2018-03-19,2018-02-13,Robert King
+2018-02-06,2018-03-06,2018-02-13,Margaret Peacock
+2018-02-06,2018-03-06,2018-02-15,Margaret Peacock
+2018-02-07,2018-03-07,2018-02-15,Laura Callahan
+2018-02-07,2018-03-07,2018-02-08,Margaret Peacock
+2018-02-07,2018-03-07,2018-02-13,Michael Suyama
+2018-02-08,2018-03-08,2018-02-25,Nancy Davolio
+2018-02-08,2018-03-08,2018-02-11,Laura Callahan
+2018-02-11,2018-03-11,2018-02-18,Nancy Davolio
+2018-02-11,2018-03-11,2018-02-18,Anne Dodsworth
+2018-02-11,2018-03-11,2018-02-13,Robert King
+2018-02-12,2018-03-12,2018-02-14,Robert King
+2018-02-12,2018-03-12,2018-02-14,Margaret Peacock
+2018-02-13,2018-03-13,2018-02-15,Anne Dodsworth
+2018-02-13,2018-03-13,2018-02-15,Nancy Davolio
+2018-02-13,2018-03-13,2018-02-18,Janet Leverling
+2018-02-14,2018-03-14,2018-02-22,Robert King
+2018-02-14,2018-03-14,2018-02-20,Janet Leverling
+2018-02-15,2018-03-15,2018-03-01,Margaret Peacock
+2018-02-15,2018-03-15,2018-02-21,Steven Buchanan
+2018-02-15,2018-03-15,2018-02-27,Nancy Davolio
+2018-02-18,2018-03-18,2018-02-21,Margaret Peacock
+2018-02-18,2018-03-18,2018-02-26,Nancy Davolio
+2018-02-19,2018-03-19,2018-02-27,Janet Leverling
+2018-02-19,2018-03-19,2018-02-22,Janet Leverling
+2018-02-19,2018-03-19,2018-03-01,Anne Dodsworth
+2018-02-20,2018-03-06,2018-02-26,Margaret Peacock
+2018-02-20,2018-03-20,2018-02-22,Michael Suyama
+2018-02-21,2018-03-21,2018-03-01,Margaret Peacock
+2018-02-21,2018-03-21,2018-03-05,Nancy Davolio
+2018-02-21,2018-03-21,2018-02-27,Nancy Davolio
+2018-02-21,2018-03-21,2018-02-28,Janet Leverling
+2018-02-21,2018-03-21,2018-03-13,Andrew Fuller
+2018-02-21,2018-03-21,2018-02-27,Margaret Peacock
+2018-02-22,2018-03-22,2018-02-25,Michael Suyama
+2018-02-22,2018-03-22,2018-02-25,Andrew Fuller
+2018-02-22,2018-03-22,2018-03-04,Nancy Davolio
+2018-02-25,2018-03-25,2018-03-06,Margaret Peacock
+2018-02-25,2018-03-25,2018-03-06,Janet Leverling
+2018-02-25,2018-03-25,2018-02-27,Andrew Fuller
+2018-02-26,2018-03-26,2018-03-04,Margaret Peacock
+2018-02-26,2018-04-09,2018-03-04,Nancy Davolio
+2018-02-26,2018-03-26,2018-02-28,Steven Buchanan
+2018-02-26,2018-04-09,2018-03-08,Robert King
+2018-02-27,2018-03-27,2018-04-03,Janet Leverling
+2018-02-27,2018-03-27,2018-03-08,Janet Leverling
+2018-02-27,2018-03-27,2018-03-06,Margaret Peacock
+2018-02-28,2018-03-28,2018-04-03,Margaret Peacock
+2018-02-28,2018-03-28,2018-03-13,Nancy Davolio
+2018-02-28,2018-03-28,2018-03-07,Michael Suyama
+2018-03-01,2018-04-12,2018-03-13,Margaret Peacock
+2018-03-01,2018-03-15,2018-03-14,Margaret Peacock
+2018-03-01,2018-03-29,2018-03-19,Laura Callahan
+2018-03-01,2018-03-29,2018-03-11,Michael Suyama
+2018-03-04,2018-04-01,2018-03-07,Janet Leverling
+2018-03-04,2018-04-01,2018-03-13,Margaret Peacock
+2018-03-04,2018-04-01,2018-03-13,Janet Leverling
+2018-03-05,2018-03-19,2018-03-08,Robert King
+2018-03-05,2018-04-02,2018-03-11,Janet Leverling
+2018-03-05,2018-04-02,2018-03-08,Andrew Fuller
+2018-03-06,2018-04-03,2018-03-18,Laura Callahan
+2018-03-06,2018-04-03,2018-03-15,Robert King
+2018-03-06,2018-04-03,2018-03-13,Anne Dodsworth
+2018-03-06,2018-04-03,2018-03-14,Margaret Peacock
+2018-03-07,2018-03-21,2018-03-08,Michael Suyama
+2018-03-07,2018-04-04,2018-03-13,Margaret Peacock
+2018-03-07,2018-04-04,2018-03-14,Nancy Davolio
+2018-03-08,2018-04-05,2018-03-11,Janet Leverling
+2018-03-08,2018-04-05,2018-03-14,Janet Leverling
+2018-03-08,2018-04-05,2018-03-12,Andrew Fuller
+2018-03-11,2018-04-08,2018-03-18,Nancy Davolio
+2018-03-11,2018-04-22,2018-04-02,Anne Dodsworth
+2018-03-11,2018-04-22,2018-03-19,Nancy Davolio
+2018-03-11,2018-03-25,2018-03-20,Anne Dodsworth
+2018-03-12,2018-04-23,2018-03-15,Steven Buchanan
+2018-03-12,2018-04-09,2018-03-15,Laura Callahan
+2018-03-12,2018-04-23,2018-03-15,Michael Suyama
+2018-03-13,2018-04-10,2018-03-22,Laura Callahan
+2018-03-13,2018-04-10,2018-03-22,Robert King
+2018-03-13,2018-04-24,2018-03-18,Michael Suyama
+2018-03-14,2018-03-28,2018-04-03,Janet Leverling
+2018-03-14,2018-04-11,2018-03-25,Laura Callahan
+2018-03-14,2018-04-11,2018-03-18,Laura Callahan
+2018-03-14,2018-04-11,2018-03-21,Anne Dodsworth
+2018-03-15,2018-04-12,2018-03-19,Janet Leverling
+2018-03-15,2018-04-12,2018-03-25,Michael Suyama
+2018-03-15,2018-04-12,2018-04-03,Margaret Peacock
+2018-03-18,2018-04-15,2018-03-28,Andrew Fuller
+2018-03-18,2018-04-15,2018-03-27,Nancy Davolio
+2018-03-18,2018-04-15,2018-03-25,Nancy Davolio
+2018-03-19,2018-04-02,2018-04-19,Anne Dodsworth
+2018-03-19,2018-04-16,2018-03-28,Andrew Fuller
+2018-03-19,2018-04-16,2018-03-21,Margaret Peacock
+2018-03-19,2018-04-16,2018-03-22,Michael Suyama
+2018-03-20,2018-04-03,2018-03-29,Janet Leverling
+2018-03-20,2018-04-17,2018-03-22,Nancy Davolio
+2018-03-20,2018-05-01,2018-03-29,Nancy Davolio
+2018-03-21,2018-04-18,2018-04-05,Laura Callahan
+2018-03-21,2018-04-18,2018-04-18,Anne Dodsworth
+2018-03-21,2018-04-18,2018-03-26,Laura Callahan
+2018-03-22,2018-05-03,2018-04-12,Margaret Peacock
+2018-03-22,2018-04-19,2018-03-28,Nancy Davolio
+2018-03-22,2018-04-19,2018-04-03,Andrew Fuller
+2018-03-22,2018-04-19,2018-04-01,Andrew Fuller
+2018-03-25,2018-04-22,2018-03-29,Nancy Davolio
+2018-03-25,2018-04-22,2018-03-28,Andrew Fuller
+2018-03-25,2018-04-22,2018-04-16,Laura Callahan
+2018-03-26,2018-04-23,2018-04-01,Laura Callahan
+2018-03-26,2018-04-23,2018-04-05,Janet Leverling
+2018-03-26,2018-04-23,2018-03-28,Andrew Fuller
+2018-03-27,2018-05-08,2018-04-02,Andrew Fuller
+2018-03-27,2018-04-24,2018-04-02,Nancy Davolio
+2018-03-27,2018-04-24,2018-03-29,Nancy Davolio
+2018-03-27,2018-04-24,2018-04-05,Robert King
+2018-03-28,2018-04-11,2018-04-04,Andrew Fuller
+2018-03-28,2018-04-25,2018-04-01,Nancy Davolio
+2018-03-28,2018-04-25,2018-04-05,Margaret Peacock
+2018-03-29,2018-05-10,2018-04-08,Laura Callahan
+2018-03-29,2018-04-12,2018-04-12,Laura Callahan
+2018-03-29,2018-04-26,2018-04-05,Michael Suyama
+2018-04-01,2018-04-29,2018-04-09,Andrew Fuller
+2018-04-01,2018-04-29,2018-04-09,Andrew Fuller
+2018-04-01,2018-04-29,2018-04-11,Margaret Peacock
+2018-04-01,2018-04-29,2018-04-03,Janet Leverling
+2018-04-02,2018-04-30,2018-04-15,Janet Leverling
+2018-04-02,2018-04-30,2018-04-05,Andrew Fuller
+2018-04-02,2018-04-30,2018-04-10,Janet Leverling
+2018-04-03,2018-05-01,2018-04-08,Laura Callahan
+2018-04-03,2018-05-01,,Robert King
+2018-04-03,2018-05-01,2018-04-05,Andrew Fuller
+2018-04-04,2018-05-02,2018-04-16,Andrew Fuller
+2018-04-04,2018-05-02,2018-04-08,Janet Leverling
+2018-04-04,2018-04-18,2018-04-12,Nancy Davolio
+2018-04-04,2018-05-02,2018-04-05,Andrew Fuller
+2018-04-05,2018-05-03,2018-04-10,Andrew Fuller
+2018-04-05,2018-04-19,2018-04-15,Andrew Fuller
+2018-04-05,2018-05-03,2018-04-08,Anne Dodsworth
+2018-04-08,2018-05-06,2018-04-15,Anne Dodsworth
+2018-04-08,2018-05-06,2018-04-11,Margaret Peacock
+2018-04-08,2018-05-06,,Michael Suyama
+2018-04-09,2018-05-07,2018-04-11,Andrew Fuller
+2018-04-09,2018-05-07,2018-04-16,Janet Leverling
+2018-04-09,2018-05-07,2018-04-29,Anne Dodsworth
+2018-04-09,2018-04-23,2018-04-19,Nancy Davolio
+2018-04-10,2018-05-08,2018-04-15,Margaret Peacock
+2018-04-10,2018-05-08,2018-04-19,Michael Suyama
+2018-04-10,2018-05-08,2018-04-23,Margaret Peacock
+2018-04-11,2018-05-09,2018-04-15,Nancy Davolio
+2018-04-11,2018-05-09,2018-04-17,Andrew Fuller
+2018-04-11,2018-05-09,2018-04-22,Margaret Peacock
+2018-04-12,2018-05-10,2018-04-22,Robert King
+2018-04-12,2018-05-10,2018-04-19,Michael Suyama
+2018-04-12,2018-05-10,2018-04-18,Andrew Fuller
+2018-04-12,2018-05-10,2018-04-18,Robert King
+2018-04-15,2018-05-27,2018-04-22,Laura Callahan
+2018-04-15,2018-05-13,2018-04-19,Andrew Fuller
+2018-04-15,2018-05-13,2018-04-17,Laura Callahan
+2018-04-16,2018-05-14,2018-04-22,Robert King
+2018-04-16,2018-05-14,2018-04-25,Nancy Davolio
+2018-04-16,2018-05-14,,Nancy Davolio
+2018-04-17,2018-05-15,,Margaret Peacock
+2018-04-17,2018-05-15,2018-04-23,Janet Leverling
+2018-04-17,2018-05-01,2018-04-26,Andrew Fuller
+2018-04-17,2018-05-15,2018-04-24,Steven Buchanan
+2018-04-18,2018-05-16,2018-04-26,Margaret Peacock
+2018-04-18,2018-05-16,,Michael Suyama
+2018-04-18,2018-05-16,2018-04-19,Laura Callahan
+2018-04-19,2018-05-17,2018-04-26,Robert King
+2018-04-19,2018-05-17,2018-04-25,Robert King
+2018-04-19,2018-05-17,2018-04-29,Janet Leverling
+2018-04-22,2018-05-20,2018-04-30,Laura Callahan
+2018-04-22,2018-05-20,,Robert King
+2018-04-22,2018-05-20,2018-04-26,Janet Leverling
+2018-04-22,2018-05-20,2018-04-24,Andrew Fuller
+2018-04-23,2018-05-21,,Laura Callahan
+2018-04-23,2018-05-21,2018-04-30,Robert King
+2018-04-23,2018-05-07,2018-04-26,Laura Callahan
+2018-04-24,2018-05-22,2018-04-26,Janet Leverling
+2018-04-24,2018-05-22,,Anne Dodsworth
+2018-04-24,2018-06-05,,Andrew Fuller
+2018-04-25,2018-05-23,2018-04-29,Andrew Fuller
+2018-04-25,2018-06-06,,Margaret Peacock
+2018-04-25,2018-05-23,,Margaret Peacock
+2018-04-25,2018-05-23,2018-05-01,Janet Leverling
+2018-04-26,2018-05-24,2018-04-29,Nancy Davolio
+2018-04-26,2018-05-24,,Laura Callahan
+2018-04-26,2018-05-24,2018-04-29,Robert King
+2018-04-29,2018-05-13,2018-05-01,Nancy Davolio
+2018-04-29,2018-05-27,,Laura Callahan
+2018-04-29,2018-05-27,2018-05-01,Nancy Davolio
+2018-04-30,2018-05-28,,Andrew Fuller
+2018-04-30,2018-05-28,,Nancy Davolio
+2018-04-30,2018-05-28,,Margaret Peacock
+2018-04-30,2018-05-28,,Andrew Fuller
+2018-05-01,2018-05-29,,Robert King
+2018-05-01,2018-05-29,,Laura Callahan
+2018-05-01,2018-05-29,,Margaret Peacock
+2018-05-01,2018-05-29,,Nancy Davolio

@@ -1,8 +1,9 @@
 """
 Preparación de DW_Pedidos para el tablero (TP3).
-Lee el CSV original, renombra columnas, estandariza valores y guarda dos archivos limpios:
-  data/lineas.csv  -> una fila por línea de pedido (pedido x producto)
-  data/pedidos.csv -> una fila por pedido (para conteos y envíos)
+Lee el CSV original, renombra columnas, estandariza valores y guarda dos archivos limpios
+optimizados con únicamente las columnas consumidas por app.py:
+  data/processed/lineas.csv  -> una fila por línea de pedido (pedido x producto)
+  data/processed/pedidos.csv -> una fila por pedido (para conteos y envíos)
 """
 import os
 import pandas as pd
@@ -71,7 +72,6 @@ df["Empleado"] = df["NombreEmpleado"] + " " + df["ApellidoEmpleado"]
 df["Valor"] = (df["Cantidad"] * df["PrecioUnidad"]).round(2)
 df["CostoTotal"] = (df["Cantidad"] * df["CostoUnidad"]).round(2)
 
-
 # 6) Tabla a nivel pedido (una fila por IdPedido)
 cols_pedido = ["IdPedido", "IdCliente", "Cliente", "CiudadCliente",
                "IdEmpleado", "Empleado", "IdTransportista", "Transportista",
@@ -87,11 +87,25 @@ pedidos["DiasHastaEnvio"] = (pedidos["FechaEnvio"] - pedidos["FechaPedido"]).dt.
 pedidos["FueraDePlazo"] = ((pedidos["FechaEnvio"] > pedidos["FechaEntrega"])
                            .astype("boolean").mask(pedidos["Pendiente"]))  
 
-# 7) Guardar
-os.makedirs(SALIDA, exist_ok=True)
-df.to_csv(f"{SALIDA}/lineas.csv", index=False)
-pedidos.to_csv(f"{SALIDA}/pedidos.csv", index=False)
+# 7) Selección de columnas consumidas por el tablero (app.py)
+cols_lineas_app = [
+    "FechaPedido", "Empleado", "IdPedido", "Valor", "IdCliente",
+    "Producto", "Cantidad", "CiudadCliente", "LatitudCiudadCliente",
+    "LongitudCiudadCliente", "Cliente"
+]
 
-print("lineas:", df.shape, "| pedidos:", pedidos.shape)
+cols_pedidos_app = [
+    "FechaPedido", "FechaEntrega", "FechaEnvio", "Empleado"
+]
+
+lineas_out = df[cols_lineas_app]
+pedidos_out = pedidos[cols_pedidos_app]
+
+# 8) Guardar
+os.makedirs(SALIDA, exist_ok=True)
+lineas_out.to_csv(f"{SALIDA}/lineas.csv", index=False)
+pedidos_out.to_csv(f"{SALIDA}/pedidos.csv", index=False)
+
+print("lineas:", lineas_out.shape, "| pedidos:", pedidos_out.shape)
 print("pendientes:", int(pedidos["Pendiente"].sum()),
       "| fuera de plazo:", int(pedidos["FueraDePlazo"].sum()))
