@@ -115,15 +115,20 @@ def variacion(clave):
     return f"{(actual[clave] - anterior[clave]) / anterior[clave]:+.1%}"
 
 
-k1, k2, k3, k4, k5, k6 = st.columns(6)
+grupo_izq, espacio_centro, grupo_der = st.columns([5, 4, 3])
+
+with grupo_izq:
+    k1, k2, k3 = st.columns([0.85, 1.5, 1], gap="small")
+
+with grupo_der:
+    k4, k5 = st.columns(2)
+
 k1.metric("Clientes", f"{actual['clientes']:,}", delta=variacion("clientes"),
           help="Clientes distintos que hicieron al menos un pedido en el período.")
 k2.metric("Valor vendido", f"${actual['valor']:,.0f}", delta=variacion("valor"),
           help="Suma de Cantidad × PrecioUnidad de todas las líneas de pedido del período.")
 k3.metric("Pedidos", f"{actual['pedidos']:,}", delta=variacion("pedidos"),
           help="Pedidos distintos realizados en el período.")
-k4.metric("Valor promedio por pedido", f"${actual['promedio']:,.0f}", delta=variacion("promedio"),
-          help="Valor vendido dividido por la cantidad de pedidos.")
 
 # Pedidos pendientes: sin fecha de envío. Fuera de plazo: enviados después de FechaEntrega (la fecha prometida).
 pendientes = int(ped_sel["FechaEnvio"].isna().sum())
@@ -132,10 +137,10 @@ fuera_plazo = int((ped_sel["FechaEnvio"] > ped_sel["FechaEntrega"]).sum())   # N
 
 # Cada tarjeta va en un contenedor con "key": Streamlit le agrega la clase CSS st-key-<key>,
 # y con eso se le cambia el color al número (st.metric no tiene un parámetro de color).
-with k5.container(key="kpi_pendientes"):
+with k4.container(key="kpi_pendientes"):
     st.metric("Pedidos pendientes de envío", f"{pendientes:,}",
               help="Pedidos del período que todavía no tienen fecha de envío.")
-with k6.container(key="kpi_fuera"):
+with k5.container(key="kpi_fuera"):
     st.metric("Enviados fuera de plazo", f"{fuera_plazo:,}",
               delta=f"{fuera_plazo / enviados:.1%} de los enviados" if enviados else None,
               delta_color="off", delta_arrow="off",
@@ -322,7 +327,7 @@ with tab2:
     with mapa:
         st.subheader("Valor y pedidos por ciudad")
         st.caption("*Tamaño del círculo: cantidad de pedidos. Color: valor vendido (más oscuro = más valor). "
-                   "Se rotulan las 5 ciudades con más valor.*")
+                   "Se nombran las 5 ciudades con más valor.*")
         geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
                      .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"), Clientes=("IdCliente", "nunique")))
         top_ciudades = set(geo.nlargest(5, "Valor")["CiudadCliente"])
