@@ -13,8 +13,7 @@ SALIDA = "data/processed"
 
 df = pd.read_csv(ENTRADA)
 
-# 1) Renombrar columnas: sin tildes, sin duplicados (Ciudad / Ciudad.1, etc.)
-#    y aclarando a quién pertenece cada dato (cliente / empleado / transportista)
+# 1) Renombrar columnas
 df = df.rename(columns={
     "NombreCompania": "Cliente",
     "NombreContacto": "ContactoCliente",
@@ -51,11 +50,11 @@ cols_text = [col for col in df.columns if col not in fechas + numericas]
 for fecha in fechas:
     df[fecha] = pd.to_datetime(df[fecha], format="%m/%d/%Y")  
 
-# 3) Estandarizar texto: espacios dobles y bordes
+# 3) Estandarizar texto
 for col in cols_text:
     df[col] = df[col].astype("string").str.replace(r"\s+", " ", regex=True).str.strip()
 
-# 4) Estandarizar ciudades de clientes (duplicados y errores de traducción)
+# 4) Estandarizar ciudades de clientes
 df["CiudadCliente"] = df["CiudadCliente"].replace({
     "Sao Paulo": "São Paulo",  
     "Lion": "Lyon",
@@ -66,6 +65,34 @@ df["CiudadCliente"] = df["CiudadCliente"].replace({
 ciudades = pd.read_csv("data/interim/ciudades.csv")
 df = df.merge(ciudades, on="CiudadCliente", how="left")
 assert df["LatitudCiudadCliente"].notna().all(), "Hay ciudades sin coordenadas"
+
+# Mapeo de región por ciudad
+mapa_regiones = {
+    'Albuquerque': 'América del Norte', 'Anchorage': 'América del Norte', 'Boise': 'América del Norte',
+    'Butte': 'América del Norte', 'Elgin': 'América del Norte', 'Eugene': 'América del Norte',
+    'Kirkland': 'América del Norte', 'Lander': 'América del Norte', 'Montreal': 'América del Norte',
+    'México D.F.': 'América del Norte', 'Portland': 'América del Norte', 'San Francisco': 'América del Norte',
+    'Seattle': 'América del Norte', 'Tsawassen': 'América del Norte', 'Vancouver': 'América del Norte',
+    'Walla Walla': 'América del Norte',
+    
+    'Barquisimeto': 'América del Sur', 'Buenos Aires': 'América del Sur', 'Campinas': 'América del Sur',
+    'Caracas': 'América del Sur', 'I. de Margarita': 'América del Sur', 'Resende': 'América del Sur',
+    'Rio de Janeiro': 'América del Sur', 'San Cristóbal': 'América del Sur', 'São Paulo': 'América del Sur',
+    
+    'Aachen': 'Europa', 'Barcelona': 'Europa', 'Berlín': 'Europa', 'Brandenburgo': 'Europa',
+    'Bruselas': 'Europa', 'Bräcke': 'Europa', 'Bérgamo': 'Europa', 'Charleroi': 'Europa',
+    'Cork': 'Europa', 'Cowes': 'Europa', 'Cunewalde': 'Europa', 'Estrasburgo': 'Europa',
+    'Fráncfort': 'Europa', 'Graz': 'Europa', 'Génova': 'Europa', 'Helsinki': 'Europa',
+    'Köln': 'Europa', 'København': 'Europa', 'Leipzig': 'Europa', 'Lille': 'Europa',
+    'Lisboa': 'Europa', 'Londres': 'Europa', 'Luleå': 'Europa', 'Lyon': 'Europa',
+    'Madrid': 'Europa', 'Mannheim': 'Europa', 'Marsella': 'Europa', 'München': 'Europa',
+    'Münster': 'Europa', 'Nantes': 'Europa', 'Oulu': 'Europa', 'París': 'Europa',
+    'Reggio Emilia': 'Europa', 'Reims': 'Europa', 'Salzburgo': 'Europa', 'Sevilla': 'Europa',
+    'Stavern': 'Europa', 'Stuttgart': 'Europa', 'Torino': 'Europa', 'Toulouse': 'Europa',
+    'Versalles': 'Europa', 'Warszawa': 'Europa', 'Århus': 'Europa'
+}
+
+df["RegionCliente"] = df["CiudadCliente"].map(mapa_regiones)
 
 # 5) Columnas calculadas fila por fila
 df["Empleado"] = df["NombreEmpleado"] + " " + df["ApellidoEmpleado"]
@@ -90,7 +117,7 @@ pedidos["FueraDePlazo"] = ((pedidos["FechaEnvio"] > pedidos["FechaEntrega"])
 # 7) Selección de columnas consumidas por el tablero (app.py)
 cols_lineas_app = [
     "FechaPedido", "Empleado", "IdPedido", "Valor", "IdCliente",
-    "Producto", "Cantidad", "CiudadCliente", "LatitudCiudadCliente",
+    "Producto", "Cantidad", "CiudadCliente", "RegionCliente", "LatitudCiudadCliente",
     "LongitudCiudadCliente", "Cliente"
 ]
 

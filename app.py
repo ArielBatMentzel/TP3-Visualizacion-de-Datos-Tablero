@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 import plotly.graph_objects as go
+import numpy as np
 
 # paleta.py tiene que estar en la misma carpeta que este archivo
 from paleta import ACENTO, AMARILLO, AMARILLO_TEXTO, BASE, GRIS, ROJO, RUMBO_CONTINUA
@@ -349,7 +350,7 @@ with tab1:
 with tab2:
 
     # ---------------------------------------------------------------------------
-    # PREGUNTA 4 — ¿Qué productos tuvieron mayores ingresos y cuáles se vendieron en mayor cantidad?
+    # PREGUNTA 4 — ¿Qué productos generan más valor y cuáles se vendieron en mayor cantidad?
     # ---------------------------------------------------------------------------
     prod = (df_sel.groupby("Producto", as_index=False)
                   .agg(Valor=("Valor", "sum"), Unidades=("Cantidad", "sum")))
@@ -370,7 +371,7 @@ with tab2:
 
     col_a, col_b = st.columns(2)
     with col_a:
-        st.subheader("Top 10 productos por ingresos")
+        st.subheader("Top 10 productos por valor vendido")
         st.plotly_chart(barras_top(top_valor, "Valor", "$%{x:,.0f}"), width="stretch")
     with col_b:
         st.subheader("Top 10 productos por unidades vendidas")
@@ -380,70 +381,89 @@ with tab2:
     # ---------------------------------------------------------------------------
     # PREGUNTA 3 — ¿Cómo se concentran valor y pedidos por ciudad? ¿Qué clientes son los más importantes?
     # ---------------------------------------------------------------------------
-    mapa, top_cli = st.columns([3, 2])
+    st.subheader("Valor y pedidos por ciudad")
+    st.caption("*Tamaño del círculo: cantidad de pedidos. Color: valor vendido (más oscuro = más valor). "
+                "Se nombran las 5 ciudades con más valor.*")
+    geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
+                    .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"), Clientes=("IdCliente", "nunique")))
+    top_ciudades = set(geo.nlargest(5, "Valor")["CiudadCliente"])
+    geo["Etiqueta"] = geo["CiudadCliente"].where(geo["CiudadCliente"].isin(top_ciudades), "")
 
-    with mapa:
-        st.subheader("Valor y pedidos por ciudad")
-        st.caption("*Tamaño del círculo: cantidad de pedidos. Color: valor vendido (más oscuro = más valor). "
-                   "Se nombran las 5 ciudades con más valor.*")
-        geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
-                     .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"), Clientes=("IdCliente", "nunique")))
-        top_ciudades = set(geo.nlargest(5, "Valor")["CiudadCliente"])
-        geo["Etiqueta"] = geo["CiudadCliente"].where(geo["CiudadCliente"].isin(top_ciudades), "")
+    fig = px.scatter_geo(geo, lat="LatitudCiudadCliente", lon="LongitudCiudadCliente", size="Pedidos", color="Valor",
+                            color_continuous_scale=RUMBO_CONTINUA, text="Etiqueta",
+                            custom_data=["CiudadCliente", "Valor", "Pedidos", "Clientes"],
+                            projection="natural earth", size_max=30)
+    fig.update_traces(textposition="top center", textfont=dict(size=11, color="#374151"),
+                        marker=dict(line=dict(width=0.8, color="#5B6770")),   # borde: los círculos claros se ven sobre el fondo
+                        hovertemplate="<b>%{customdata[0]}</b><br>Valor: $%{customdata[1]:,.0f}"
+                                    "<br>Pedidos: %{customdata[2]}<br>Clientes: %{customdata[3]}<extra></extra>")
+    fig.update_geos(showcountries=True, countrycolor="#D1D5DB", showland=True, landcolor="#F3F4F6", fitbounds="locations")
+    fig.update_layout(height=430, margin=dict(l=0, r=0, t=10, b=0), coloraxis_colorbar=dict(title="Valor ($)"))
+    st.plotly_chart(fig, width="stretch")
 
-        fig = px.scatter_geo(geo, lat="LatitudCiudadCliente", lon="LongitudCiudadCliente", size="Pedidos", color="Valor",
-                             color_continuous_scale=RUMBO_CONTINUA, text="Etiqueta",
-                             custom_data=["CiudadCliente", "Valor", "Pedidos", "Clientes"],
-                             projection="natural earth", size_max=30)
-        fig.update_traces(textposition="top center", textfont=dict(size=11, color="#374151"),
-                          marker=dict(line=dict(width=0.8, color="#5B6770")),   # borde: los círculos claros se ven sobre el fondo
-                          hovertemplate="<b>%{customdata[0]}</b><br>Valor: $%{customdata[1]:,.0f}"
-                                        "<br>Pedidos: %{customdata[2]}<br>Clientes: %{customdata[3]}<extra></extra>")
-        fig.update_geos(showcountries=True, countrycolor="#D1D5DB", showland=True, landcolor="#F3F4F6", fitbounds="locations")
-        fig.update_layout(height=430, margin=dict(l=0, r=0, t=10, b=0), coloraxis_colorbar=dict(title="Valor ($)"))
-        st.plotly_chart(fig, width="stretch")
+    # ============================================================ ANÁLISIS DE CLIENTES (IMPORTANCIA VS RECURRENCIA)
+    st.subheader("Análisis de Clientes: Importancia (Valor) vs. Recurrencia (Pedidos)")
+    st.caption("*Pasá el mouse sobre cualquier punto para ver el detalle del cliente. Las líneas punteadas representan la mediana de la empresa.*")
 
-    with top_cli:
-        TOP_CLIENTES = 10
-        st.subheader(f"Top {TOP_CLIENTES} clientes por % de ingresos")
-        st.caption("*Porcentaje del valor vendido total (según los filtros activos) que aporta cada cliente.*")
-        total_valor = df_sel["Valor"].sum()
-        clientes = (df_sel.groupby(["IdCliente", "Cliente", "CiudadCliente"], as_index=False)
-                          .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique")))
-        clientes["Participacion"] = clientes["Valor"] / total_valor
-        top_c = clientes.nlargest(TOP_CLIENTES, "Participacion").sort_values("Participacion")   # ascendente: el mayor queda arriba
-        top_c["Texto"] = top_c["Participacion"].map(lambda x: f"{x:.1%}")
+    # 1. Agrupamiento a nivel cliente reteniendo la región
+    clientes = (
+        df_sel.groupby(["IdCliente", "Cliente", "CiudadCliente", "RegionCliente"], as_index=False)
+            .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"))
+    )
 
-        fig = px.bar(top_c, x="Participacion", y="Cliente", orientation="h", text="Texto",
-                     custom_data=["Valor", "Pedidos", "CiudadCliente"])
-        fig.update_traces(marker_color=BASE, textposition="outside", cliponaxis=False,
-                          hovertemplate="Valor: $%{customdata[0]:,.0f}"
-                                        "<br>Pedidos: %{customdata[1]}<extra></extra>")
-        fig.update_layout(template="plotly_white", height=430, margin=dict(l=0, r=30, t=10, b=0),
-                          yaxis_title=None, xaxis_title=None)
-        fig.update_xaxes(tickformat=".0%", rangemode="tozero")
-        st.plotly_chart(fig, width="stretch")
+    # 2. Jitter en X para evitar superposición visual de puntos
+    np.random.seed(42)
+    clientes["Pedidos_Jitter"] = clientes["Pedidos"] + np.random.uniform(-0.15, 0.15, size=len(clientes))
 
-        # Cuánto depende la empresa de pocos clientes
-        acumulado = clientes["Participacion"].sort_values(ascending=False).cumsum()
-        n_mitad = int((acumulado < 0.5).sum()) + 1
-        sujeto = f"Estos clientes suman" if len(top_c) > 1 else "Este cliente suma"
-        st.caption(f"*{sujeto} el {top_c['Participacion'].sum():.0%}. "
-                   f"La mitad del valor la generan {n_mitad} de {len(clientes)} clientes.*")
+    # 3. Mapeo de formas y colores por región respetando la paleta "Rumbo"
+    simbolos_region = {
+        "Europa": "circle",
+        "América del Norte": "square",
+        "América del Sur": "diamond"
+    }
 
-    # Clientes importantes (valor) vs recurrentes (pedidos)
-    st.subheader("Clientes: importancia (valor) vs recurrencia (pedidos)")
-    st.caption("*Cada punto es un cliente. Las líneas punteadas marcan el promedio. Arriba a la derecha: importantes y recurrentes; "
-               "Se rotulan los 5 clientes con más valor.*")
-    clientes["Etiqueta"] = clientes["Cliente"].where(clientes["Valor"].rank(ascending=False, method="first") <= 5, "")
-    fig = px.scatter(clientes, x="Pedidos", y="Valor", text="Etiqueta", custom_data=["Cliente", "CiudadCliente"])
-    fig.update_traces(marker=dict(size=10, color=BASE, opacity=0.85, line=dict(width=0.6, color="white")),
-                      textposition="top center", textfont=dict(size=11, color="#374151"),
-                      hovertemplate="<b>%{customdata[0]}</b> (%{customdata[1]})<br>Pedidos: %{x}<br>Valor: $%{y:,.0f}<extra></extra>")
-    fig.add_vline(x=clientes["Pedidos"].mean(), line_dash="dot", line_color=GRIS)
-    fig.add_hline(y=clientes["Valor"].mean(), line_dash="dot", line_color=GRIS)
-    fig.update_layout(template="plotly_white", height=380, margin=dict(l=0, r=0, t=10, b=0),
-                      xaxis_title="Pedidos realizados", yaxis_title="Valor vendido ($)")
+    colores_region = {
+        "Europa": '#0B3352',             # "#035574" (Azul marino / petróleo)
+        "América del Norte": '#A2C6AE',  # "#50A395" (Verde agua / turquesa)
+        "América del Sur": '#038288'  # (Turquesa medio de la paleta)
+    }
+
+    fig = px.scatter(
+        clientes,
+        x="Pedidos_Jitter",
+        y="Valor",
+        color="RegionCliente",
+        symbol="RegionCliente",
+        color_discrete_map=colores_region,
+        symbol_map=simbolos_region,
+        custom_data=["Cliente", "CiudadCliente", "RegionCliente", "Valor", "Pedidos"]
+    )
+
+    # 4. Cálculo de la Mediana General (1 única línea X e Y para toda la empresa)
+    mediana_x = clientes["Pedidos"].median()
+    mediana_y = clientes["Valor"].median()
+
+    fig.add_vline(x=mediana_x, line_dash="dot", line_color=GRIS)
+    fig.add_hline(y=mediana_y, line_dash="dot", line_color=GRIS)
+
+    # 5. Formato visual de marcadores y tooltips
+    fig.update_traces(
+        marker=dict(size=10, opacity=0.85, line=dict(width=0.6, color="white")),
+        hovertemplate="<b>%{customdata[0]}</b> (%{customdata[1]}, %{customdata[2]})<br>"
+                    "Pedidos reales: <b>%{customdata[4]}</b><br>"
+                    "Valor vendido: <b>$%{customdata[3]:,.0f}</b><extra></extra>"
+    )
+
+    fig.update_layout(
+        template="plotly_white",
+        height=400,
+        margin=dict(l=0, r=0, t=10, b=0),
+        xaxis_title="Cantidad de pedidos realizados (Recurrencia)",
+        yaxis_title="Valor vendido total ($ - Importancia)",
+        legend=dict(orientation="h", y=1.1, x=0, title_text="Región:")
+    )
     fig.update_xaxes(rangemode="tozero")
     fig.update_yaxes(rangemode="tozero")
+
     st.plotly_chart(fig, width="stretch")
+
