@@ -93,6 +93,7 @@ mapa_regiones = {
 }
 
 df["RegionCliente"] = df["CiudadCliente"].map(mapa_regiones)
+assert df["RegionCliente"].notna().all(), "Hay ciudades sin región asignada"
 
 # 5) Columnas calculadas fila por fila
 df["Empleado"] = df["NombreEmpleado"] + " " + df["ApellidoEmpleado"]

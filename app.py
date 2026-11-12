@@ -7,9 +7,9 @@ import plotly.graph_objects as go
 import numpy as np
 
 # paleta.py tiene que estar en la misma carpeta que este archivo
-from paleta import ACENTO, AMARILLO, AMARILLO_TEXTO, BASE, GRIS, ROJO, RUMBO_CONTINUA
+from paleta import ACENTO, AMARILLO, AMARILLO_TEXTO, BASE, GRIS, ROJO, RUMBO_CONTINUA, RUMBO_DISCRETA
 
-st.set_page_config(page_title="Gestión comercial", layout="wide")
+st.set_page_config(page_title="Gestión Comercial", layout="wide")
 
 
 @st.cache_data  # se lee una sola vez, no en cada interacción
@@ -84,7 +84,9 @@ df_prev = filtrar(lineas, prev_ini, prev_fin) if comparable else None
 
 
 # ============================================================ ENCABEZADO
-st.title("Gestión comercial")
+st.title("Gestión Comercial")
+# se añade un subtítulo con una breve explicación
+st.subheader("Seguimiento de ventas, control de entregas y desempeño comercial.")
 
 if emp_sel:
     a, b = st.columns([6, 1])
@@ -94,7 +96,7 @@ if emp_sel:
         st.rerun()
 
 if df.empty:
-    st.warning("No hay ventas en el período y transportista seleccionados.")
+    st.warning("No hay ventas en el período seleccionado.")
     st.stop()
 
 
@@ -281,8 +283,8 @@ with tab1:
     # PREGUNTA 2 — ¿Qué empleados rinden más y quiénes están por debajo del objetivo (70% del promedio)?
     # ---------------------------------------------------------------------------
     st.subheader(f"{texto_medida} por empleado")
-    st.caption("*Amarillo: posible necesidad de apoyo. "
-               "Click en un empleado para filtrar el resto del tablero; click de nuevo para sacarlo; se pueden elegir varios.*")
+    st.caption("*Amarillo: posible necesidad de apoyo.*  \n"
+               "*Click en un empleado para filtrar el resto del tablero y click de nuevo para sacarlo; pudiendo elegir varios.*")
 
     rank = (df.groupby("Empleado", as_index=False)
               .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"))
@@ -382,8 +384,9 @@ with tab2:
     # PREGUNTA 3 — ¿Cómo se concentran valor y pedidos por ciudad? ¿Qué clientes son los más importantes?
     # ---------------------------------------------------------------------------
     st.subheader("Valor y pedidos por ciudad")
-    st.caption("*Tamaño del círculo: cantidad de pedidos. Color: valor vendido (más oscuro = más valor). "
-                "Se nombran las 5 ciudades con más valor.*")
+    st.caption("*EL tamaño del círculo indica la cantidad de pedidos.*  \n "
+               "*El color indica el valor vendido (más oscuro = mayor valor).*  \n"
+                "*Se nombran las 5 ciudades con más valor.*")
     geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
                     .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"), Clientes=("IdCliente", "nunique")))
     top_ciudades = set(geo.nlargest(5, "Valor")["CiudadCliente"])
@@ -403,7 +406,8 @@ with tab2:
 
     # ============================================================ ANÁLISIS DE CLIENTES (IMPORTANCIA VS RECURRENCIA)
     st.subheader("Análisis de Clientes: Importancia (Valor) vs. Recurrencia (Pedidos)")
-    st.caption("*Pasá el mouse sobre cualquier punto para ver el detalle del cliente. Las líneas punteadas representan la mediana de la empresa.*")
+    st.caption("*Pasá el mouse sobre cualquier punto para ver el detalle del cliente.*  \n"
+               "*Las líneas punteadas representan la mediana de la empresa.*")
 
     # 1. Agrupamiento a nivel cliente reteniendo la región
     clientes = (
@@ -423,9 +427,9 @@ with tab2:
     }
 
     colores_region = {
-        "Europa": '#0B3352',             # "#035574" (Azul marino / petróleo)
-        "América del Norte": '#A2C6AE',  # "#50A395" (Verde agua / turquesa)
-        "América del Sur": '#038288'  # (Turquesa medio de la paleta)
+        "Europa": BASE,             # "#035574" (Azul marino / petróleo)
+        "América del Norte": ACENTO,  # "#50A395" (Verde agua / turquesa)
+        "América del Sur": RUMBO_DISCRETA[0]  # (Turquesa medio de la paleta)
     }
 
     fig = px.scatter(

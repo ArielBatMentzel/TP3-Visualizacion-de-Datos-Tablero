@@ -7,7 +7,7 @@ Tablero interactivo hecho con Streamlit (TP3 - Visualización de Datos).
 1. (Opcional) Crear y activar un entorno virtual:
 
    ```bash
-   python -m venv venv
+   python -m venv .venv
    source .venv/bin/activate      # Mac / Linux
    .venv\Scripts\activate         # Windows
    ```
