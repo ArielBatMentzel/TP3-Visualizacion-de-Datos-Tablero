@@ -6,13 +6,12 @@ import streamlit as st
 import plotly.graph_objects as go
 import numpy as np
 
-# paleta.py tiene que estar en la misma carpeta que este archivo
 from paleta import ACENTO, AMARILLO, AMARILLO_TEXTO, BASE, GRIS, ROJO, RUMBO_CONTINUA, RUMBO_DISCRETA
 
 st.set_page_config(page_title="Gestión Comercial", layout="wide")
 
 
-@st.cache_data  # se lee una sola vez, no en cada interacción
+@st.cache_data  # se lee una sola vez, no en cada interacción (porque lo guarda en cache de streamlit)
 def cargar():
     lineas = pd.read_csv("data/processed/lineas.csv", parse_dates=["FechaPedido"])
     pedidos = pd.read_csv("data/processed/pedidos.csv", parse_dates=["FechaPedido", "FechaEntrega", "FechaEnvio"])
@@ -22,12 +21,12 @@ def cargar():
 lineas, pedidos = cargar()
 
 
-# ============================================================ FILTROS (barra lateral)
+# ===== FILTROS (barra lateral)
 st.sidebar.header("Filtros")
 
 fmin, fmax = lineas["FechaPedido"].min().date(), lineas["FechaPedido"].max().date()
 
-# Atajos de período: "hoy" es la última fecha del dataset (no la fecha real), y se cuenta hacia atrás desde ahí.
+# Atajos de período 
 ATAJOS = {"Última semana": 7, "Último mes": 30, "Último trimestre": 90, "Último año": 365}
 
 
@@ -59,12 +58,12 @@ if len(rango) != 2:   # mientras el usuario todavía no eligió la segunda fecha
 medida = st.sidebar.radio("Medida (Ventas y equipo)", ["Valor", "Pedidos"], horizontal=True)
 texto_medida = "Valor vendido" if medida == "Valor" else "Cantidad de pedidos"
 
-# Empleados clickeados en el ranking (filtran todo el tablero menos el propio ranking)
+# Empleados clickeados en el ranking (filtran todo el tablero)
 emp_sel = st.session_state.get("emp_sel", [])
 
 
 def filtrar(tabla, desde, hasta, con_empleados=True):
-    """Filtra una tabla (líneas o pedidos) por fechas, transportista y, opcionalmente, empleados seleccionados."""
+    """Filtra una tabla (líneas o pedidos) por fechas y, opcionalmente, empleados seleccionados."""
     d = tabla[(tabla["FechaPedido"].dt.date >= desde) & (tabla["FechaPedido"].dt.date <= hasta)]
     if con_empleados and emp_sel:
         d = d[d["Empleado"].isin(emp_sel)]
@@ -73,7 +72,7 @@ def filtrar(tabla, desde, hasta, con_empleados=True):
 
 df = filtrar(lineas, rango[0], rango[1], con_empleados=False)   # para el ranking de empleados
 df_sel = filtrar(lineas, rango[0], rango[1])                    # para todo lo demás
-ped_sel = filtrar(pedidos, rango[0], rango[1])                  # a nivel pedido (una fila por pedido)
+ped_sel = filtrar(pedidos, rango[0], rango[1])                  # a nivel pedido
 
 # Período anterior de igual duración, inmediatamente antes del seleccionado
 dias = (rango[1] - rango[0]).days + 1
@@ -83,7 +82,7 @@ comparable = prev_ini >= fmin          # solo se compara si el período anterior
 df_prev = filtrar(lineas, prev_ini, prev_fin) if comparable else None
 
 
-# ============================================================ ENCABEZADO
+# ===== ENCABEZADO
 st.title("Gestión Comercial")
 # se añade un subtítulo con una breve explicación
 st.subheader("Seguimiento de ventas, control de entregas y desempeño comercial.")
@@ -101,9 +100,8 @@ if df.empty:
 
 
 def resumen(d):
-    n_pedidos = d["IdPedido"].nunique()      # nunique: la fila es una línea de pedido
-    valor = d["Valor"].sum()
-    return {"clientes": d["IdCliente"].nunique(), "valor": valor, "pedidos": n_pedidos}
+    return {"clientes": d["IdCliente"].nunique(), "valor": d["Valor"].sum(),
+            "pedidos": d["IdPedido"].nunique()}      # nunique: la fila es una línea de pedido
 
 
 actual = resumen(df_sel)
@@ -128,27 +126,27 @@ with grupo_der:
 k1.metric("Clientes", f"{actual['clientes']:,}", delta=variacion("clientes"),
           help="Clientes distintos que hicieron al menos un pedido en el período.")
 k2.metric("Valor vendido", f"${actual['valor']:,.0f}", delta=variacion("valor"),
-          help="Suma de Cantidad × PrecioUnidad de todas las líneas de pedido del período.")
-k3.metric("Pedidos", f"{actual['pedidos']:,}", delta=variacion("pedidos"),
-          help="Pedidos distintos realizados en el período.")
+          help="**Total vendido en el período**")
+k3.metric("Pedidos", f"{actual['pedidos']:,}", delta=variacion("pedidos"))
 
-# Pedidos pendientes: sin fecha de envío. Fuera de plazo: enviados después de FechaEntrega (la fecha prometida).
+# --- PREGUNTA 5 — ¿Cuántos pedidos se enviaron fuera de término y cuántos siguen pendientes de envío?
+# Pedidos pendientes: sin fecha de envío. Fuera de plazo: enviados después de FechaEntrega.
+# Los pintamos solamente si su valor es distinto de 0
 pendientes = int(ped_sel["FechaEnvio"].isna().sum())
 enviados = int(ped_sel["FechaEnvio"].notna().sum())
-fuera_plazo = int((ped_sel["FechaEnvio"] > ped_sel["FechaEntrega"]).sum())   # NaT (pendientes) da False
+fuera_plazo = int((ped_sel["FechaEnvio"] > ped_sel["FechaEntrega"]).sum()) 
 
 # Cada tarjeta va en un contenedor con "key": Streamlit le agrega la clase CSS st-key-<key>,
-# y con eso se le cambia el color al número (st.metric no tiene un parámetro de color).
+# y con eso se le cambia el color al número.
 with k4.container(key="kpi_pendientes"):
-    st.metric("Pedidos pendientes de envío", f"{pendientes:,}",
-              help="Pedidos del período que todavía no tienen fecha de envío.")
+    st.metric(" ", f"{pendientes:,}",
+              help="**Pedidos pendientes de envío**")
 with k5.container(key="kpi_fuera"):
-    st.metric("Enviados fuera de plazo", f"{fuera_plazo:,}",
+    st.metric(" ", f"{fuera_plazo:,}",
               delta=f"{fuera_plazo / enviados:.1%} de los enviados" if enviados else None,
               delta_color="off", delta_arrow="off",
-              help="Pedidos enviados después de la fecha de entrega prometida.")
+              help="Pedidos enviados fuera de plazo")
 
-# Color solo si el valor es mayor a 0 (con 0 queda el color normal)
 css = ""
 if pendientes > 0:
     css += f'.st-key-kpi_pendientes [data-testid="stMetricValue"], .st-key-kpi_pendientes [data-testid="stMetricValue"] * {{ color: {AMARILLO}; }}'
@@ -168,12 +166,11 @@ if df_sel.empty:
 
 tab1, tab2 = st.tabs(["Ventas y equipo", "Productos, clientes y ciudades"])
 
-# ============================================================ VISTA 1: VENTAS Y EQUIPO
+
+# ===== VISTA 1: VENTAS Y EQUIPO
 with tab1:
 
-    # ---------------------------------------------------------------------------
-    # PREGUNTA 1 — ¿Cómo evolucionan el valor vendido y los pedidos?
-    # ---------------------------------------------------------------------------
+    # --- PREGUNTA 1 — ¿Cómo evolucionan el valor vendido y la cantidad de pedidos en el período elegido, y cómo se comparan con el período anterior?
     if dias <= 21:
       pfreq, nombre, fmt_eje = "D", "día", "%d/%m"
     elif dias <= 150:
@@ -216,7 +213,7 @@ with tab1:
             lbl = p.start_time.strftime("%m/%Y")
           else:
             lbl = f"Del {eff_start:%d/%m} al {eff_end:%d/%m/%Y}"
-        else:  # W-SUN (Semanas)
+        else:
           if eff_start == p.start_time.date() and eff_end == p.end_time.date():
             lbl = f"Semana del {eff_start:%d/%m/%Y}"
           else:
@@ -226,15 +223,16 @@ with tab1:
       evol = pd.DataFrame(
           {"Inicio": periodos.start_time, medida: serie.values, "Etiqueta": etiquetas}
       )
-      return periodos, evol
+      return evol
 
-    periodos, evol = evolucion(df_sel, rango[0], rango[1])
+    evol = evolucion(df_sel, rango[0], rango[1])
     hover_medida = (
         "Valor vendido: $%{y:,.0f}"
         if medida == "Valor"
         else "Pedidos: %{y:,.0f}"
     )
 
+    # Gráfico de líneas: valor vendido o pedidos por día/semana/mes; el período anterior va en línea punteada.
     fig = px.line(
         evol, x="Inicio", y=medida, markers=True, custom_data=["Etiqueta"]
     )
@@ -247,7 +245,7 @@ with tab1:
     )
 
     if comparable:
-      _, evol_prev = evolucion(df_prev, prev_ini, prev_fin)
+      evol_prev = evolucion(df_prev, prev_ini, prev_fin)
       n_puntos = min(len(evol), len(evol_prev))
 
       fig.add_scatter(
@@ -279,9 +277,7 @@ with tab1:
     fig.update_yaxes(rangemode="tozero")
     st.plotly_chart(fig, width="stretch")
 
-    # ---------------------------------------------------------------------------
-    # PREGUNTA 2 — ¿Qué empleados rinden más y quiénes están por debajo del objetivo (70% del promedio)?
-    # ---------------------------------------------------------------------------
+    # --- PREGUNTA 2 — ¿Qué empleados tienen mayor rendimiento y cuáles quedan por debajo del 70% del promedio? ¿Hay diferencia por menor volumen y/o por menor valor de los pedidos?
     st.subheader(f"{texto_medida} por empleado")
     st.caption("*Amarillo: posible necesidad de apoyo.*  \n"
                "*Click en un empleado para filtrar el resto del tablero y click de nuevo para sacarlo; pudiendo elegir varios.*")
@@ -292,11 +288,11 @@ with tab1:
     rank["ValorPorPedido"] = rank["Valor"] / rank["Pedidos"]
     promedio = rank[medida].mean()
     umbral = promedio * 0.7
-    rank["PctPromedio"] = rank[medida] / promedio
     abajo = rank[medida] < umbral
 
     colores = [ACENTO if e in emp_sel else (AMARILLO if a_ else BASE) for e, a_ in zip(rank["Empleado"], abajo)]
 
+    # Gráfico de lollipop (puntos con tallo): una fila por empleado, según la medida elegida (valor o pedidos).
     fig = go.Figure()
 
     # Tallos horizontales del lollipop.
@@ -315,7 +311,7 @@ with tab1:
         y=rank["Empleado"],
         mode="markers",
         marker=dict(size=13, color=colores),
-        customdata=rank[["Valor", "Pedidos", "ValorPorPedido", "PctPromedio"]],
+        customdata=rank[["Valor", "Pedidos", "ValorPorPedido"]],
         hovertemplate="<b>%{y}</b><br>Valor: $%{customdata[0]:,.0f}"
                     "<br>Pedidos: %{customdata[1]}"
                     "<br>Valor por pedido: $%{customdata[2]:,.0f}<extra></extra>",
@@ -335,7 +331,6 @@ with tab1:
     fig.update_yaxes(tickmode="array", tickvals=rank["Empleado"], ticktext=ticktext)
     fig.update_layout(template="plotly_white", height=380, margin=dict(l=0, r=0, t=10, b=0),
                       yaxis_title=None, xaxis_title=medida)
-    fig.update_xaxes(rangemode="tozero")
 
     # La key cambia después de cada click (v), así el gráfico arranca "limpio" cada vez
     # y cada click llega como un evento nuevo: la selección real la guardamos nosotros en emp_sel.
@@ -348,12 +343,10 @@ with tab1:
         st.rerun()
 
 
-# ============================================================ VISTA 2: PRODUCTOS, CLIENTES Y CIUDADES
+# ===== VISTA 2: PRODUCTOS, CLIENTES Y CIUDADES
 with tab2:
 
-    # ---------------------------------------------------------------------------
-    # PREGUNTA 4 — ¿Qué productos generan más valor y cuáles se vendieron en mayor cantidad?
-    # ---------------------------------------------------------------------------
+    # --- PREGUNTA 3 — ¿Qué productos generan más valor y cuáles se vendieron en mayor cantidad?
     prod = (df_sel.groupby("Producto", as_index=False)
                   .agg(Valor=("Valor", "sum"), Unidades=("Cantidad", "sum")))
     top_valor = prod.nlargest(10, "Valor").sort_values("Valor")
@@ -361,11 +354,11 @@ with tab2:
     en_ambos = set(top_valor["Producto"]) & set(top_unid["Producto"])
 
 
+    # Gráfico de barras horizontales: top 10 productos; en verde los que están en ambos rankings.
     def barras_top(d, col, plantilla):
-        d = d.copy()
         fig = px.bar(d, x=col, y="Producto", orientation="h")
         fig.update_traces(marker_color=[ACENTO if p in en_ambos else BASE for p in d["Producto"]],
-                          texttemplate=plantilla, textposition="outside", cliponaxis=False, hovertemplate=None, hoverinfo="none")
+                          texttemplate=plantilla, textposition="outside", cliponaxis=False, hoverinfo="none")
         fig.update_layout(template="plotly_white", height=380, margin=dict(l=0, r=40, t=10, b=0),
                           yaxis_title=None, xaxis_title=None)
         return fig
@@ -380,18 +373,16 @@ with tab2:
         st.plotly_chart(barras_top(top_unid, "Unidades", "%{x:,.0f}"), width="stretch")
     st.caption(f"*Verde: productos que están en los dos rankings ({len(en_ambos)} de 10).*")
 
-    # ---------------------------------------------------------------------------
-    # PREGUNTA 3 — ¿Cómo se concentran valor y pedidos por ciudad? ¿Qué clientes son los más importantes?
-    # ---------------------------------------------------------------------------
+    # --- PREGUNTA 4 — ¿Cómo se distribuyen el valor y los pedidos por ciudad, y qué clientes son los más relevantes respecto al valor y la recurrencia?
     st.subheader("Valor y pedidos por ciudad")
-    st.caption("*EL tamaño del círculo indica la cantidad de pedidos.*  \n "
-               "*El color indica el valor vendido (más oscuro = mayor valor).*  \n"
+    st.caption("*EL tamaño del círculo indica la cantidad de pedidos y el color indica el valor vendido (más oscuro = mayor valor).*  \n"
                 "*Se nombran las 5 ciudades con más valor.*")
     geo = (df_sel.groupby(["CiudadCliente", "LatitudCiudadCliente", "LongitudCiudadCliente"], as_index=False)
                     .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"), Clientes=("IdCliente", "nunique")))
     top_ciudades = set(geo.nlargest(5, "Valor")["CiudadCliente"])
     geo["Etiqueta"] = geo["CiudadCliente"].where(geo["CiudadCliente"].isin(top_ciudades), "")
 
+    # Mapa de burbujas: tamaño = pedidos, color = valor vendido, una burbuja por ciudad.
     fig = px.scatter_geo(geo, lat="LatitudCiudadCliente", lon="LongitudCiudadCliente", size="Pedidos", color="Valor",
                             color_continuous_scale=RUMBO_CONTINUA, text="Etiqueta",
                             custom_data=["CiudadCliente", "Valor", "Pedidos", "Clientes"],
@@ -404,34 +395,35 @@ with tab2:
     fig.update_layout(height=430, margin=dict(l=0, r=0, t=10, b=0), coloraxis_colorbar=dict(title="Valor ($)"))
     st.plotly_chart(fig, width="stretch")
 
-    # ============================================================ ANÁLISIS DE CLIENTES (IMPORTANCIA VS RECURRENCIA)
-    st.subheader("Análisis de Clientes: Importancia (Valor) vs. Recurrencia (Pedidos)")
-    st.caption("*Pasá el mouse sobre cualquier punto para ver el detalle del cliente.*  \n"
-               "*Las líneas punteadas representan la mediana de la empresa.*")
 
-    # 1. Agrupamiento a nivel cliente reteniendo la región
+    # --- PREGUNTA 4 — clientes más relevantes: importancia (valor) vs. recurrencia (pedidos)
+    st.subheader("Análisis de Clientes: Importancia (Valor) vs. Recurrencia (Pedidos)")
+    st.caption("*Las líneas punteadas representan la mediana de la empresa.*  \n"
+               "*Se pueden ocultar regiones haciendo click en su leyenda.*")
+
+    # Agrupamos a nivel cliente
     clientes = (
         df_sel.groupby(["IdCliente", "Cliente", "CiudadCliente", "RegionCliente"], as_index=False)
             .agg(Valor=("Valor", "sum"), Pedidos=("IdPedido", "nunique"))
     )
 
-    # 2. Jitter en X para evitar superposición visual de puntos
+    # Agregamos un jitter para solucionar, en cierta medida, la superposición de puntos
     np.random.seed(42)
     clientes["Pedidos_Jitter"] = clientes["Pedidos"] + np.random.uniform(-0.15, 0.15, size=len(clientes))
 
-    # 3. Mapeo de formas y colores por región respetando la paleta "Rumbo"
+    # Generamos las características de los puntos por región (forma y color)
     simbolos_region = {
         "Europa": "circle",
         "América del Norte": "square",
         "América del Sur": "diamond"
     }
-
     colores_region = {
-        "Europa": BASE,             # "#035574" (Azul marino / petróleo)
-        "América del Norte": ACENTO,  # "#50A395" (Verde agua / turquesa)
-        "América del Sur": RUMBO_DISCRETA[0]  # (Turquesa medio de la paleta)
+        "Europa": BASE,
+        "América del Norte": ACENTO,
+        "América del Sur": RUMBO_DISCRETA[0]
     }
 
+    # Gráfico de dispersión: un punto por cliente (x = pedidos, y = valor), forma y color según región.
     fig = px.scatter(
         clientes,
         x="Pedidos_Jitter",
@@ -443,14 +435,14 @@ with tab2:
         custom_data=["Cliente", "CiudadCliente", "RegionCliente", "Valor", "Pedidos"]
     )
 
-    # 4. Cálculo de la Mediana General (1 única línea X e Y para toda la empresa)
+    # Calculamos la mediana general (1 única línea X e Y para toda la empresa)
     mediana_x = clientes["Pedidos"].median()
     mediana_y = clientes["Valor"].median()
 
     fig.add_vline(x=mediana_x, line_dash="dot", line_color=GRIS)
     fig.add_hline(y=mediana_y, line_dash="dot", line_color=GRIS)
 
-    # 5. Formato visual de marcadores y tooltips
+
     fig.update_traces(
         marker=dict(size=10, opacity=0.85, line=dict(width=0.6, color="white")),
         hovertemplate="<b>%{customdata[0]}</b> (%{customdata[1]}, %{customdata[2]})<br>"
