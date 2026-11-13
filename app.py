@@ -21,7 +21,7 @@ def cargar():
 lineas, pedidos = cargar()
 
 
-# ===== FILTROS (barra lateral)
+# ============================================================ FILTROS (barra lateral)
 st.sidebar.header("Filtros")
 
 fmin, fmax = lineas["FechaPedido"].min().date(), lineas["FechaPedido"].max().date()
@@ -346,7 +346,7 @@ with tab1:
 # ===== VISTA 2: PRODUCTOS, CLIENTES Y CIUDADES
 with tab2:
 
-    # --- PREGUNTA 3 — ¿Qué productos generan más valor y cuáles se vendieron en mayor cantidad?
+    # --- PREGUNTA 4 — ¿Qué productos generan más valor y cuáles se vendieron en mayor cantidad?
     prod = (df_sel.groupby("Producto", as_index=False)
                   .agg(Valor=("Valor", "sum"), Unidades=("Cantidad", "sum")))
     top_valor = prod.nlargest(10, "Valor").sort_values("Valor")
@@ -358,7 +358,7 @@ with tab2:
     def barras_top(d, col, plantilla):
         fig = px.bar(d, x=col, y="Producto", orientation="h")
         fig.update_traces(marker_color=[ACENTO if p in en_ambos else BASE for p in d["Producto"]],
-                          texttemplate=plantilla, textposition="outside", cliponaxis=False, hoverinfo="none")
+                          texttemplate=plantilla, textposition="outside", cliponaxis=False, hovertemplate=None, hoverinfo="skip")
         fig.update_layout(template="plotly_white", height=380, margin=dict(l=0, r=40, t=10, b=0),
                           yaxis_title=None, xaxis_title=None)
         return fig
@@ -373,7 +373,7 @@ with tab2:
         st.plotly_chart(barras_top(top_unid, "Unidades", "%{x:,.0f}"), width="stretch")
     st.caption(f"*Verde: productos que están en los dos rankings ({len(en_ambos)} de 10).*")
 
-    # --- PREGUNTA 4 — ¿Cómo se distribuyen el valor y los pedidos por ciudad, y qué clientes son los más relevantes respecto al valor y la recurrencia?
+    # --- PREGUNTA 3 — ¿Cómo se distribuyen el valor y los pedidos por ciudad, y qué clientes son los más relevantes respecto al valor y la recurrencia?
     st.subheader("Valor y pedidos por ciudad")
     st.caption("*EL tamaño del círculo indica la cantidad de pedidos y el color indica el valor vendido (más oscuro = mayor valor).*  \n"
                 "*Se nombran las 5 ciudades con más valor.*")
@@ -396,7 +396,7 @@ with tab2:
     st.plotly_chart(fig, width="stretch")
 
 
-    # --- PREGUNTA 4 — clientes más relevantes: importancia (valor) vs. recurrencia (pedidos)
+    # --- PREGUNTA 3 (parte 2) — clientes más relevantes: importancia (valor) vs. recurrencia (pedidos)
     st.subheader("Análisis de Clientes: Importancia (Valor) vs. Recurrencia (Pedidos)")
     st.caption("*Las líneas punteadas representan la mediana de la empresa.*  \n"
                "*Se pueden ocultar regiones haciendo click en su leyenda.*")
